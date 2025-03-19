@@ -1,1 +1,4 @@
 .venv
+data/gamelogs.csv
+data/schedule.csv
+data/dataset.csv
