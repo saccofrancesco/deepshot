@@ -4,6 +4,7 @@ import bs4
 from collections import defaultdict
 from rich.console import Console
 from rich.progress import Progress
+import sqlite3
 import plotly.graph_objects as go
 
 # Initialize a Rich console
@@ -259,5 +260,6 @@ def plot_metric(stats, metric):
 
 # Main
 if __name__ == "__main__":
-    stats = fetch_team_season_log("Golden State Warriors", "2015")
-    plot_metric(stats, "pts")
+    team: str = "Golden State Warriors"
+    year: str = "2015"
+    stats = fetch_team_season_log(team, year)
