@@ -38,6 +38,7 @@ team_codes: dict[str, str] = {
     "Washington Wizards": "WAS",
 }
 
+
 # Get all the team season log basic and andvanced statistics
 def fetch_team_season_log(
     team: str, season: str
@@ -131,3 +132,85 @@ def fetch_team_season_log(
             stats[date]["average_stats"][stat_key] = round(avg_value, 2)
 
     return stats
+
+
+# Plot agraph with both the day-to-day game metric and the average given a single stat
+def plot_metric(stats, metric):
+
+    # Extract the dates, stat values, and average values
+    dates: list[str] = sorted(stats.keys())
+    stat_values: list[int | float] = [stats[date]["stats"][metric] for date in dates]
+    avg_values: list[int | float] = [
+        stats[date]["average_stats"][metric] for date in dates
+    ]
+
+    # Create the Plotly figure
+    fig: go.Figure = go.Figure()
+
+    # Add the actual game-day stats trace
+    fig.add_trace(
+        go.Scatter(
+            x=dates,
+            y=stat_values,
+            mode="lines+markers",  # Show both lines and markers
+            name=f"Game-day {metric}",
+            marker=dict(
+                size=10,
+                color="#3C6E71",
+                symbol="circle",
+                line=dict(width=1, color="white"),
+            ),
+            line=dict(color="#3C6E71", width=2, smoothing=True),
+        )
+    )
+
+    # Add the rolling average stats trace
+    fig.add_trace(
+        go.Scatter(
+            x=dates,
+            y=avg_values,
+            mode="lines+markers",  # Show both lines and markers
+            name=f"Rolling Average {metric}",
+            marker=dict(
+                size=10,
+                color="#F0A500",
+                symbol="circle",
+                line=dict(width=1, color="white"),
+            ),
+            line=dict(color="#F0A500", width=2, dash="dot", smoothing=True),
+        )
+    )
+
+    # Update the layout to make the plot look modern and sleek
+    fig.update_layout(
+        title=f"{metric.capitalize()} - Game-day vs Rolling Average",
+        xaxis_title="Game Dates",
+        yaxis_title=metric.capitalize(),
+        xaxis=dict(
+            tickangle=-45,
+            tickmode="array",
+            tickvals=dates[::5],
+            showgrid=False,
+        ),
+        yaxis=dict(showgrid=False),
+        margin=dict(l=50, r=50, t=80, b=40),
+        hovermode="x unified",
+        template="plotly_dark",  # Dark theme for sleekness
+        plot_bgcolor="#2A2A2A",  # Subtle dark background
+        paper_bgcolor="#2A2A2A",  # Subtle dark background
+        font=dict(family="Arial", color="white", size=14),  # Modern font styling
+        legend=dict(
+            title="Legend",
+            font=dict(size=12),
+            orientation="h",  # Horizontal legend for a clean look
+            yanchor="bottom",
+            y=1.02,
+            xanchor="center",
+            x=0.5,
+        ),
+        title_font=dict(size=22, family="Arial, sans-serif"),
+        hoverlabel=dict(bgcolor="rgba(0,0,0,0.7)", font_size=13, font_family="Arial"),
+    )
+
+    # Show the figure
+    fig.show()
