@@ -181,7 +181,9 @@ def fetch_team_season_log(
 
 
 # Plot agraph with both the day-to-day game metric and the average given a single stat
-def plot_metric(stats, metric):
+def plot_metric(
+    stats: dict[str, dict[str, dict[str, int | float]]], metric: str
+) -> None:
 
     # Extract the dates, stat values, and average values
     dates: list[str] = sorted(stats.keys())
@@ -266,4 +268,7 @@ def plot_metric(stats, metric):
 if __name__ == "__main__":
     team: str = "Golden State Warriors"
     year: str = "2015"
-    stats = fetch_team_season_log(team, year)
+    stats: dict[str, dict[str, dict[str, int | float]]] = fetch_team_season_log(
+        team, year
+    )
+    plot_metric(stats, "pts")
