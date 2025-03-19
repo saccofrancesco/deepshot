@@ -161,12 +161,25 @@ def fetch_team_season_log(
             past_games: list[str] = game_dates[max(0, i - 10) : i]
 
             for stat_key in stats[date]["stats"]:
+
+                # Weights: most recent game has highest weight
+                weights = list(range(1, len(past_games) + 1))  # e.g., [1, 2, 3,..., n]
+                total_weight = sum(weights)
+
+                # Weighted sum of the stats for the past games
+                weighted_sum = sum(
+                    stats[d]["stats"][stat_key] * weights[j]
+                    for j, d in enumerate(past_games)
+                )
+
+                # Calculating weighted average
                 avg_value: float = (
-                    sum(stats[d]["stats"][stat_key] for d in past_games)
-                    / len(past_games)
-                    if past_games
+                    weighted_sum / total_weight
+                    if total_weight
                     else stats[date]["stats"][stat_key]
                 )
+
+                # Storing the weighted average rounded to 2 decimal places
                 stats[date]["average_stats"][stat_key] = round(avg_value, 2)
             progress.advance(task)
 
@@ -263,7 +276,7 @@ def plot_metric(
 # Main
 if __name__ == "__main__":
     team: str = "Golden State Warriors"
-    year: str = "2015"
+    year: str = "2025"
     stats: dict[str, dict[str, dict[str, int | float]]] = fetch_team_season_log(
         team, year
     )
