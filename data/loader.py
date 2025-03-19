@@ -4,6 +4,8 @@ import bs4
 from collections import defaultdict
 from rich.console import Console
 from rich.progress import Progress
+import sqlite3
+import json
 import plotly.graph_objects as go
 import plotly.io as pio
 
@@ -192,6 +194,61 @@ def fetch_team_season_log(
     return stats
 
 
+# Load all the statistic data of each game in each date of the logs in the database
+def load_data(team: str, stats: dict[str, dict[str, dict[str, int | float]]]) -> None:
+
+    # Creating the connection with the database and the cursor to operate
+    conn = sqlite3.connect("nba.db")
+    cursor = conn.cursor()
+
+    # Create the game log table if doesn't already exists
+    cursor.execute(
+        """CREATE TABLE IF NOT EXISTS gamelogs (
+            date TEXT,
+            team TEXT,
+            stats TEXT,
+            rolling_average_stats TEXT
+        )"""
+    )
+    conn.commit()
+
+    # Inserting the game date specific attributes
+    with Progress(transient=True) as progress:
+        task: int = progress.add_task("[cyan]Inserting Game Stats...", total=len(stats))
+        for stat in stats.items():
+            date: str = stat[0]
+            with console.status(f"[bold yellow]Checking {date} for {team}..."):
+                cursor.execute(
+                    "SELECT * FROM gamelogs WHERE date = ? AND team = ?",
+                    (date, team),
+                )
+                if cursor.fetchone() is None:  # No record found
+                    cursor.execute(
+                        "INSERT INTO gamelogs (date, team, stats, rolling_average_stats) VALUES (?, ?, ?, ?)",
+                        (
+                            date,
+                            team,
+                            json.dumps(stat[1]["stats"]),
+                            json.dumps(stat[1]["average_stats"]),
+                        ),
+                    )
+                    conn.commit()
+                    console.print(
+                        f"[bold green]Inserted[/bold green] stats for [bold]{date}[/bold] in team [bold]{team}[/bold]."
+                    )
+                else:
+                    console.print(
+                        f"[bold red]Skipped[/bold red] existing entry for [bold]{date}[/bold]."
+                    )
+
+            # Update progress bar
+            progress.update(task, advance=1)
+
+    # Final output
+    console.print("[bold green]All game stats processed![/bold green]")
+    conn.close()
+
+
 # Plot agraph with both the day-to-day game metric and the average given a single stat
 def plot_metric(
     stats: dict[str, dict[str, dict[str, int | float]]], metric: str
@@ -283,4 +340,4 @@ if __name__ == "__main__":
     stats: dict[str, dict[str, dict[str, int | float]]] = fetch_team_season_log(
         team, year
     )
-    plot_metric(stats, "pts")
+    load_data(team, stats)
