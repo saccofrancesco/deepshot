@@ -2,11 +2,16 @@
 import requests
 import bs4
 from collections import defaultdict
+from rich.console import Console
+from rich.progress import Progress
 import plotly.graph_objects as go
 import plotly.io as pio
 
 # Setting the browser to be the default renderer for charts
 pio.renderers.default = "browser"
+
+# Initialize a Rich console
+console: Console = Console()
 
 # Storing the teams names - codes pair
 team_codes: dict[str, str] = {
@@ -48,6 +53,11 @@ def fetch_team_season_log(
     team: str, season: str
 ) -> dict[str, dict[str, dict[str, int | float]]]:
 
+    # Visualizing the current team and season infos
+    console.print(
+        f"[bold green]Fetching data for {team} - {season} season...[/bold green]"
+    )
+
     # Constructing the URLs
     basic_url: str = (
         f"https://www.basketball-reference.com/teams/{team_codes[team]}/{season}/gamelog/"
@@ -56,85 +66,116 @@ def fetch_team_season_log(
         f"https://www.basketball-reference.com/teams/{team_codes[team]}/{season}/gamelog-advanced/"
     )
 
-    # Fetching the pages and soup them
-    basic_page: requests.models.Response = requests.get(basic_url)
+    # Fetching the pages
+    with Progress() as progress:
+        task: int = progress.add_task("[cyan]Fetching pages...", total=2)
+        basic_page: requests.models.Response = requests.get(basic_url)
+        progress.advance(task)
+        advanced_page: requests.models.Response = requests.get(advanced_url)
+        progress.advance(task)
+
+    # Souping the pages
+    console.print("[bold cyan]Souping the fetched pages...[/bold cyan]")
     basic_soup: bs4.BeautifulSoup = bs4.BeautifulSoup(basic_page.content, "html.parser")
-    advanced_page: requests.models.Response = requests.get(advanced_url)
     advanced_soup: bs4.BeautifulSoup = bs4.BeautifulSoup(
         advanced_page.content, "html.parser"
     )
 
     # Grouping the basic and advanced stats
-    basic_logs: list[bs4.element.Tag] = [
-        tr
-        for n in range(1, 83)
-        for tr in basic_soup.find_all("tr", {"id": "team_game_log_reg." + str(n)})
-    ]
-    advanced_logs: list[bs4.element.Tag] = [
-        tr
-        for n in range(1, 83)
-        for tr in advanced_soup.find_all(
-            "tr", {"id": "team_game_log_adv_reg." + str(n)}
-        )
-    ]
+    console.print("[bold cyan]Extracting and parsing game logs...[/bold cyan]")
+    basic_logs: list[bs4.element.Tag] = basic_soup.find_all(
+        "tr", {"id": lambda x: x and x.startswith("team_game_log_reg.")}
+    )
+    advanced_logs: list[bs4.element.Tag] = advanced_soup.find_all(
+        "tr", {"id": lambda x: x and x.startswith("team_game_log_adv_reg.")}
+    )
 
     # Storing stats by game date
     stats = defaultdict(lambda: {"stats": {}, "average_stats": {}})
-    for log in basic_logs:
-        date: str = log.find("td", {"data-stat": "date"}).text
-        stats[date]["stats"] = {
-            "pts": int(log.find("td", {"data-stat": "team_game_score"}).text),
-            "fg": int(log.find("td", {"data-stat": "fg"}).text),
-            "fga": int(log.find("td", {"data-stat": "fga"}).text),
-            "fg_pct": float(log.find("td", {"data-stat": "fg_pct"}).text),
-            "fg3": int(log.find("td", {"data-stat": "fg3"}).text),
-            "fg3a": int(log.find("td", {"data-stat": "fg3a"}).text),
-            "fg3_pct": float(log.find("td", {"data-stat": "fg3_pct"}).text),
-            "ft": int(log.find("td", {"data-stat": "ft"}).text),
-            "fta": int(log.find("td", {"data-stat": "fta"}).text),
-            "ft_pct": float(log.find("td", {"data-stat": "ft_pct"}).text),
-            "orb": int(log.find("td", {"data-stat": "orb"}).text),
-            "drb": int(log.find("td", {"data-stat": "drb"}).text),
-            "trb": int(log.find("td", {"data-stat": "trb"}).text),
-            "ast": int(log.find("td", {"data-stat": "ast"}).text),
-            "stl": int(log.find("td", {"data-stat": "stl"}).text),
-            "blk": int(log.find("td", {"data-stat": "blk"}).text),
-            "tov": int(log.find("td", {"data-stat": "tov"}).text),
-            "pf": int(log.find("td", {"data-stat": "pf"}).text),
-        }
-    for log in advanced_logs:
-        date: str = log.find("td", {"data-stat": "date"}).text
-        stats[date]["stats"].update(
-            {
-                "ortg": float(log.find("td", {"data-stat": "team_off_rtg"}).text),
-                "drtg": float(log.find("td", {"data-stat": "team_def_rtg"}).text),
-                "pace": float(log.find("td", {"data-stat": "pace"}).text),
-                "ts": float(log.find("td", {"data-stat": "ts_pct"}).text),
-                "ast_pct": float(log.find("td", {"data-stat": "team_ast_pct"}).text),
-                "stl_pct": float(log.find("td", {"data-stat": "team_stl_pct"}).text),
-                "blk_pct": float(log.find("td", {"data-stat": "team_blk_pct"}).text),
-                "efg_pct": float(log.find("td", {"data-stat": "efg_pct"}).text),
-                "tov_pct": float(log.find("td", {"data-stat": "team_tov_pct"}).text),
-                "orb_pct": float(log.find("td", {"data-stat": "team_orb_pct"}).text),
-                "ft_rate": float(log.find("td", {"data-stat": "ft_rate"}).text),
-            }
+    with Progress() as progress:
+        task: int = progress.add_task(
+            "[cyan]Processing basic stats...", total=len(basic_logs)
         )
+        for log in basic_logs:
+            date: str = log.find("td", {"data-stat": "date"}).text
+            stats[date]["stats"] = {
+                "pts": int(log.find("td", {"data-stat": "team_game_score"}).text),
+                "fg": int(log.find("td", {"data-stat": "fg"}).text),
+                "fga": int(log.find("td", {"data-stat": "fga"}).text),
+                "fg_pct": float(log.find("td", {"data-stat": "fg_pct"}).text),
+                "fg3": int(log.find("td", {"data-stat": "fg3"}).text),
+                "fg3a": int(log.find("td", {"data-stat": "fg3a"}).text),
+                "fg3_pct": float(log.find("td", {"data-stat": "fg3_pct"}).text),
+                "ft": int(log.find("td", {"data-stat": "ft"}).text),
+                "fta": int(log.find("td", {"data-stat": "fta"}).text),
+                "ft_pct": float(log.find("td", {"data-stat": "ft_pct"}).text),
+                "orb": int(log.find("td", {"data-stat": "orb"}).text),
+                "drb": int(log.find("td", {"data-stat": "drb"}).text),
+                "trb": int(log.find("td", {"data-stat": "trb"}).text),
+                "ast": int(log.find("td", {"data-stat": "ast"}).text),
+                "stl": int(log.find("td", {"data-stat": "stl"}).text),
+                "blk": int(log.find("td", {"data-stat": "blk"}).text),
+                "tov": int(log.find("td", {"data-stat": "tov"}).text),
+                "pf": int(log.find("td", {"data-stat": "pf"}).text),
+            }
+            progress.advance(task)
+        task: int = progress.add_task(
+            "[cyan]Processing advanced stats...", total=len(advanced_logs)
+        )
+        for log in advanced_logs:
+            date: str = log.find("td", {"data-stat": "date"}).text
+            stats[date]["stats"].update(
+                {
+                    "ortg": float(log.find("td", {"data-stat": "team_off_rtg"}).text),
+                    "drtg": float(log.find("td", {"data-stat": "team_def_rtg"}).text),
+                    "pace": float(log.find("td", {"data-stat": "pace"}).text),
+                    "ts": float(log.find("td", {"data-stat": "ts_pct"}).text),
+                    "ast_pct": float(
+                        log.find("td", {"data-stat": "team_ast_pct"}).text
+                    ),
+                    "stl_pct": float(
+                        log.find("td", {"data-stat": "team_stl_pct"}).text
+                    ),
+                    "blk_pct": float(
+                        log.find("td", {"data-stat": "team_blk_pct"}).text
+                    ),
+                    "efg_pct": float(log.find("td", {"data-stat": "efg_pct"}).text),
+                    "tov_pct": float(
+                        log.find("td", {"data-stat": "team_tov_pct"}).text
+                    ),
+                    "orb_pct": float(
+                        log.find("td", {"data-stat": "team_orb_pct"}).text
+                    ),
+                    "ft_rate": float(log.find("td", {"data-stat": "ft_rate"}).text),
+                }
+            )
+            progress.advance(task)
 
     # Sorting dates for chronological processing
     game_dates: list[str] = sorted(stats.keys())
 
     # Calculating rolling averages for each game
-    for i, date in enumerate(game_dates):
-        past_games: list[str] = game_dates[max(0, i - 10) : i]
+    console.print("[bold green]Calculating rolling averages...[/bold green]")
+    with Progress() as progress:
+        task: int = progress.add_task(
+            "[cyan]Processing rolling averages...", total=len(stats)
+        )
+        for i, date in enumerate(game_dates):
+            past_games: list[str] = game_dates[max(0, i - 10) : i]
 
-        for stat_key in stats[date]["stats"]:
-            avg_value: float = (
-                sum(stats[d]["stats"][stat_key] for d in past_games) / len(past_games)
-                if past_games
-                else stats[date]["stats"][stat_key]
-            )
-            stats[date]["average_stats"][stat_key] = round(avg_value, 2)
+            for stat_key in stats[date]["stats"]:
+                avg_value: float = (
+                    sum(stats[d]["stats"][stat_key] for d in past_games)
+                    / len(past_games)
+                    if past_games
+                    else stats[date]["stats"][stat_key]
+                )
+                stats[date]["average_stats"][stat_key] = round(avg_value, 2)
+            progress.advance(task)
 
+    console.print(
+        f"[bold green]Data fetching complete for {team} - {season}![/bold green]"
+    )
     return stats
 
 
