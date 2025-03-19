@@ -4,7 +4,6 @@ import bs4
 from collections import defaultdict
 from rich.console import Console
 from rich.progress import Progress
-import sqlite3
 import plotly.graph_objects as go
 
 # Initialize a Rich console
