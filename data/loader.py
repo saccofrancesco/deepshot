@@ -214,3 +214,9 @@ def plot_metric(stats, metric):
 
     # Show the figure
     fig.show()
+
+
+# Main
+if __name__ == "__main__":
+    stats = fetch_team_season_log("Golden State Warriors", "2015")
+    plot_metric(stats, "pts")
