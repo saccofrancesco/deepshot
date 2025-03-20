@@ -37,11 +37,18 @@ with console.status("[yellow]Training model... please wait.[/yellow]") as status
 
     # Train the Random Forest model
     rf: RandomForestClassifier = RandomForestClassifier(
-        n_estimators=100, random_state=42
+        n_estimators=200,
+        max_depth=10,
+        min_samples_split=2,
+        min_samples_leaf=4,
+        max_features="log2",
+        bootstrap=False,
+        class_weight=None,
+        random_state=42,
     )
     rf.fit(X_train, y_train)
 
-    status.update("[green]Model training complete![/green]") # Update status once done
+    status.update("[green]Model training complete![/green]")  # Update status once done
 
 # Evaluate the model
 console.print("Evaluating the model...", style="bold cyan")
