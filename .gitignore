@@ -1,4 +1,5 @@
 .venv
-data/gamelogs.csv
-data/schedule.csv
-data/dataset.csv
+data/csv/gamelogs.csv
+data/csv/schedule.csv
+data/csv/rolling_averages.csv
+data/csv/dataset.csv
