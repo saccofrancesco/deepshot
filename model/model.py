@@ -50,9 +50,9 @@ accuracy: float = accuracy_score(y_test, y_pred)
 
 # Print the accuracy with rich styling
 console.print(
-    f"[bold green]Model Accuracy: {accuracy * 100:.2f}%[/bold green]", style="bold"
+    f"\n[bold green]Model Accuracy: {accuracy * 100:.2f}%[/bold green]", style="bold"
 )
 
 # Print detailed classification results with rich
 console.print("\n[bold magenta]Classification Report:[/bold magenta]", style="bold")
-console.print(classification_report(y_test, y_pred), style="dim")
+console.print(classification_report(y_test, y_pred))
