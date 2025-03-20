@@ -10,9 +10,9 @@ console: Console = Console()
 
 # Merge the gamelogs and csv files to create the dataset
 def create_dataset(
-    schedule_file: str = "schedule.csv",
-    gamelogs_file: str = "rolling_averages.csv",
-    final_dataset_file: str = "dataset.csv",
+    schedule_file: str = "./csv/schedule.csv",
+    gamelogs_file: str = "./csv/rolling_averages.csv",
+    final_dataset_file: str = "./csv/dataset.csv",
 ):
     # Read schedule.csv into a list of dicts
     schedule: list = list()
@@ -122,14 +122,14 @@ def create_dataset(
                     if gamelog["date"] == date:
                         # Check if this is the home team's stats
                         if gamelog["team"] == home_team:
-                            home_stats = {
+                            home_stats: dict[str, int | float] = {
                                 f"home_{key}": gamelog[key]
                                 for key in gamelog
                                 if key != "date" and key != "team"
                             }
                         # Check if this is the away team's stats
                         elif gamelog["team"] == away_team:
-                            away_stats = {
+                            away_stats: dict[str, int | float] = {
                                 f"away_{key}": gamelog[key]
                                 for key in gamelog
                                 if key != "date" and key != "team"
@@ -141,7 +141,7 @@ def create_dataset(
 
                 # If both home and away stats are found, create a row
                 if home_stats and away_stats:
-                    row = (
+                    row: list[str] = (
                         [home_team, away_team, winner]
                         + list(home_stats.values())
                         + list(away_stats.values())
