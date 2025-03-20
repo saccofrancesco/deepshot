@@ -1,84 +1,58 @@
-# Step 1: Import Libraries
+# Importing libraries
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split, GridSearchCV
-from sklearn.metrics import accuracy_score
-import plotly.express as px
-import joblib
-import os
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report
+import numpy as np
+from rich.console import Console
 
-# Step 2: Load CSV Data
-df = pd.read_csv("../data/csv/dataset.csv")
+# Initialize rich console for pretty printing
+console: Console = Console()
 
-# Step 3: Drop columns that are not used for training (just home_team and away_team)
-df = df.drop(["home_team", "away_team"], axis=1)
+# Start spinner for data loading
+with console.status("[green]Loading Data...") as status:
+    # Load CSV Data
+    df: pd.DataFrame = pd.read_csv("../data/csv/dataset.csv")
+    status.update("Data Loaded Successfully!")
 
-# Step 4: Define features (X) and target (y)
-X = df.drop("winning_team", axis=1)  # Features (all columns except 'winning_team')
-y = df["winning_team"]  # Target variable (already 0 or 1)
+# Drop columns that are not used for training (just home_team and away_team)
+df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
 
-# Step 5: Split the data into training and test sets
+# Define features (X) and target (y)
+X: pd.DataFrame = df.drop(
+    "winning_team", axis=1
+)  # Features (all columns except 'winning_team')
+y: pd.Series = df["winning_team"]  # Target variable (already 0 or 1)
+
+# Split the data into training and test sets
+console.print(
+    "Splitting the dataset into training and testing sets...", style="bold cyan"
+)
 X_train, X_test, y_train, y_test = train_test_split(
-    X, y, test_size=0.3, random_state=42
+    X, y, test_size=0.2, random_state=42
 )
 
-if not os.path.exists("best_random_forest.pkl"):
-    # Step 6: Define the parameter grid for RandomForest
-    param_grid = {
-        "n_estimators": [100, 200, 300],
-        "max_depth": [10, 20, 30],
-        "min_samples_split": [2, 5, 10],
-        "min_samples_leaf": [1, 2, 4],
-    }
+# Train the Random Forest model with a progress bar
+with console.status("[yellow]Training model... please wait.[/yellow]") as status:
 
-    # Initialize Random Forest classifier
-    rf = RandomForestClassifier(random_state=42)
-
-    # Setup GridSearchCV with cross-validation (cv=5)
-    grid_search = GridSearchCV(
-        estimator=rf, param_grid=param_grid, cv=5, n_jobs=-1, verbose=2
+    # Train the Random Forest model
+    rf: RandomForestClassifier = RandomForestClassifier(
+        n_estimators=100, random_state=42
     )
+    rf.fit(X_train, y_train)
 
-    # Fit the model to the training data
-    grid_search.fit(X_train, y_train)
+    status.update("[green]Model training complete![/green]") # Update status once done
 
-    # Step 7: Best parameters from grid search
-    print(f"Best parameters: {grid_search.best_params_}")
+# Evaluate the model
+console.print("Evaluating the model...", style="bold cyan")
+y_pred: np.ndarray = rf.predict(X_test)
+accuracy: float = accuracy_score(y_test, y_pred)
 
-    # Step 8: Get the best estimator (best Random Forest model)
-    best_rf = grid_search.best_estimator_
+# Print the accuracy with rich styling
+console.print(
+    f"[bold green]Model Accuracy: {accuracy * 100:.2f}%[/bold green]", style="bold"
+)
 
-    # Step 9: Evaluate the model on the test set
-    y_pred = best_rf.predict(X_test)
-    accuracy = accuracy_score(y_test, y_pred)
-    print(f"Accuracy after tuning: {accuracy * 100:.2f}%")
-
-    # Save the best model (after GridSearchCV)
-    joblib.dump(best_rf, "best_random_forest.pkl")
-    print("✅ Best model saved successfully!")
-else:
-    # Load the saved model (No need for retraining)
-    best_rf = joblib.load("best_random_forest.pkl")
-    print("✅ Best model loaded successfully!")
-
-    # Get feature importance
-    feature_importance_df = pd.DataFrame(
-        {"Feature": X_train.columns, "Importance": best_rf.feature_importances_}
-    ).sort_values(by="Importance", ascending=False)
-
-    # Plot with Plotly
-    import plotly.express as px
-
-    fig = px.bar(
-        feature_importance_df,
-        x="Importance",
-        y="Feature",
-        orientation="h",
-        title="🔍 Important Features Tier List",
-        labels={"Importance": "Feature Importance"},
-        color="Importance",
-        color_continuous_scale="Blues",
-    )
-
-    fig.update_layout(yaxis={"categoryorder": "total ascending"})
-    fig.show()
+# Print detailed classification results with rich
+console.print("\n[bold magenta]Classification Report:[/bold magenta]", style="bold")
+console.print(classification_report(y_test, y_pred), style="dim")
