@@ -1,77 +1,53 @@
 # Importing libraries
 import pandas as pd
-import pandas
-import csv
-import pandas.core
+import os
 from rich.console import Console
-from rich.progress import Progress
 
-# Initialize rich console for printing
+# Initialize rich console
 console: Console = Console()
 
-# Game window size
-game_window: int = 15
+# Load the CSV file
+console.print("[bold green]Loading CSV file...[/bold green]")
+df: pd.DataFrame = pd.read_csv("./csv/gamelogs.csv")
 
-# Load game logs
-gamelogs_filename: str = "./csv/gamelogs.csv"
-df: pd.DataFrame = pd.read_csv(gamelogs_filename)
+# Game window
+game_window: int = 30
 
+# Sort by team and date
+console.print("[bold green]Sorting data by team and date...[/bold green]")
+df["date"] = pd.to_datetime(df["date"])
+df: pd.DataFrame = df.sort_values(by=["team", "date"])
 
-# Function to compute the average for each statistics
-def compute_linear_weighted_avg(stats: list[int | float]) -> float:
-    n: int = len(stats)
-    if n == 0:
-        return None  # No previous games available
-
-    weights: list[int] = list(range(1, n + 1))  # Linear weights: 1, 2, 3, ..., n
-    weighted_avg: float = sum(
-        stat * weight for stat, weight in zip(stats, weights)
-    ) / sum(weights)
-    return round(weighted_avg, 2)  # Round to 2 decimal places
-
+# Identify columns for rolling averages (excluding 'date' and 'team')
+stat_columns: list[str] = [col for col in df.columns if col not in ["date", "team"]]
 
 # Compute rolling averages
-rolling_averages: list = list()
+console.print("[bold green]Computing rolling averages...[/bold green]")
 
-# Group by team and process each team
-grouped: pandas.core.groupby.generic.DataFrameGroupBy = df.groupby("team")
 
-# Initialize the progress bar
-with Progress() as progress:
-    task: int = progress.add_task("[cyan]Processing teams...", total=len(grouped))
+# Function to calculate the rolling average for the specified game window on on stat group
+def compute_rolling_avg(group: pd.DataFrame) -> pd.DataFrame:
+    rolling_avg: pd.DataFrame = (
+        group[stat_columns].rolling(window=game_window, min_periods=1).mean().shift(1)
+    )
+    rolling_avg.iloc[0] = group.iloc[0][stat_columns]
+    return rolling_avg
 
-    for team, games in grouped:
-        games: pd.DataFrame = games.sort_values("date")
-        for i, row in games.iterrows():
-            prev_games: pd.DataFrame = games.iloc[
-                max(0, i - game_window) : i
-            ]  # Last 15 games before this one
-            rolling_avg: dict[str, str | int | float] = {
-                "date": row["date"],
-                "team": row["team"],
-            }
 
-            # For each stat column (excluding 'date' and 'team')
-            for col in df.columns[2:]:  # Exclude date and team columns
-                rolling_avg[col] = (
-                    compute_linear_weighted_avg(prev_games[col].tolist())
-                    if not prev_games.empty
-                    else round(row[col], 2)
-                )
+df[stat_columns] = df.groupby("team", group_keys=False, observed=True)[
+    stat_columns
+].apply(compute_rolling_avg)
 
-            rolling_averages.append(rolling_avg)
-
-        # Update the progress bar after each team's processing
-        progress.update(task, advance=1)
+# Limit decimal places to 2
+console.print("[bold green]Rounding values...[/bold green]")
+df[stat_columns] = df[stat_columns].round(2)
 
 # Save to CSV
-rolling_filename: str = "./csv/rolling_averages.csv"
-with open(rolling_filename, mode="w", newline="") as file:
-    writer: csv.DictWriter = csv.DictWriter(
-        file, fieldnames=["date", "team"] + df.columns[2:].tolist()
-    )  # Ensure we include all columns
-    writer.writeheader()
-    writer.writerows(rolling_averages)
+path: str = "./csv/rolling_averages.csv"
 
-# Print success message with rich
-console.print(f"[bold green]Rolling averages saved to {rolling_filename}[/bold green]")
+if os.path.exists(path):
+    console.print(f"[bold yellow]File {path} already exists. Removing...[/bold yellow]")
+    os.remove(path)
+
+df.to_csv(path, index=False)
+console.print(f"[bold cyan]Rolling averages saved to {path}[/bold cyan]")
