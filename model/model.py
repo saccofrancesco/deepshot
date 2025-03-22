@@ -1,4 +1,5 @@
 # Importing libraries
+import os
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
@@ -9,10 +10,15 @@ from rich.console import Console
 # Initialize rich console for pretty printing
 console: Console = Console()
 
+# Get the absolute path to the script's directory
+BASE_DIR: str = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR: str = os.path.join(BASE_DIR, "..", "data", "csv")  # Adjust for relative path
+DATASET_FILE: str = os.path.join(DATA_DIR, "dataset.csv")
+
 # Start spinner for data loading
 with console.status("[green]Loading Data...") as status:
     # Load CSV Data
-    df: pd.DataFrame = pd.read_csv("../data/csv/dataset.csv")
+    df: pd.DataFrame = pd.read_csv(DATASET_FILE)
     status.update("Data Loaded Successfully!")
 
 # Drop columns that are not used for training (just home_team and away_team)
