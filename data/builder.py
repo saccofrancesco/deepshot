@@ -7,13 +7,21 @@ from collections import defaultdict
 # Initialize the console for rich output
 console: Console = Console()
 
+# Get the absolute path of the current script's directory
+script_dir = os.path.dirname(os.path.abspath(__file__))
+
 
 # Merge the gamelogs and csv files to create the dataset
 def create_dataset(
-    schedule_file: str = "./csv/schedule.csv",
-    gamelogs_file: str = "./csv/rolling_averages.csv",
-    final_dataset_file: str = "./csv/dataset.csv",
+    schedule_file: str = "csv/schedule.csv",
+    gamelogs_file: str = "csv/rolling_averages.csv",
+    final_dataset_file: str = "csv/dataset.csv",
 ):
+    # Convert relative paths to absolute paths based on the script's directory
+    schedule_file: str = os.path.join(script_dir, schedule_file)
+    gamelogs_file: str = os.path.join(script_dir, gamelogs_file)
+    final_dataset_file: str = os.path.join(script_dir, final_dataset_file)
+
     # Read schedule.csv into a list of dicts
     schedule: list = []
     with open(schedule_file, mode="r") as file:
@@ -35,9 +43,8 @@ def create_dataset(
             }
 
     # Check if the file already exists and remove it
-    path: str = final_dataset_file
-    if os.path.exists(path):
-        os.remove(path)
+    if os.path.exists(final_dataset_file):
+        os.remove(final_dataset_file)
 
     # Creating the file and the headers
     headers: list[str] = [
@@ -116,7 +123,7 @@ def create_dataset(
         "away_ft_rate",
     ]
 
-    with open(path, mode="a", newline="") as file:
+    with open(final_dataset_file, mode="a", newline="") as file:
         writer: csv.writer = csv.writer(file)
         writer.writerow(headers)
 
@@ -148,7 +155,10 @@ def create_dataset(
                 progress.update(task, advance=1)
 
     # Display a success message
-    console.print(f"Final dataset successfully saved to {path} ✅", style="bold green")
+    console.print(
+        f"Final dataset successfully saved to {final_dataset_file} ✅",
+        style="bold green",
+    )
 
 
 # Main
