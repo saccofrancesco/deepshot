@@ -14,7 +14,7 @@ GAMELOGS_FILE: str = os.path.join(CSV_DIR, "gamelogs.csv")
 OUTPUT_FILE: str = os.path.join(CSV_DIR, "rolling_averages.csv")
 
 # Game window size
-GAME_WINDOW: int = 25
+game_window: int = 25
 
 
 def compute_rolling_averages(
@@ -66,4 +66,4 @@ def compute_rolling_averages(
 
 # Run only when executed directly
 if __name__ == "__main__":
-    compute_rolling_averages(25)
+    compute_rolling_averages(game_window)
