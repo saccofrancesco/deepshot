@@ -11,7 +11,7 @@ console.print("[bold green]Loading CSV file...[/bold green]")
 df: pd.DataFrame = pd.read_csv("./csv/gamelogs.csv")
 
 # Game window
-game_window: int = 30
+game_window: int = 25
 
 # Sort by team and date
 console.print("[bold green]Sorting data by team and date...[/bold green]")
