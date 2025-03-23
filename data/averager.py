@@ -9,19 +9,20 @@ console: Console = Console()
 # Get the absolute path to the script's directory
 BASE_DIR: str = os.path.dirname(os.path.abspath(__file__))
 CSV_DIR: str = os.path.join(BASE_DIR, "csv")
+TEST_DIR: str = os.path.join(BASE_DIR, "test")
 
 # Define file paths
 GAMELOGS_FILE: str = os.path.join(CSV_DIR, "gamelogs.csv")
 OUTPUT_FILE: str = os.path.join(CSV_DIR, "rolling_averages.csv")
+TEST_GAMELOGS_FILE: str = os.path.join(TEST_DIR, "gamelogs.csv")
+TEST_OUTPUT_FILE: str = os.path.join(TEST_DIR, "rolling_averages.csv")
 
 # Game window size
 game_window: int = 25
 
 
 # Calculate the rolling average over the last n game_window games
-def compute_rolling_averages(
-    game_window: int, gamelogs_file: str = GAMELOGS_FILE, output_file: str = OUTPUT_FILE
-):
+def compute_rolling_averages(game_window: int, gamelogs_file: str, output_file: str):
     # Load the CSV file
     console.print("[bold green]Loading CSV file...[/bold green]")
     df: pd.DataFrame = pd.read_csv(gamelogs_file)
@@ -65,4 +66,8 @@ def compute_rolling_averages(
 
 # Run only when executed directly
 if __name__ == "__main__":
-    compute_rolling_averages(game_window)
+    command: str = input("Average for training (1) - Average for testing (2) -> ")
+    if command == "1":
+        compute_rolling_averages(game_window, GAMELOGS_FILE, OUTPUT_FILE)
+    elif command == "2":
+        compute_rolling_averages(game_window, TEST_GAMELOGS_FILE, TEST_OUTPUT_FILE)
