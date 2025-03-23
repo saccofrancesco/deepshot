@@ -5,9 +5,13 @@ import datetime
 import csv
 import pandas as pd
 import joblib
+import sklearn.ensemble
 
 # Loading the model
-model = joblib.load("./model/deepshot.pkl")
+model: sklearn.ensemble._forest.RandomForestClassifier = joblib.load(
+    "./model/deepshot.pkl"
+)
+print(type(model))
 
 # Get the next day NBA game
 month: datetime.datetime = datetime.datetime.now().strftime("%B").lower()
@@ -89,7 +93,7 @@ df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
 df: pd.DataFrame = df.astype(float)
 
 # Make predictions
-predictions = model.predict(df)
+predictions: list[int] = model.predict(df)
 
 # Get probabilities
-prob = model.predict_proba(df)
+prob: list[list[float]] = model.predict_proba(df)

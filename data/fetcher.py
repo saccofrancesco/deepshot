@@ -205,7 +205,7 @@ def fetch_team_season_log(
 
 # Saves the fetched team stats into a CSV file without overwriting existing data,
 # ensuring the format remains consistent and duplicates are avoided.
-def save_team_stats_to_csv(stats: dict, team: str, file_path: str):
+def save_team_stats_to_csv(stats: dict, team: str, file_path: str) -> None:
 
     # Define expected columns
     columns: list[str] = [
@@ -283,32 +283,32 @@ def save_team_stats_to_csv(stats: dict, team: str, file_path: str):
 def format_csv(input_csv: str, output_file: str) -> None:
 
     # Split the input CSV string into rows
-    rows = input_csv.strip().split("\n")
+    rows: list[str] = input_csv.strip().split("\n")
 
     # Create a CSV reader to process the input
-    reader = csv.reader(rows)
+    reader: csv.reader = csv.reader(rows)
 
     # Skip the header row
     next(reader)
 
     # Open the output CSV file in append mode
     with open(output_file, mode="a", newline="") as file:
-        writer = csv.writer(file)
+        writer: csv.writer = csv.writer(file)
 
         # Process each row in the input CSV
         for row in reader:
             # Parse the relevant columns: Date, Home Team, Away Team, PTS (Home and Away)
-            date_str = row[0]
-            home_team = row[4]
-            away_team = row[2]
-            home_pts = int(row[5])
-            away_pts = int(row[3])
+            date_str: str = row[0]
+            home_team: str = row[4]
+            away_team: str = row[2]
+            home_pts: str = int(row[5])
+            away_pts: str = int(row[3])
 
             # Determine the winning team (0 for home, 1 for away)
             winning_team = 0 if home_pts > away_pts else 1
 
             # Convert the date string to the desired format
-            date = datetime.datetime.strptime(date_str, "%a %b %d %Y").strftime(
+            date: str = datetime.datetime.strptime(date_str, "%a %b %d %Y").strftime(
                 "%Y-%m-%d"
             )
 
