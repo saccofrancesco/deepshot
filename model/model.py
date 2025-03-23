@@ -6,6 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
 from rich.console import Console
+import joblib
 
 # Initialize rich console for pretty printing
 console: Console = Console()
@@ -69,3 +70,6 @@ console.print(
 # Print detailed classification results with rich
 console.print("\n[bold magenta]Classification Report:[/bold magenta]", style="bold")
 console.print(classification_report(y_test, y_pred))
+
+# Save the model
+joblib.dump(rf, "deepshot.pkl")
