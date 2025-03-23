@@ -17,6 +17,7 @@ OUTPUT_FILE: str = os.path.join(CSV_DIR, "rolling_averages.csv")
 # Game window size
 game_window: int = 25
 
+
 # Calculate the rolling average over the last n game_window games
 def compute_rolling_averages(
     game_window: int, gamelogs_file: str = GAMELOGS_FILE, output_file: str = OUTPUT_FILE
@@ -38,10 +39,7 @@ def compute_rolling_averages(
 
     def compute_rolling_avg(group: pd.DataFrame) -> pd.DataFrame:
         rolling_avg: pd.DataFrame = (
-            group[stat_columns]
-            .rolling(window=game_window, min_periods=1)
-            .mean()
-            .shift(1)
+            group[stat_columns].ewm(span=game_window, adjust=False).mean().shift(1)
         )
         rolling_avg.iloc[0] = group.iloc[0][stat_columns]
         return rolling_avg
