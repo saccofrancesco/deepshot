@@ -1,4 +1,4 @@
 .venv
 data/csv/rolling_averages.csv
 data/csv/dataset.csv
-test/
+model/deepshot.pkl
