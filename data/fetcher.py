@@ -316,9 +316,29 @@ def format_csv(input_csv: str, output_file: str) -> None:
             writer.writerow([date, home_team, away_team, winning_team])
 
 
+# Sort the dataframe for better organization
+def sort_csv() -> None:
+
+    # Read the CSV file into a DataFrame
+    df: pd.DataFrame = pd.read_csv("./csv/gamelogs.csv")
+
+    # Ensure date column is treated as datetime for sorting
+    df["date"] = pd.to_datetime(df["date"])
+
+    # Sort by home_team (A-Z) first, then by date
+    df: pd.DataFrame = df.sort_values(by=["team", "date"])
+
+    # Convert the date column back to its original format (YYYY-MM-DD)
+    df["date"] = df["date"].dt.strftime("%Y-%m-%d")
+
+    # Save the sorted DataFrame back to a CSV file
+    df.to_csv("./csv/gamelogs.csv", index=False)
+
+
 if __name__ == "__main__":
     for year in ["2025"]:
         for team in team_codes.keys():
             save_team_stats_to_csv(
                 fetch_team_season_log(team, year), team, "csv/gamelogs.csv"
             )
+    sort_csv()
