@@ -71,5 +71,28 @@ console.print(
 console.print("\n[bold magenta]Classification Report:[/bold magenta]", style="bold")
 console.print(classification_report(y_test, y_pred))
 
+# Set options to display all columns
+pd.set_option("display.max_columns", None)  # No column truncation
+pd.set_option("display.width", None)  # Automatically adjust width
+pd.set_option("display.max_rows", None)  # Show all rows, if necessary
+
+# Now print the feature importance DataFrame
+console.print("\n[bold yellow]Feature Importances:[/bold yellow]", style="bold")
+feature_importances = rf.feature_importances_
+features = X.columns  # Get the feature names
+
+# Create a DataFrame to visualize feature importance
+importance_df = pd.DataFrame({"Feature": features, "Importance": feature_importances})
+
+# Sort by importance in descending order
+importance_df = importance_df.sort_values(by="Importance", ascending=False)
+
+console.print(importance_df)
+
+# Reset Pandas display options to default (optional)
+pd.reset_option("display.max_columns")
+pd.reset_option("display.width")
+pd.reset_option("display.max_rows")
+
 # Save the model
 joblib.dump(rf, "deepshot.pkl")
