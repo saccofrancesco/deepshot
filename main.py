@@ -98,7 +98,7 @@ def fetch_todays_games(year: str, month: str) -> list[dict[str, str | int | floa
         if date := row.find("th", {"data-stat": "date_game"}).text:
             if (
                 datetime.datetime.strptime(date, "%a, %b %d, %Y").strftime("%Y-%m-%d")
-                == "2025-03-24"
+                == today
             ):
                 daily_game_rows.append(row)
 
@@ -177,38 +177,44 @@ def game_card(game: dict[str, str]) -> ui.card:
     with card:
         with ui.expansion().style("width: 800px;") as expansion:
             with expansion.add_slot("header"):
-                with ui.row().style("width: 750px;").classes(
-                    "items-center justify-between gap-4"
-                ):
+                with ui.column().style("width: 750px;"):
+                    with ui.row().style("width: 750px;").classes(
+                        "items-center justify-between gap-4"
+                    ):
 
-                    # Home team (Left-Aligned)
-                    with ui.column().classes("items-start w-1/3"):
-                        ui.image(f"./img/badges/{game['home_team']}.png").classes(
-                            "w-36"
-                        )
-                        ui.label(game["home_team"]).classes(
-                            "text-left text-md font-bold"
-                        )
-                        ui.label(f"Win Prob: {game['home_prob']} %").classes(
-                            f"text-left text-md font-bold {'text-green-600' if game['home_prob'] > 50 else 'text-red-600'}"
+                        # Home team (Left-Aligned)
+                        with ui.column().classes("items-start w-1/3"):
+                            ui.image(f"./img/badges/{game['home_team']}.png").classes(
+                                "w-36"
+                            )
+
+                        # Centered "VS"
+                        ui.label("VS").classes("text-lg font-semibold").style(
+                            "min-width: 80px; text-align: center;"
                         )
 
-                    # Centered "VS"
-                    ui.label("VS").classes("text-lg font-semibold").style(
-                        "min-width: 80px; text-align: center;"
-                    )
-
-                    # Away team (Right-Aligned)
-                    with ui.column().classes("items-end w-1/3"):
-                        ui.image(f"./img/badges/{game['away_team']}.png").classes(
-                            "w-36z"
-                        )
-                        ui.label(game["away_team"]).classes(
-                            "text-right text-md font-bold"
-                        )
-                        ui.label(f"Win Prob: {game['away_prob']} %").classes(
-                            f"text-right text-md font-bold {'text-green-600' if game['away_prob'] > 50 else 'text-red-600'}"
-                        )
+                        # Away team (Right-Aligned)
+                        with ui.column().classes("items-end w-1/3"):
+                            ui.image(f"./img/badges/{game['away_team']}.png").classes(
+                                "w-36"
+                            )
+                    with ui.row().style("width: 750px;").classes(
+                        "items-center justify-between gap-4"
+                    ):
+                        with ui.column().classes("items-start w-1/3"):
+                            ui.label(game["home_team"]).classes(
+                                "text-left text-md font-bold"
+                            )
+                            ui.label(f"Win Prob: {game['home_prob']} %").classes(
+                                f"text-left text-md font-bold {'text-green-600' if game['home_prob'] > 50 else 'text-red-600'}"
+                            )
+                        with ui.column().classes("items-end w-1/3"):
+                            ui.label(game["away_team"]).classes(
+                                "text-right text-md font-bold"
+                            )
+                            ui.label(f"Win Prob: {game['away_prob']} %").classes(
+                                f"text-right text-md font-bold {'text-green-600' if game['away_prob'] > 50 else 'text-red-600'}"
+                            )
 
             # Expanded Stats Section (Smaller Text)
             with ui.row().style("width: 750px;").classes("w-full"):
