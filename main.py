@@ -223,7 +223,7 @@ def game_card(game: dict[str, str]) -> ui.card:
                     icon: ui.icon = ui.icon("expand_more").classes("text-xl")
 
             # Expanded Stats Section
-            with ui.row().classes("w-full mt-2"):
+            with ui.row().classes("w-full"):
 
                 # Home team stats
                 with ui.column().classes("items-start flex-1"):
