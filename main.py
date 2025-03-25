@@ -16,21 +16,23 @@ model: sklearn.ensemble._forest.RandomForestClassifier = joblib.load(
 )
 
 # Get feature importance scores
-importance_scores = model.feature_importances_
+importance_scores: np.ndarray = model.feature_importances_
 
 # Sort feature indices by importance (descending order)
-sorted_indices = np.argsort(importance_scores)[::-1]
+sorted_indices: np.ndarray = np.argsort(importance_scores)[::-1]
 
 # Extract feature names while ensuring uniqueness
-unique_stats = []
+unique_stats: list = list()
 for i in sorted_indices:
-    stat_name = model.feature_names_in_[i].replace("home_", "").replace("away_", "")
+    stat_name: str = (
+        model.feature_names_in_[i].replace("home_", "").replace("away_", "")
+    )
     if stat_name not in unique_stats:
         unique_stats.append(stat_name)
-    if len(unique_stats) == 15:  # Stop once we have 10 unique stats
+    if len(unique_stats) == 15:  # Stop once we have 15 unique stats
         break
 
-stats_tags = unique_stats  # Top 10 most important unique stat names
+stats_tags: list[str] = unique_stats  # Top 15 most important unique stat names
 
 # Stats -> Full description dict
 stat_to_full_name_desc: dict[str, str] = {
@@ -71,6 +73,8 @@ stat_to_full_name_desc: dict[str, str] = {
     "ft_rate": "Free Throws Per Field Goal Attempt",
 }
 
+# Storing stats that if lower are better:
+lower_better_stats: set = {"tov", "pf", "drtg", "tov_pct"}
 
 # Get the next day NBA game
 month: datetime.datetime = datetime.datetime.now().strftime("%B").lower()
@@ -173,96 +177,118 @@ for i, game in enumerate(games):
 
 # Creating a default card component to use feeding into it the game data, for each game
 def game_card(game: dict[str, str]) -> ui.card:
-    card: ui.card = ui.card().classes("m-4 p-4 rounded-2xl shadow-md border")
+    card: ui.card = ui.card().classes("m-4 p-8 rounded-2xl shadow-md border w-[650px]")
+
     with card:
-        with ui.expansion().style("width: 800px;") as expansion:
+
+        # Row for Team Logos and "VS"
+        with ui.row().classes("items-center justify-between w-full mb-2"):
+            ui.image(f"./img/badges/{game['home_team']}.png").classes("w-32")
+            ui.label("VS").classes("text-lg font-semibold text-center w-20")
+            ui.image(f"./img/badges/{game['away_team']}.png").classes("w-32")
+
+        # Row for Team Names and Win Probabilities
+        with ui.row().classes("items-center justify-between w-full mb-2"):
+            with ui.column().classes("items-start"):
+                ui.label(game["home_team"]).classes("text-left text-md font-bold")
+                ui.label(f"Win Prob: {game['home_prob']} %").classes(
+                    f"text-left text-md font-bold {'text-green-600' if game['home_prob'] > 50 else 'text-red-600'}"
+                )
+
+            with ui.column().classes("items-end"):
+                ui.label(game["away_team"]).classes("text-right text-md font-bold")
+                ui.label(f"Win Prob: {game['away_prob']} %").classes(
+                    f"text-right text-md font-bold {'text-green-600' if game['away_prob'] > 50 else 'text-red-600'}"
+                )
+
+        # Wide & Rounded "See More" Expansion
+        with ui.expansion().classes(
+            "w-full shadow-md bg-gray-100 rounded-2xl overflow-hidden mx-auto"
+        ).props("duration=550 hide-expand-icon") as expansion:
+
+            # Toggle the label on / off based on the expansion state
+            def toggle_label() -> None:
+                label.set_text("Click to hide" if expansion.value else "Click for more")
+                icon.set_name("expand_less" if expansion.value else "expand_more")
+
+            expansion.on(
+                "update:model-value", toggle_label
+            )  # Listen for expansion state changes
+
             with expansion.add_slot("header"):
-                with ui.column().style("width: 750px;"):
-                    with ui.row().style("width: 750px;").classes(
-                        "items-center justify-between gap-4"
-                    ):
+                with ui.row().classes("w-full justify-center items-center"):
+                    label: ui.label = ui.label("Click for more").classes(
+                        "text-md font-bold text-center"
+                    )
+                    icon: ui.icon = ui.icon("expand_more").classes("text-xl")
 
-                        # Home team (Left-Aligned)
-                        with ui.column().classes("items-start w-1/3"):
-                            ui.image(f"./img/badges/{game['home_team']}.png").classes(
-                                "w-36"
-                            )
+            # Expanded Stats Section
+            with ui.row().classes("w-full mt-2"):
 
-                        # Centered "VS"
-                        ui.label("VS").classes("text-lg font-semibold").style(
-                            "min-width: 80px; text-align: center;"
-                        )
-
-                        # Away team (Right-Aligned)
-                        with ui.column().classes("items-end w-1/3"):
-                            ui.image(f"./img/badges/{game['away_team']}.png").classes(
-                                "w-36"
-                            )
-                    with ui.row().style("width: 750px;").classes(
-                        "items-center justify-between gap-4"
-                    ):
-                        with ui.column().classes("items-start w-1/3"):
-                            ui.label(game["home_team"]).classes(
-                                "text-left text-md font-bold"
-                            )
-                            ui.label(f"Win Prob: {game['home_prob']} %").classes(
-                                f"text-left text-md font-bold {'text-green-600' if game['home_prob'] > 50 else 'text-red-600'}"
-                            )
-                        with ui.column().classes("items-end w-1/3"):
-                            ui.label(game["away_team"]).classes(
-                                "text-right text-md font-bold"
-                            )
-                            ui.label(f"Win Prob: {game['away_prob']} %").classes(
-                                f"text-right text-md font-bold {'text-green-600' if game['away_prob'] > 50 else 'text-red-600'}"
-                            )
-
-            # Expanded Stats Section (Smaller Text)
-            with ui.row().style("width: 750px;").classes("w-full"):
-
-                # Home team stats (Left-Aligned)
+                # Home team stats
                 with ui.column().classes("items-start flex-1"):
                     for stat in stats_tags:
-                        home_val = float(game[f"home_{stat}"])
-                        away_val = float(game[f"away_{stat}"])
-                        diff = abs(home_val - away_val) / max(home_val, away_val) * 100
-
-                        style = (
-                            "text-green-600 font-bold"
-                            if home_val > away_val and diff >= 5
-                            else (
-                                "text-red-600 font-bold"
-                                if home_val < away_val and diff >= 5
-                                else "text-black"
-                            )
+                        home_val: str = float(game[f"home_{stat}"])
+                        away_val: str = float(game[f"away_{stat}"])
+                        diff: float = (
+                            abs(home_val - away_val) / max(home_val, away_val) * 100
                         )
+
+                        # Determine if the stat is "better" when lower
+                        is_lower_better: bool = stat in lower_better_stats
+
+                        if (
+                            diff >= 5
+                        ):  # Apply coloring only when the difference is at least 5%
+                            if (home_val > away_val and not is_lower_better) or (
+                                home_val < away_val and is_lower_better
+                            ):
+                                style: str = (
+                                    "text-green-600 font-bold"  # Home team has better stat
+                                )
+                            else:
+                                style: str = (
+                                    "text-red-600 font-bold"  # Home team has worse stat
+                                )
+                        else:
+                            style: str = "text-black"
 
                         ui.label(game[f"home_{stat}"]).classes(
                             f"text-left text-sm {style}"
                         )
 
                 # Stat labels (Centered)
-                with ui.column().classes("items-center flex-1"):
+                with ui.column().classes("items-center flex-2"):
                     for stat in stats_tags:
                         ui.label(stat_to_full_name_desc[stat]).classes(
                             "text-center text-sm font-bold"
                         )
 
-                # Away team stats (Right-Aligned)
-                with ui.column().classes("items-end pr-6 flex-1"):
+                # Away team stats
+                with ui.column().classes("items-end flex-1"):
                     for stat in stats_tags:
-                        home_val = float(game[f"home_{stat}"])
-                        away_val = float(game[f"away_{stat}"])
-                        diff = abs(home_val - away_val) / max(home_val, away_val) * 100
-
-                        style = (
-                            "text-green-600 font-bold"
-                            if away_val > home_val and diff >= 5
-                            else (
-                                "text-red-600 font-bold"
-                                if away_val < home_val and diff >= 5
-                                else "text-black"
-                            )
+                        home_val: str = float(game[f"home_{stat}"])
+                        away_val: str = float(game[f"away_{stat}"])
+                        diff: float = (
+                            abs(home_val - away_val) / max(home_val, away_val) * 100
                         )
+
+                        # Determine if the stat is "better" when lower
+                        is_lower_better: bool = stat in lower_better_stats
+
+                        if diff >= 5:
+                            if (away_val > home_val and not is_lower_better) or (
+                                away_val < home_val and is_lower_better
+                            ):
+                                style: str = (
+                                    "text-green-600 font-bold"  # Away team has better stat
+                                )
+                            else:
+                                style: str = (
+                                    "text-red-600 font-bold"  # Away team has worse stat
+                                )
+                        else:
+                            style: str = "text-black"
 
                         ui.label(game[f"away_{stat}"]).classes(
                             f"text-right text-sm {style}"
