@@ -44,13 +44,12 @@ with console.status("[yellow]Training model... please wait.[/yellow]") as status
 
     # Train the Random Forest model
     rf: RandomForestClassifier = RandomForestClassifier(
-        n_estimators=200,
-        max_depth=10,
-        min_samples_split=2,
-        min_samples_leaf=4,
-        max_features="log2",
+        n_estimators=300,
+        max_depth=18,
+        min_samples_split=20,
+        min_samples_leaf=20,
+        max_features="sqrt",
         bootstrap=False,
-        class_weight=None,
         random_state=42,
     )
     rf.fit(X_train, y_train)
