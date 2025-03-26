@@ -299,6 +299,8 @@ def game_card(game: dict[str, str]) -> ui.card:
 
 # Rendering the cards for each game
 with ui.element("div").classes("p-8 flex justify-center items-center"):
+
+    # Showing the cards
     for game in games:
         game_card(game)
 
