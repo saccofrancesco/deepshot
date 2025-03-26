@@ -14,8 +14,6 @@ TEST_DIR: str = os.path.join(BASE_DIR, "test")
 # Define file paths
 GAMELOGS_FILE: str = os.path.join(CSV_DIR, "gamelogs.csv")
 OUTPUT_FILE: str = os.path.join(CSV_DIR, "rolling_averages.csv")
-TEST_GAMELOGS_FILE: str = os.path.join(TEST_DIR, "gamelogs.csv")
-TEST_OUTPUT_FILE: str = os.path.join(TEST_DIR, "rolling_averages.csv")
 
 # Game window size
 game_window: int = 25
@@ -66,8 +64,4 @@ def compute_rolling_averages(game_window: int, gamelogs_file: str, output_file: 
 
 # Run only when executed directly
 if __name__ == "__main__":
-    command: str = input("Average for training (1) - Average for testing (2) -> ")
-    if command == "1":
-        compute_rolling_averages(game_window, GAMELOGS_FILE, OUTPUT_FILE)
-    elif command == "2":
-        compute_rolling_averages(game_window, TEST_GAMELOGS_FILE, TEST_OUTPUT_FILE)
+    compute_rolling_averages(game_window, GAMELOGS_FILE, OUTPUT_FILE)

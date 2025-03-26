@@ -166,21 +166,10 @@ def create_dataset(
 
 # Main
 if __name__ == "__main__":
-    command: str = input("Building for training (1) - Building for testing (2) -> ")
-    if command == "1":
-        console.print(
-            "[bold magenta]Starting the dataset creation process...", style="bold blue"
-        )
-        create_dataset("csv/schedule.csv", "csv/rolling_averages.csv", "csv/dataset.csv")
-        console.print(
-            "[bold magenta]Dataset creation process completed!", style="bold green"
-        )
-    elif command == "2":
-        console.print(
-            "[bold magenta]Starting the test bdataset creation process...",
-            style="bold blue",
-        )
-        create_dataset("test/schedule.csv", "test/rolling_averages.csv", "test/dataset.csv")
-        console.print(
-            "[bold magenta]Test dataset creation process completed!", style="bold green"
-        )
+    console.print(
+        "[bold magenta]Starting the dataset creation process...", style="bold blue"
+    )
+    create_dataset()
+    console.print(
+        "[bold magenta]Dataset creation process completed!", style="bold green"
+    )
