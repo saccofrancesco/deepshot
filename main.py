@@ -342,45 +342,48 @@ class GameList:
         ui.update(self.container)
 
         # For each game shcedule for today date, extract the home team and away team
-        games: list[dict[str, str | int | float]] = list()
-        for game in extract_games(self.date):
-            stat_label, stats = find_most_recent_stats(game["home_team"])
-            for i, _ in enumerate(stat_label):
-                game[f"home_{stat_label[i]}"] = stats[i]
-            stat_label, stats = find_most_recent_stats(game["away_team"])
-            for i, _ in enumerate(stat_label):
-                game[f"away_{stat_label[i]}"] = stats[i]
-            games.append(game)
+        try:
+            games: list[dict[str, str | int | float]] = list()
+            for game in extract_games(self.date):
+                stat_label, stats = find_most_recent_stats(game["home_team"])
+                for i, _ in enumerate(stat_label):
+                    game[f"home_{stat_label[i]}"] = stats[i]
+                stat_label, stats = find_most_recent_stats(game["away_team"])
+                for i, _ in enumerate(stat_label):
+                    game[f"away_{stat_label[i]}"] = stats[i]
+                games.append(game)
 
-        # Convert data into DataFrame
-        df: pd.DataFrame = pd.DataFrame(games)
+            # Convert data into DataFrame
+            df: pd.DataFrame = pd.DataFrame(games)
 
-        # Drop non-numeric columns (team names)
-        df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
+            # Drop non-numeric columns (team names)
+            df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
 
-        # Convert all values to float (they are strings in the provided data)
-        df: pd.DataFrame = df.astype(float)
+            # Convert all values to float (they are strings in the provided data)
+            df: pd.DataFrame = df.astype(float)
 
-        # Make predictions
-        predictions: list[int] = model.predict(df)
+            # Make predictions
+            predictions: list[int] = model.predict(df)
 
-        # Get probabilities
-        prob: list[list[float]] = model.predict_proba(df)
+            # Get probabilities
+            prob: list[list[float]] = model.predict_proba(df)
 
-        # Appending the new data to the games dict
-        for i, game in enumerate(games):
-            game["winner"] = (
-                game["home_team"] if predictions[i] == 0 else game["away_team"]
-            )
-            game["home_prob"] = round(float(prob[i][0]) * 100, 2)
-            game["away_prob"] = round(float(prob[i][1]) * 100, 2)
+            # Appending the new data to the games dict
+            for i, game in enumerate(games):
+                game["winner"] = (
+                    game["home_team"] if predictions[i] == 0 else game["away_team"]
+                )
+                game["home_prob"] = round(float(prob[i][0]) * 100, 2)
+                game["away_prob"] = round(float(prob[i][1]) * 100, 2)
 
-        # After clearing the container, rendering the game cards
-        self.container.clear()
-        with self.container:
-            for game in games:
-                GameCard(game)
-        ui.update(self.container)
+            # After clearing the container, rendering the game cards
+            self.container.clear()
+            with self.container:
+                for game in games:
+                    GameCard(game)
+        except:
+            self.container.clear()
+            ui.update(self.container)
 
 
 # Add custom CSS to remove unwanted borders and padding
