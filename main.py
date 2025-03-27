@@ -1,6 +1,4 @@
 # Importing libraries
-import requests
-import bs4
 import datetime
 import csv
 import pandas as pd
@@ -77,48 +75,30 @@ stat_to_full_name_desc: dict[str, str] = {
 lower_better_stats: set = {"tov", "pf", "drtg", "tov_pct"}
 
 # Get the next day NBA game
-month: datetime.datetime = datetime.datetime.now().strftime("%B").lower()
 year: datetime.datetime = datetime.datetime.now().strftime("%Y")
 today: datetime.datetime = datetime.datetime.now().strftime(f"{year}-%m-%d")
 
 
-# Function to fetch and get the scheduled games for today
+# Function to retrieve and get the scheduled games for today
 @lru_cache(maxsize=None)
-def fetch_games(date: str) -> list[dict[str, str | int | float]]:
+def extract_games(date: str) -> list[dict[str, str | int | float]]:
 
-    # Extracting year and month to the YYYY-mm-dd date format
-    date_obj: datetime.datetime = datetime.datetime.strptime(date, "%Y-%m-%d")
-    year: str = date_obj.year
-    month: str = date_obj.strftime("%B").lower()
+    games: list = list()
 
-    # Composing the schedule URL
-    schedule_url: str = (
-        f"https://www.basketball-reference.com/leagues/NBA_{year}_games-{month}.html"
-    )
-
-    # Requesting and souping the schedule page
-    page: requests.models.Response = requests.get(schedule_url)
-    soup: bs4.BeautifulSoup = bs4.BeautifulSoup(page.content, "html.parser")
-
-    # Filtering the schedules
-    rows: list[bs4.element.Tag] = soup.find("tbody").find_all("tr")
-    daily_game_rows: list[bs4.element.Tag] = list()
-    for row in rows:
-        if unformatted_date := row.find("th", {"data-stat": "date_game"}).text:
-            if (
-                datetime.datetime.strptime(unformatted_date, "%a, %b %d, %Y").strftime(
-                    "%Y-%m-%d"
+    with open("./data/csv/schedule.csv", "r", newline="") as file:
+        reader: csv.DictReader = csv.DictReader(file)
+        for row in reader:
+            if row["date"] == date:
+                games.append(
+                    {"home_team": row["home_team"], "away_team": row["away_team"]}
                 )
-                == date
-            ):
-                daily_game_rows.append(row)
 
-    return daily_game_rows
+    return games
 
 
 # Search the last available stat for each team and append it as home and away
 def find_most_recent_stats(
-    team_name: str, file_path: str = "./data/csv/rolling_averages.csv"
+    team_name: str, file_path: str = "./data/csv/averages.csv"
 ) -> tuple[str, str]:
     most_recent_row = None
     most_recent_date = None
@@ -363,18 +343,14 @@ class GameList:
 
         # For each game shcedule for today date, extract the home team and away team
         games: list[dict[str, str | int | float]] = list()
-        for game in fetch_games(self.date):
-            matchup: dict[str, str | int | float] = {
-                "home_team": game.find("td", {"data-stat": "home_team_name"}).text,
-                "away_team": game.find("td", {"data-stat": "visitor_team_name"}).text,
-            }
-            stat_label, stats = find_most_recent_stats(matchup["home_team"])
+        for game in extract_games(self.date):
+            stat_label, stats = find_most_recent_stats(game["home_team"])
             for i, _ in enumerate(stat_label):
-                matchup[f"home_{stat_label[i]}"] = stats[i]
-            stat_label, stats = find_most_recent_stats(matchup["away_team"])
+                game[f"home_{stat_label[i]}"] = stats[i]
+            stat_label, stats = find_most_recent_stats(game["away_team"])
             for i, _ in enumerate(stat_label):
-                matchup[f"away_{stat_label[i]}"] = stats[i]
-            games.append(matchup)
+                game[f"away_{stat_label[i]}"] = stats[i]
+            games.append(game)
 
         # Convert data into DataFrame
         df: pd.DataFrame = pd.DataFrame(games)
