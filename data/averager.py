@@ -13,7 +13,7 @@ TEST_DIR: str = os.path.join(BASE_DIR, "test")
 
 # Define file paths
 GAMELOGS_FILE: str = os.path.join(CSV_DIR, "gamelogs.csv")
-OUTPUT_FILE: str = os.path.join(CSV_DIR, "rolling_averages.csv")
+OUTPUT_FILE: str = os.path.join(CSV_DIR, "averages.csv")
 
 # Game window size
 game_window: int = 25
