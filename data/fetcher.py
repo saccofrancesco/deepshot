@@ -203,6 +203,65 @@ def fetch_team_season_log(
     return stats
 
 
+# Fetch current month games schedule
+def fetch_month_schedule(year: str, filename: str = "./csv/schedule.csv") -> None:
+
+    # Getting the current month in lowercase
+    month: datetime.datetime = datetime.datetime.now().strftime("%B").lower()
+
+    # Constructing the URL to fetch
+    url: str = (
+        f"https://www.basketball-reference.com/leagues/NBA_{year}_games-{month}.html"
+    )
+
+    # Requesting and souping the page
+    page: requests.models.Response = requests.get(url)
+    soup: bs4.BeautifulSoup = bs4.BeautifulSoup(page.content, "html.parser")
+
+    # Filtering the schedules
+    rows: list[bs4.element.Tag] = soup.find("tbody").find_all("tr")
+    games: list[dict[str, str]] = list()
+    for row in rows:
+        if row.find("td", {"data-stat": "game_remarks"}).text != "":
+            break
+        game: dict[str, str] = dict()
+        game["date"] = datetime.datetime.strptime(
+            row.find("th", {"data-stat": "date_game"}).text, "%a, %b %d, %Y"
+        ).strftime("%Y-%m-%d")
+        game["home_team"] = row.find("td", {"data-stat": "home_team_name"}).text
+        game["away_team"] = row.find("td", {"data-stat": "visitor_team_name"}).text
+        games.append(game)
+
+    # Read existing data to check for duplicates
+    existing_rows: set = set()
+    with open(filename, "r", newline="") as file:
+        reader: csv.DictReader = csv.DictReader(file)
+        for row in reader:
+            existing_rows.add((row["date"], row["home_team"], row["away_team"]))
+
+    # Filter out rows that already exist
+    filtered_data: list[dict[str, str]] = [
+        row
+        for row in games
+        if (row["date"], row["home_team"], row["away_team"]) not in existing_rows
+    ]
+
+    # Append only new rows
+    if filtered_data:
+        with open(filename, "a", newline="") as file:
+            writer: csv.DictWriter = csv.DictWriter(
+                file, fieldnames=["date", "home_team", "away_team"]
+            )
+            writer.writerows(filtered_data)
+        console.print(
+            f"[bold green]Appended {len(filtered_data)} new rows.[/bold green]"
+        )
+    else:
+        console.print(
+            "[bold purple]No new rows to append; all data already exists.[/bold purple]"
+        )
+
+
 # Saves the fetched team stats into a CSV file without overwriting existing data,
 # ensuring the format remains consistent and duplicates are avoided.
 def save_team_stats_to_csv(stats: dict, team: str, file_path: str) -> None:
@@ -276,7 +335,7 @@ def save_team_stats_to_csv(stats: dict, team: str, file_path: str) -> None:
 
     # Save to CSV
     combined_data.to_csv(file_path, index=False)
-    print(f"Stats saved to {file_path} successfully!")
+    console.print(f"[bold green]Stats saved to {file_path} successfully![/bold green]")
 
 
 # Format a given csv schedule string and put it in a specific .csv file
@@ -336,9 +395,15 @@ def sort_csv() -> None:
 
 
 if __name__ == "__main__":
-    for year in ["2025"]:
+    target_year: str = "2025"
+    command: str = console.input(
+        "[bold blue]Fetch games' logs (1) - Fetch calendar (2) -> [/bold blue]"
+    )
+    if command == "1":
         for team in team_codes.keys():
             save_team_stats_to_csv(
-                fetch_team_season_log(team, year), team, "csv/gamelogs.csv"
+                fetch_team_season_log(team, target_year), team, "csv/gamelogs.csv"
             )
-    sort_csv()
+        sort_csv()
+    elif command == "2":
+        fetch_month_schedule(target_year)
