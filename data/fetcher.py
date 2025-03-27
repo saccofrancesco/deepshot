@@ -38,7 +38,7 @@ team_codes: dict[str, str] = {
     "Oklahoma City Thunder": "OKC",
     "Orlando Magic": "ORL",
     "Philadelphia 76ers": "PHI",
-    "Phoenix Suns": "PH0",
+    "Phoenix Suns": "PHO",
     "Portland Trail Blazers": "POR",
     "Sacramento Kings": "SAC",
     "San Antonio Spurs": "SAS",
