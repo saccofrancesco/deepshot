@@ -37,12 +37,20 @@ X_train, X_test, y_train, y_test = train_test_split(
 
 # Define hyperparameter search space
 param_space: dict[str, Integer | Categorical] = {
-    "n_estimators": Integer(50, 300),
-    "max_depth": Integer(3, 20),
-    "min_samples_split": Integer(2, 20),
-    "min_samples_leaf": Integer(1, 20),
-    "max_features": Categorical(["sqrt", "log2"]),
-    "bootstrap": Categorical([True, False]),
+    "n_estimators": Integer(
+        200, 1500
+    ),  # More trees for accuracy, but capped to avoid long training times
+    "max_depth": Integer(30, 90),  # Deep trees for complex patterns but not excessive
+    "min_samples_split": Integer(
+        20, 60
+    ),  # Prevents overfitting while allowing flexibility
+    "min_samples_leaf": Integer(20, 40),  # Ensures leaves have enough data for stability
+    "max_features": Categorical(
+        ["sqrt", "log2"]
+    ),  # Reduces overfitting, speeds up training
+    "bootstrap": Categorical([True, False]),  # Improves model robustness
+    "criterion": Categorical(["gini", "entropy"]),  # Tests both splitting methods
+    "class_weight": Categorical([None, "balanced"]),  # Addresses class imbalance
 }
 
 # Bayesian optimization
