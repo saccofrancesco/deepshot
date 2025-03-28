@@ -5986,10 +5986,10 @@ date,home_team,away_team
 2005-04-20,Golden State Warriors,Utah Jazz
 2005-04-20,Sacramento Kings,Phoenix Suns
 2005-11-01,Philadelphia 76ers,Milwaukee Bucks
-2005-11-01,New Orleans/Oklahoma City Hornets,Sacramento Kings
+2005-11-01,New Orleans:Oklahoma City Hornets,Sacramento Kings
 2005-11-01,San Antonio Spurs,Denver Nuggets
 2005-11-01,Phoenix Suns,Dallas Mavericks
-2005-11-02,Cleveland Cavaliers,New Orleans/Oklahoma City Hornets
+2005-11-02,Cleveland Cavaliers,New Orleans:Oklahoma City Hornets
 2005-11-02,Orlando Magic,Indiana Pacers
 2005-11-02,Toronto Raptors,Washington Wizards
 2005-11-02,Boston Celtics,New York Knicks
@@ -6022,7 +6022,7 @@ date,home_team,away_team
 2005-11-05,Indiana Pacers,Philadelphia 76ers
 2005-11-05,Memphis Grizzlies,Cleveland Cavaliers
 2005-11-05,Dallas Mavericks,San Antonio Spurs
-2005-11-05,Houston Rockets,New Orleans/Oklahoma City Hornets
+2005-11-05,Houston Rockets,New Orleans:Oklahoma City Hornets
 2005-11-05,Milwaukee Bucks,Miami Heat
 2005-11-05,Utah Jazz,Phoenix Suns
 2005-11-05,Portland Trail Blazers,Atlanta Hawks
@@ -6048,7 +6048,7 @@ date,home_team,away_team
 2005-11-09,New Jersey Nets,Utah Jazz
 2005-11-09,Indiana Pacers,Miami Heat
 2005-11-09,Minnesota Timberwolves,Los Angeles Lakers
-2005-11-09,New Orleans/Oklahoma City Hornets,Orlando Magic
+2005-11-09,New Orleans:Oklahoma City Hornets,Orlando Magic
 2005-11-09,Chicago Bulls,Golden State Warriors
 2005-11-09,Portland Trail Blazers,New York Knicks
 2005-11-09,Denver Nuggets,Sacramento Kings
@@ -6069,7 +6069,7 @@ date,home_team,away_team
 2005-11-12,Washington Wizards,San Antonio Spurs
 2005-11-12,Miami Heat,Charlotte Bobcats
 2005-11-12,New Jersey Nets,Houston Rockets
-2005-11-12,New Orleans/Oklahoma City Hornets,Dallas Mavericks
+2005-11-12,New Orleans:Oklahoma City Hornets,Dallas Mavericks
 2005-11-12,Chicago Bulls,Utah Jazz
 2005-11-12,Milwaukee Bucks,Indiana Pacers
 2005-11-12,Phoenix Suns,Golden State Warriors
@@ -6086,7 +6086,7 @@ date,home_team,away_team
 2005-11-15,Orlando Magic,Charlotte Bobcats
 2005-11-15,Philadelphia 76ers,Toronto Raptors
 2005-11-15,Detroit Pistons,Boston Celtics
-2005-11-15,Miami Heat,New Orleans/Oklahoma City Hornets
+2005-11-15,Miami Heat,New Orleans:Oklahoma City Hornets
 2005-11-15,New Jersey Nets,Seattle SuperSonics
 2005-11-15,Minnesota Timberwolves,Houston Rockets
 2005-11-15,Dallas Mavericks,Denver Nuggets
@@ -6096,7 +6096,7 @@ date,home_team,away_team
 2005-11-16,Toronto Raptors,Philadelphia 76ers
 2005-11-16,Boston Celtics,Seattle SuperSonics
 2005-11-16,Charlotte Bobcats,Indiana Pacers
-2005-11-16,New Orleans/Oklahoma City Hornets,Denver Nuggets
+2005-11-16,New Orleans:Oklahoma City Hornets,Denver Nuggets
 2005-11-16,Phoenix Suns,Memphis Grizzlies
 2005-11-16,Los Angeles Lakers,New York Knicks
 2005-11-16,Portland Trail Blazers,Chicago Bulls
@@ -6108,7 +6108,7 @@ date,home_team,away_team
 2005-11-18,Indiana Pacers,Charlotte Bobcats
 2005-11-18,Boston Celtics,Toronto Raptors
 2005-11-18,Miami Heat,Philadelphia 76ers
-2005-11-18,New Orleans/Oklahoma City Hornets,Atlanta Hawks
+2005-11-18,New Orleans:Oklahoma City Hornets,Atlanta Hawks
 2005-11-18,Denver Nuggets,New York Knicks
 2005-11-18,Phoenix Suns,Utah Jazz
 2005-11-18,Houston Rockets,Detroit Pistons
@@ -6116,7 +6116,7 @@ date,home_team,away_team
 2005-11-18,Sacramento Kings,Milwaukee Bucks
 2005-11-18,Los Angeles Lakers,Los Angeles Clippers
 2005-11-18,Seattle SuperSonics,Chicago Bulls
-2005-11-19,Orlando Magic,New Orleans/Oklahoma City Hornets
+2005-11-19,Orlando Magic,New Orleans:Oklahoma City Hornets
 2005-11-19,Philadelphia 76ers,Cleveland Cavaliers
 2005-11-19,New Jersey Nets,Washington Wizards
 2005-11-19,Minnesota Timberwolves,Charlotte Bobcats
@@ -6130,7 +6130,7 @@ date,home_team,away_team
 2005-11-20,Denver Nuggets,Memphis Grizzlies
 2005-11-20,Seattle SuperSonics,Sacramento Kings
 2005-11-20,Los Angeles Lakers,Chicago Bulls
-2005-11-21,Philadelphia 76ers,New Orleans/Oklahoma City Hornets
+2005-11-21,Philadelphia 76ers,New Orleans:Oklahoma City Hornets
 2005-11-21,Utah Jazz,Milwaukee Bucks
 2005-11-21,Sacramento Kings,San Antonio Spurs
 2005-11-21,Golden State Warriors,New Jersey Nets
@@ -6147,7 +6147,7 @@ date,home_team,away_team
 2005-11-23,Houston Rockets,Phoenix Suns
 2005-11-23,Miami Heat,Portland Trail Blazers
 2005-11-23,Milwaukee Bucks,Philadelphia 76ers
-2005-11-23,New Orleans/Oklahoma City Hornets,Minnesota Timberwolves
+2005-11-23,New Orleans:Oklahoma City Hornets,Minnesota Timberwolves
 2005-11-23,Sacramento Kings,New Jersey Nets
 2005-11-23,Golden State Warriors,San Antonio Spurs
 2005-11-23,Los Angeles Clippers,Toronto Raptors
@@ -6166,7 +6166,7 @@ date,home_team,away_team
 2005-11-25,Sacramento Kings,Toronto Raptors
 2005-11-25,Phoenix Suns,New Jersey Nets
 2005-11-26,New York Knicks,Philadelphia 76ers
-2005-11-26,Seattle SuperSonics,New Orleans/Oklahoma City Hornets
+2005-11-26,Seattle SuperSonics,New Orleans:Oklahoma City Hornets
 2005-11-26,Orlando Magic,Miami Heat
 2005-11-26,Charlotte Bobcats,Washington Wizards
 2005-11-26,Cleveland Cavaliers,Minnesota Timberwolves
@@ -6181,7 +6181,7 @@ date,home_team,away_team
 2005-11-28,Boston Celtics,Orlando Magic
 2005-11-28,Miami Heat,New York Knicks
 2005-11-28,Denver Nuggets,New Jersey Nets
-2005-11-28,Golden State Warriors,New Orleans/Oklahoma City Hornets
+2005-11-28,Golden State Warriors,New Orleans:Oklahoma City Hornets
 2005-11-29,Philadelphia 76ers,Portland Trail Blazers
 2005-11-29,Milwaukee Bucks,Dallas Mavericks
 2005-11-29,Minnesota Timberwolves,Los Angeles Clippers
@@ -6197,7 +6197,7 @@ date,home_team,away_team
 2005-11-30,Boston Celtics,Philadelphia 76ers
 2005-11-30,New Jersey Nets,Detroit Pistons
 2005-11-30,New York Knicks,Chicago Bulls
-2005-11-30,Denver Nuggets,New Orleans/Oklahoma City Hornets
+2005-11-30,Denver Nuggets,New Orleans:Oklahoma City Hornets
 2005-11-30,Phoenix Suns,Indiana Pacers
 2005-11-30,Seattle SuperSonics,Charlotte Bobcats
 2005-11-30,Golden State Warriors,Sacramento Kings
@@ -6208,7 +6208,7 @@ date,home_team,away_team
 2005-12-02,Boston Celtics,Chicago Bulls
 2005-12-02,Detroit Pistons,New York Knicks
 2005-12-02,Memphis Grizzlies,Orlando Magic
-2005-12-02,New Orleans/Oklahoma City Hornets,Philadelphia 76ers
+2005-12-02,New Orleans:Oklahoma City Hornets,Philadelphia 76ers
 2005-12-02,Phoenix Suns,Denver Nuggets
 2005-12-02,Portland Trail Blazers,Indiana Pacers
 2005-12-02,Sacramento Kings,Miami Heat
@@ -6217,7 +6217,7 @@ date,home_team,away_team
 2005-12-02,Seattle SuperSonics,Cleveland Cavaliers
 2005-12-03,New Jersey Nets,Toronto Raptors
 2005-12-03,Chicago Bulls,Detroit Pistons
-2005-12-03,Dallas Mavericks,New Orleans/Oklahoma City Hornets
+2005-12-03,Dallas Mavericks,New Orleans:Oklahoma City Hornets
 2005-12-03,Houston Rockets,Memphis Grizzlies
 2005-12-03,Milwaukee Bucks,Orlando Magic
 2005-12-03,San Antonio Spurs,Philadelphia 76ers
@@ -6235,7 +6235,7 @@ date,home_team,away_team
 2005-12-05,Los Angeles Clippers,Miami Heat
 2005-12-06,Indiana Pacers,Dallas Mavericks
 2005-12-06,Washington Wizards,Toronto Raptors
-2005-12-06,Memphis Grizzlies,New Orleans/Oklahoma City Hornets
+2005-12-06,Memphis Grizzlies,New Orleans:Oklahoma City Hornets
 2005-12-06,Milwaukee Bucks,Los Angeles Lakers
 2005-12-06,Houston Rockets,Boston Celtics
 2005-12-06,Denver Nuggets,Atlanta Hawks
@@ -6246,7 +6246,7 @@ date,home_team,away_team
 2005-12-07,Philadelphia 76ers,Milwaukee Bucks
 2005-12-07,Toronto Raptors,Los Angeles Lakers
 2005-12-07,Charlotte Bobcats,New Jersey Nets
-2005-12-07,New Orleans/Oklahoma City Hornets,Boston Celtics
+2005-12-07,New Orleans:Oklahoma City Hornets,Boston Celtics
 2005-12-07,San Antonio Spurs,Miami Heat
 2005-12-07,Utah Jazz,Atlanta Hawks
 2005-12-07,Portland Trail Blazers,Minnesota Timberwolves
@@ -6262,7 +6262,7 @@ date,home_team,away_team
 2005-12-09,San Antonio Spurs,Boston Celtics
 2005-12-09,Utah Jazz,Seattle SuperSonics
 2005-12-09,Phoenix Suns,New York Knicks
-2005-12-09,Portland Trail Blazers,New Orleans/Oklahoma City Hornets
+2005-12-09,Portland Trail Blazers,New Orleans:Oklahoma City Hornets
 2005-12-09,Golden State Warriors,Detroit Pistons
 2005-12-10,Atlanta Hawks,San Antonio Spurs
 2005-12-10,Orlando Magic,Denver Nuggets
@@ -6278,11 +6278,11 @@ date,home_team,away_team
 2005-12-11,Miami Heat,Washington Wizards
 2005-12-11,Los Angeles Clippers,Detroit Pistons
 2005-12-11,Portland Trail Blazers,Houston Rockets
-2005-12-11,Sacramento Kings,New Orleans/Oklahoma City Hornets
+2005-12-11,Sacramento Kings,New Orleans:Oklahoma City Hornets
 2005-12-12,Philadelphia 76ers,Minnesota Timberwolves
 2005-12-12,New York Knicks,Milwaukee Bucks
 2005-12-12,Dallas Mavericks,Los Angeles Lakers
-2005-12-12,Phoenix Suns,New Orleans/Oklahoma City Hornets
+2005-12-12,Phoenix Suns,New Orleans:Oklahoma City Hornets
 2005-12-12,Utah Jazz,Detroit Pistons
 2005-12-13,Cleveland Cavaliers,Atlanta Hawks
 2005-12-13,Washington Wizards,New Jersey Nets
@@ -6300,7 +6300,7 @@ date,home_team,away_team
 2005-12-14,Dallas Mavericks,Phoenix Suns
 2005-12-14,Memphis Grizzlies,Los Angeles Lakers
 2005-12-14,Milwaukee Bucks,Miami Heat
-2005-12-14,New Orleans/Oklahoma City Hornets,Los Angeles Clippers
+2005-12-14,New Orleans:Oklahoma City Hornets,Los Angeles Clippers
 2005-12-14,Utah Jazz,Portland Trail Blazers
 2005-12-14,Golden State Warriors,Houston Rockets
 2005-12-15,Cleveland Cavaliers,Denver Nuggets
@@ -6312,7 +6312,7 @@ date,home_team,away_team
 2005-12-16,Boston Celtics,Milwaukee Bucks
 2005-12-16,New Jersey Nets,Denver Nuggets
 2005-12-16,Detroit Pistons,Chicago Bulls
-2005-12-16,New Orleans/Oklahoma City Hornets,Phoenix Suns
+2005-12-16,New Orleans:Oklahoma City Hornets,Phoenix Suns
 2005-12-16,Philadelphia 76ers,Miami Heat
 2005-12-16,Dallas Mavericks,Orlando Magic
 2005-12-16,Portland Trail Blazers,Seattle SuperSonics
@@ -6328,7 +6328,7 @@ date,home_team,away_team
 2005-12-18,Toronto Raptors,Philadelphia 76ers
 2005-12-18,Atlanta Hawks,Denver Nuggets
 2005-12-18,New Jersey Nets,Golden State Warriors
-2005-12-18,New Orleans/Oklahoma City Hornets,San Antonio Spurs
+2005-12-18,New Orleans:Oklahoma City Hornets,San Antonio Spurs
 2005-12-18,Dallas Mavericks,Minnesota Timberwolves
 2005-12-18,Portland Trail Blazers,Washington Wizards
 2005-12-18,Los Angeles Lakers,Houston Rockets
@@ -6351,7 +6351,7 @@ date,home_team,away_team
 2005-12-21,Boston Celtics,Utah Jazz
 2005-12-21,New York Knicks,San Antonio Spurs
 2005-12-21,Memphis Grizzlies,Portland Trail Blazers
-2005-12-21,Minnesota Timberwolves,New Orleans/Oklahoma City Hornets
+2005-12-21,Minnesota Timberwolves,New Orleans:Oklahoma City Hornets
 2005-12-21,Houston Rockets,Toronto Raptors
 2005-12-21,Denver Nuggets,Washington Wizards
 2005-12-22,Chicago Bulls,Cleveland Cavaliers
@@ -6365,7 +6365,7 @@ date,home_team,away_team
 2005-12-23,Detroit Pistons,Golden State Warriors
 2005-12-23,Memphis Grizzlies,Chicago Bulls
 2005-12-23,Minnesota Timberwolves,Portland Trail Blazers
-2005-12-23,Milwaukee Bucks,New Orleans/Oklahoma City Hornets
+2005-12-23,Milwaukee Bucks,New Orleans:Oklahoma City Hornets
 2005-12-23,San Antonio Spurs,Toronto Raptors
 2005-12-23,Denver Nuggets,Houston Rockets
 2005-12-23,Phoenix Suns,Washington Wizards
@@ -6395,12 +6395,12 @@ date,home_team,away_team
 2005-12-28,Washington Wizards,Phoenix Suns
 2005-12-28,Charlotte Bobcats,Chicago Bulls
 2005-12-28,Minnesota Timberwolves,Seattle SuperSonics
-2005-12-28,New Orleans/Oklahoma City Hornets,Houston Rockets
+2005-12-28,New Orleans:Oklahoma City Hornets,Houston Rockets
 2005-12-28,Portland Trail Blazers,Philadelphia 76ers
 2005-12-28,Golden State Warriors,Boston Celtics
 2005-12-28,Los Angeles Lakers,Memphis Grizzlies
 2005-12-29,Detroit Pistons,Miami Heat
-2005-12-29,San Antonio Spurs,New Orleans/Oklahoma City Hornets
+2005-12-29,San Antonio Spurs,New Orleans:Oklahoma City Hornets
 2005-12-29,Denver Nuggets,Seattle SuperSonics
 2005-12-30,Indiana Pacers,Toronto Raptors
 2005-12-30,Orlando Magic,Minnesota Timberwolves
@@ -6414,7 +6414,7 @@ date,home_team,away_team
 2005-12-31,Cleveland Cavaliers,Detroit Pistons
 2005-12-31,Chicago Bulls,Phoenix Suns
 2005-12-31,Houston Rockets,Golden State Warriors
-2005-12-31,New Orleans/Oklahoma City Hornets,Dallas Mavericks
+2005-12-31,New Orleans:Oklahoma City Hornets,Dallas Mavericks
 2005-12-31,Utah Jazz,Philadelphia 76ers
 2005-12-31,Denver Nuggets,San Antonio Spurs
 2005-12-31,Seattle SuperSonics,Memphis Grizzlies
@@ -6424,7 +6424,7 @@ date,home_team,away_team
 2006-01-01,Los Angeles Lakers,Utah Jazz
 2006-01-02,Indiana Pacers,Seattle SuperSonics
 2006-01-02,New York Knicks,Phoenix Suns
-2006-01-02,New Orleans/Oklahoma City Hornets,Charlotte Bobcats
+2006-01-02,New Orleans:Oklahoma City Hornets,Charlotte Bobcats
 2006-01-02,Chicago Bulls,Milwaukee Bucks
 2006-01-02,Denver Nuggets,Boston Celtics
 2006-01-03,Atlanta Hawks,Toronto Raptors
@@ -6438,7 +6438,7 @@ date,home_team,away_team
 2006-01-04,Boston Celtics,Charlotte Bobcats
 2006-01-04,Milwaukee Bucks,Cleveland Cavaliers
 2006-01-04,Minnesota Timberwolves,Dallas Mavericks
-2006-01-04,New Orleans/Oklahoma City Hornets,Miami Heat
+2006-01-04,New Orleans:Oklahoma City Hornets,Miami Heat
 2006-01-04,Chicago Bulls,Seattle SuperSonics
 2006-01-04,San Antonio Spurs,Portland Trail Blazers
 2006-01-04,Denver Nuggets,Indiana Pacers
@@ -6451,14 +6451,14 @@ date,home_team,away_team
 2006-01-06,New York Knicks,Washington Wizards
 2006-01-06,Detroit Pistons,Seattle SuperSonics
 2006-01-06,Memphis Grizzlies,Utah Jazz
-2006-01-06,New Orleans/Oklahoma City Hornets,Portland Trail Blazers
+2006-01-06,New Orleans:Oklahoma City Hornets,Portland Trail Blazers
 2006-01-06,San Antonio Spurs,Minnesota Timberwolves
 2006-01-06,Milwaukee Bucks,Chicago Bulls
 2006-01-06,Denver Nuggets,Dallas Mavericks
 2006-01-06,Sacramento Kings,Los Angeles Clippers
 2006-01-06,Los Angeles Lakers,Philadelphia 76ers
 2006-01-06,Phoenix Suns,Miami Heat
-2006-01-07,Atlanta Hawks,New Orleans/Oklahoma City Hornets
+2006-01-07,Atlanta Hawks,New Orleans:Oklahoma City Hornets
 2006-01-07,Orlando Magic,Charlotte Bobcats
 2006-01-07,Washington Wizards,Boston Celtics
 2006-01-07,Cleveland Cavaliers,Milwaukee Bucks
@@ -6482,7 +6482,7 @@ date,home_team,away_team
 2006-01-10,Charlotte Bobcats,Houston Rockets
 2006-01-10,Memphis Grizzlies,Sacramento Kings
 2006-01-10,Milwaukee Bucks,Minnesota Timberwolves
-2006-01-10,New Orleans/Oklahoma City Hornets,Detroit Pistons
+2006-01-10,New Orleans:Oklahoma City Hornets,Detroit Pistons
 2006-01-10,San Antonio Spurs,New Jersey Nets
 2006-01-10,Denver Nuggets,Phoenix Suns
 2006-01-10,Los Angeles Clippers,Orlando Magic
@@ -6504,7 +6504,7 @@ date,home_team,away_team
 2006-01-13,New York Knicks,Atlanta Hawks
 2006-01-13,Memphis Grizzlies,New Jersey Nets
 2006-01-13,Minnesota Timberwolves,Denver Nuggets
-2006-01-13,New Orleans/Oklahoma City Hornets,Sacramento Kings
+2006-01-13,New Orleans:Oklahoma City Hornets,Sacramento Kings
 2006-01-13,Philadelphia 76ers,Boston Celtics
 2006-01-13,Portland Trail Blazers,Orlando Magic
 2006-01-13,Seattle SuperSonics,Miami Heat
@@ -6512,7 +6512,7 @@ date,home_team,away_team
 2006-01-14,Detroit Pistons,Charlotte Bobcats
 2006-01-14,Chicago Bulls,Indiana Pacers
 2006-01-14,Dallas Mavericks,New Jersey Nets
-2006-01-14,Houston Rockets,New Orleans/Oklahoma City Hornets
+2006-01-14,Houston Rockets,New Orleans:Oklahoma City Hornets
 2006-01-14,Milwaukee Bucks,Denver Nuggets
 2006-01-14,San Antonio Spurs,Memphis Grizzlies
 2006-01-14,Phoenix Suns,Cleveland Cavaliers
@@ -6522,7 +6522,7 @@ date,home_team,away_team
 2006-01-15,Toronto Raptors,New York Knicks
 2006-01-15,Portland Trail Blazers,Cleveland Cavaliers
 2006-01-15,Sacramento Kings,Orlando Magic
-2006-01-16,Charlotte Bobcats,New Orleans/Oklahoma City Hornets
+2006-01-16,Charlotte Bobcats,New Orleans:Oklahoma City Hornets
 2006-01-16,New York Knicks,Minnesota Timberwolves
 2006-01-16,Washington Wizards,Philadelphia 76ers
 2006-01-16,Atlanta Hawks,Houston Rockets
@@ -6541,7 +6541,7 @@ date,home_team,away_team
 2006-01-18,Orlando Magic,Washington Wizards
 2006-01-18,Philadelphia 76ers,New Jersey Nets
 2006-01-18,Boston Celtics,Minnesota Timberwolves
-2006-01-18,New Orleans/Oklahoma City Hornets,Memphis Grizzlies
+2006-01-18,New Orleans:Oklahoma City Hornets,Memphis Grizzlies
 2006-01-18,Chicago Bulls,New York Knicks
 2006-01-18,Houston Rockets,Dallas Mavericks
 2006-01-18,San Antonio Spurs,Milwaukee Bucks
@@ -6552,7 +6552,7 @@ date,home_team,away_team
 2006-01-19,Sacramento Kings,Los Angeles Lakers
 2006-01-20,Atlanta Hawks,Milwaukee Bucks
 2006-01-20,Philadelphia 76ers,Memphis Grizzlies
-2006-01-20,Washington Wizards,New Orleans/Oklahoma City Hornets
+2006-01-20,Washington Wizards,New Orleans:Oklahoma City Hornets
 2006-01-20,Boston Celtics,New Jersey Nets
 2006-01-20,Charlotte Bobcats,Orlando Magic
 2006-01-20,Miami Heat,San Antonio Spurs
@@ -6564,7 +6564,7 @@ date,home_team,away_team
 2006-01-20,Phoenix Suns,Los Angeles Lakers
 2006-01-20,Seattle SuperSonics,Toronto Raptors
 2006-01-21,Orlando Magic,Sacramento Kings
-2006-01-21,New York Knicks,New Orleans/Oklahoma City Hornets
+2006-01-21,New York Knicks,New Orleans:Oklahoma City Hornets
 2006-01-21,Indiana Pacers,Chicago Bulls
 2006-01-21,New Jersey Nets,Boston Celtics
 2006-01-21,Milwaukee Bucks,Charlotte Bobcats
@@ -6579,7 +6579,7 @@ date,home_team,away_team
 2006-01-22,Portland Trail Blazers,Dallas Mavericks
 2006-01-22,Los Angeles Lakers,Toronto Raptors
 2006-01-23,Atlanta Hawks,Indiana Pacers
-2006-01-23,Boston Celtics,New Orleans/Oklahoma City Hornets
+2006-01-23,Boston Celtics,New Orleans:Oklahoma City Hornets
 2006-01-23,Milwaukee Bucks,Houston Rockets
 2006-01-23,Denver Nuggets,Toronto Raptors
 2006-01-23,Utah Jazz,New Jersey Nets
@@ -6595,7 +6595,7 @@ date,home_team,away_team
 2006-01-25,Boston Celtics,Washington Wizards
 2006-01-25,Detroit Pistons,Milwaukee Bucks
 2006-01-25,New York Knicks,Sacramento Kings
-2006-01-25,New Orleans/Oklahoma City Hornets,San Antonio Spurs
+2006-01-25,New Orleans:Oklahoma City Hornets,San Antonio Spurs
 2006-01-25,Houston Rockets,Charlotte Bobcats
 2006-01-25,Memphis Grizzlies,Minnesota Timberwolves
 2006-01-25,Utah Jazz,Seattle SuperSonics
@@ -6618,7 +6618,7 @@ date,home_team,away_team
 2006-01-27,Portland Trail Blazers,New Jersey Nets
 2006-01-27,Los Angeles Lakers,Golden State Warriors
 2006-01-28,Washington Wizards,Charlotte Bobcats
-2006-01-28,Memphis Grizzlies,New Orleans/Oklahoma City Hornets
+2006-01-28,Memphis Grizzlies,New Orleans:Oklahoma City Hornets
 2006-01-28,Philadelphia 76ers,New York Knicks
 2006-01-28,Chicago Bulls,Atlanta Hawks
 2006-01-28,San Antonio Spurs,Minnesota Timberwolves
@@ -6637,7 +6637,7 @@ date,home_team,away_team
 2006-01-30,Miami Heat,Los Angeles Clippers
 2006-01-30,Memphis Grizzlies,Houston Rockets
 2006-01-30,Minnesota Timberwolves,Boston Celtics
-2006-01-30,New Orleans/Oklahoma City Hornets,Milwaukee Bucks
+2006-01-30,New Orleans:Oklahoma City Hornets,Milwaukee Bucks
 2006-01-30,Utah Jazz,San Antonio Spurs
 2006-01-30,Seattle SuperSonics,Portland Trail Blazers
 2006-01-31,Philadelphia 76ers,Phoenix Suns
@@ -6654,7 +6654,7 @@ date,home_team,away_team
 2006-02-01,Charlotte Bobcats,Atlanta Hawks
 2006-02-01,Detroit Pistons,Minnesota Timberwolves
 2006-02-01,Memphis Grizzlies,Dallas Mavericks
-2006-02-01,New Orleans/Oklahoma City Hornets,Chicago Bulls
+2006-02-01,New Orleans:Oklahoma City Hornets,Chicago Bulls
 2006-02-01,Houston Rockets,Milwaukee Bucks
 2006-02-01,Utah Jazz,Denver Nuggets
 2006-02-01,Portland Trail Blazers,San Antonio Spurs
@@ -6674,7 +6674,7 @@ date,home_team,away_team
 2006-02-04,Washington Wizards,Atlanta Hawks
 2006-02-04,Cleveland Cavaliers,Philadelphia 76ers
 2006-02-04,Indiana Pacers,Detroit Pistons
-2006-02-04,New Orleans/Oklahoma City Hornets,Los Angeles Lakers
+2006-02-04,New Orleans:Oklahoma City Hornets,Los Angeles Lakers
 2006-02-04,Dallas Mavericks,Seattle SuperSonics
 2006-02-04,Milwaukee Bucks,Memphis Grizzlies
 2006-02-04,Denver Nuggets,Portland Trail Blazers
@@ -6688,7 +6688,7 @@ date,home_team,away_team
 2006-02-06,Washington Wizards,Orlando Magic
 2006-02-06,Charlotte Bobcats,Seattle SuperSonics
 2006-02-06,Miami Heat,Boston Celtics
-2006-02-06,New Jersey Nets,New Orleans/Oklahoma City Hornets
+2006-02-06,New Jersey Nets,New Orleans:Oklahoma City Hornets
 2006-02-06,Phoenix Suns,Minnesota Timberwolves
 2006-02-06,Utah Jazz,Chicago Bulls
 2006-02-06,Golden State Warriors,Denver Nuggets
@@ -6704,7 +6704,7 @@ date,home_team,away_team
 2006-02-08,New Jersey Nets,New York Knicks
 2006-02-08,Milwaukee Bucks,Orlando Magic
 2006-02-08,Minnesota Timberwolves,Cleveland Cavaliers
-2006-02-08,New Orleans/Oklahoma City Hornets,Seattle SuperSonics
+2006-02-08,New Orleans:Oklahoma City Hornets,Seattle SuperSonics
 2006-02-08,Houston Rockets,Los Angeles Lakers
 2006-02-08,Phoenix Suns,Memphis Grizzlies
 2006-02-08,Denver Nuggets,Chicago Bulls
@@ -6717,13 +6717,13 @@ date,home_team,away_team
 2006-02-10,Indiana Pacers,Golden State Warriors
 2006-02-10,Minnesota Timberwolves,Utah Jazz
 2006-02-10,New Jersey Nets,San Antonio Spurs
-2006-02-10,New Orleans/Oklahoma City Hornets,New York Knicks
+2006-02-10,New Orleans:Oklahoma City Hornets,New York Knicks
 2006-02-10,Phoenix Suns,Sacramento Kings
 2006-02-10,Denver Nuggets,Dallas Mavericks
 2006-02-10,Los Angeles Clippers,Memphis Grizzlies
 2006-02-10,Seattle SuperSonics,Atlanta Hawks
 2006-02-11,Cleveland Cavaliers,Golden State Warriors
-2006-02-11,Minnesota Timberwolves,New Orleans/Oklahoma City Hornets
+2006-02-11,Minnesota Timberwolves,New Orleans:Oklahoma City Hornets
 2006-02-11,Houston Rockets,Utah Jazz
 2006-02-11,Milwaukee Bucks,Charlotte Bobcats
 2006-02-11,Los Angeles Lakers,Memphis Grizzlies
@@ -6740,7 +6740,7 @@ date,home_team,away_team
 2006-02-13,Cleveland Cavaliers,San Antonio Spurs
 2006-02-13,Charlotte Bobcats,Portland Trail Blazers
 2006-02-13,Minnesota Timberwolves,Toronto Raptors
-2006-02-13,New Orleans/Oklahoma City Hornets,Washington Wizards
+2006-02-13,New Orleans:Oklahoma City Hornets,Washington Wizards
 2006-02-13,Dallas Mavericks,New York Knicks
 2006-02-13,Golden State Warriors,Memphis Grizzlies
 2006-02-13,Los Angeles Lakers,Utah Jazz
@@ -6757,7 +6757,7 @@ date,home_team,away_team
 2006-02-15,New York Knicks,Toronto Raptors
 2006-02-15,Memphis Grizzlies,Sacramento Kings
 2006-02-15,Minnesota Timberwolves,Seattle SuperSonics
-2006-02-15,New Orleans/Oklahoma City Hornets,Portland Trail Blazers
+2006-02-15,New Orleans:Oklahoma City Hornets,Portland Trail Blazers
 2006-02-15,Dallas Mavericks,Washington Wizards
 2006-02-15,Denver Nuggets,Phoenix Suns
 2006-02-15,Golden State Warriors,Los Angeles Clippers
@@ -6765,7 +6765,7 @@ date,home_team,away_team
 2006-02-16,Chicago Bulls,Philadelphia 76ers
 2006-02-16,Phoenix Suns,Houston Rockets
 2006-02-21,Cleveland Cavaliers,Orlando Magic
-2006-02-21,Indiana Pacers,New Orleans/Oklahoma City Hornets
+2006-02-21,Indiana Pacers,New Orleans:Oklahoma City Hornets
 2006-02-21,Washington Wizards,Minnesota Timberwolves
 2006-02-21,Detroit Pistons,Atlanta Hawks
 2006-02-21,Memphis Grizzlies,Toronto Raptors
@@ -6780,7 +6780,7 @@ date,home_team,away_team
 2006-02-22,Philadelphia 76ers,Cleveland Cavaliers
 2006-02-22,New Jersey Nets,Orlando Magic
 2006-02-22,New York Knicks,Miami Heat
-2006-02-22,New Orleans/Oklahoma City Hornets,Utah Jazz
+2006-02-22,New Orleans:Oklahoma City Hornets,Utah Jazz
 2006-02-22,Houston Rockets,Los Angeles Clippers
 2006-02-22,Chicago Bulls,Milwaukee Bucks
 2006-02-22,Phoenix Suns,Boston Celtics
@@ -6806,13 +6806,13 @@ date,home_team,away_team
 2006-02-25,Philadelphia 76ers,Chicago Bulls
 2006-02-25,San Antonio Spurs,Golden State Warriors
 2006-02-25,Phoenix Suns,Charlotte Bobcats
-2006-02-25,Utah Jazz,New Orleans/Oklahoma City Hornets
+2006-02-25,Utah Jazz,New Orleans:Oklahoma City Hornets
 2006-02-26,Detroit Pistons,Cleveland Cavaliers
 2006-02-26,Minnesota Timberwolves,Memphis Grizzlies
 2006-02-26,Orlando Magic,Houston Rockets
 2006-02-26,New Jersey Nets,Indiana Pacers
 2006-02-26,Los Angeles Lakers,Boston Celtics
-2006-02-26,Portland Trail Blazers,New Orleans/Oklahoma City Hornets
+2006-02-26,Portland Trail Blazers,New Orleans:Oklahoma City Hornets
 2006-02-27,Atlanta Hawks,New Jersey Nets
 2006-02-27,Cleveland Cavaliers,Detroit Pistons
 2006-02-27,Miami Heat,Toronto Raptors
@@ -6825,7 +6825,7 @@ date,home_team,away_team
 2006-02-27,Golden State Warriors,Utah Jazz
 2006-02-27,Los Angeles Clippers,Charlotte Bobcats
 2006-02-28,Chicago Bulls,Minnesota Timberwolves
-2006-02-28,Seattle SuperSonics,New Orleans/Oklahoma City Hornets
+2006-02-28,Seattle SuperSonics,New Orleans:Oklahoma City Hornets
 2006-02-28,Los Angeles Lakers,Orlando Magic
 2006-03-01,Cleveland Cavaliers,Sacramento Kings
 2006-03-01,Toronto Raptors,Atlanta Hawks
@@ -6839,7 +6839,7 @@ date,home_team,away_team
 2006-03-01,Utah Jazz,Charlotte Bobcats
 2006-03-01,Portland Trail Blazers,Los Angeles Lakers
 2006-03-01,Golden State Warriors,Orlando Magic
-2006-03-01,Los Angeles Clippers,New Orleans/Oklahoma City Hornets
+2006-03-01,Los Angeles Clippers,New Orleans:Oklahoma City Hornets
 2006-03-02,Chicago Bulls,Cleveland Cavaliers
 2006-03-02,San Antonio Spurs,Dallas Mavericks
 2006-03-03,Atlanta Hawks,Sacramento Kings
@@ -6869,7 +6869,7 @@ date,home_team,away_team
 2006-03-05,Seattle SuperSonics,Utah Jazz
 2006-03-06,Charlotte Bobcats,Miami Heat
 2006-03-06,New Jersey Nets,Sacramento Kings
-2006-03-06,New Orleans/Oklahoma City Hornets,Phoenix Suns
+2006-03-06,New Orleans:Oklahoma City Hornets,Phoenix Suns
 2006-03-06,Denver Nuggets,Memphis Grizzlies
 2006-03-06,Utah Jazz,Orlando Magic
 2006-03-06,Los Angeles Lakers,San Antonio Spurs
@@ -6887,7 +6887,7 @@ date,home_team,away_team
 2006-03-08,Detroit Pistons,Chicago Bulls
 2006-03-08,Miami Heat,Washington Wizards
 2006-03-08,Milwaukee Bucks,Sacramento Kings
-2006-03-08,New Orleans/Oklahoma City Hornets,Los Angeles Lakers
+2006-03-08,New Orleans:Oklahoma City Hornets,Los Angeles Lakers
 2006-03-08,Houston Rockets,Indiana Pacers
 2006-03-08,Utah Jazz,Minnesota Timberwolves
 2006-03-08,Seattle SuperSonics,Memphis Grizzlies
@@ -6898,7 +6898,7 @@ date,home_team,away_team
 2006-03-10,Toronto Raptors,Denver Nuggets
 2006-03-10,Boston Celtics,Milwaukee Bucks
 2006-03-10,Miami Heat,Golden State Warriors
-2006-03-10,New Orleans/Oklahoma City Hornets,Indiana Pacers
+2006-03-10,New Orleans:Oklahoma City Hornets,Indiana Pacers
 2006-03-10,Chicago Bulls,Los Angeles Clippers
 2006-03-10,San Antonio Spurs,Los Angeles Lakers
 2006-03-10,Sacramento Kings,Memphis Grizzlies
@@ -6917,7 +6917,7 @@ date,home_team,away_team
 2006-03-12,Boston Celtics,Denver Nuggets
 2006-03-12,Detroit Pistons,Charlotte Bobcats
 2006-03-12,Toronto Raptors,Indiana Pacers
-2006-03-12,New Orleans/Oklahoma City Hornets,New Jersey Nets
+2006-03-12,New Orleans:Oklahoma City Hornets,New Jersey Nets
 2006-03-12,Portland Trail Blazers,Phoenix Suns
 2006-03-12,Sacramento Kings,Dallas Mavericks
 2006-03-13,Indiana Pacers,Orlando Magic
@@ -6931,7 +6931,7 @@ date,home_team,away_team
 2006-03-14,Memphis Grizzlies,Boston Celtics
 2006-03-14,Chicago Bulls,Portland Trail Blazers
 2006-03-14,Dallas Mavericks,Cleveland Cavaliers
-2006-03-14,San Antonio Spurs,New Orleans/Oklahoma City Hornets
+2006-03-14,San Antonio Spurs,New Orleans:Oklahoma City Hornets
 2006-03-14,Sacramento Kings,Los Angeles Lakers
 2006-03-14,Seattle SuperSonics,Phoenix Suns
 2006-03-15,Indiana Pacers,Denver Nuggets
@@ -6960,7 +6960,7 @@ date,home_team,away_team
 2006-03-17,Los Angeles Clippers,Philadelphia 76ers
 2006-03-18,Chicago Bulls,Miami Heat
 2006-03-18,Charlotte Bobcats,Detroit Pistons
-2006-03-18,New Orleans/Oklahoma City Hornets,Denver Nuggets
+2006-03-18,New Orleans:Oklahoma City Hornets,Denver Nuggets
 2006-03-18,Houston Rockets,San Antonio Spurs
 2006-03-18,Milwaukee Bucks,Portland Trail Blazers
 2006-03-19,Cleveland Cavaliers,Los Angeles Lakers
@@ -6982,7 +6982,7 @@ date,home_team,away_team
 2006-03-21,Dallas Mavericks,Houston Rockets
 2006-03-21,Memphis Grizzlies,Indiana Pacers
 2006-03-21,Minnesota Timberwolves,Miami Heat
-2006-03-21,New Orleans/Oklahoma City Hornets,Los Angeles Clippers
+2006-03-21,New Orleans:Oklahoma City Hornets,Los Angeles Clippers
 2006-03-21,San Antonio Spurs,Golden State Warriors
 2006-03-21,Sacramento Kings,Seattle SuperSonics
 2006-03-21,Utah Jazz,Phoenix Suns
@@ -6997,7 +6997,7 @@ date,home_team,away_team
 2006-03-22,Los Angeles Lakers,Sacramento Kings
 2006-03-23,New Jersey Nets,Minnesota Timberwolves
 2006-03-23,Memphis Grizzlies,Los Angeles Clippers
-2006-03-23,New Orleans/Oklahoma City Hornets,Houston Rockets
+2006-03-23,New Orleans:Oklahoma City Hornets,Houston Rockets
 2006-03-23,Dallas Mavericks,Golden State Warriors
 2006-03-23,Phoenix Suns,Portland Trail Blazers
 2006-03-23,Utah Jazz,Washington Wizards
@@ -7007,7 +7007,7 @@ date,home_team,away_team
 2006-03-24,Cleveland Cavaliers,Boston Celtics
 2006-03-24,Miami Heat,Charlotte Bobcats
 2006-03-24,New York Knicks,Memphis Grizzlies
-2006-03-24,Chicago Bulls,New Orleans/Oklahoma City Hornets
+2006-03-24,Chicago Bulls,New Orleans:Oklahoma City Hornets
 2006-03-24,Denver Nuggets,Seattle SuperSonics
 2006-03-24,Portland Trail Blazers,San Antonio Spurs
 2006-03-24,Los Angeles Lakers,Milwaukee Bucks
@@ -7026,10 +7026,10 @@ date,home_team,away_team
 2006-03-26,Portland Trail Blazers,Los Angeles Clippers
 2006-03-26,Sacramento Kings,Golden State Warriors
 2006-03-26,Seattle SuperSonics,San Antonio Spurs
-2006-03-26,Los Angeles Lakers,New Orleans/Oklahoma City Hornets
+2006-03-26,Los Angeles Lakers,New Orleans:Oklahoma City Hornets
 2006-03-27,Miami Heat,Indiana Pacers
 2006-03-27,New Jersey Nets,Phoenix Suns
-2006-03-27,Utah Jazz,New Orleans/Oklahoma City Hornets
+2006-03-27,Utah Jazz,New Orleans:Oklahoma City Hornets
 2006-03-27,Golden State Warriors,Washington Wizards
 2006-03-28,Charlotte Bobcats,Atlanta Hawks
 2006-03-28,Detroit Pistons,Dallas Mavericks
@@ -7048,7 +7048,7 @@ date,home_team,away_team
 2006-03-29,Houston Rockets,Seattle SuperSonics
 2006-03-29,Denver Nuggets,Utah Jazz
 2006-03-29,Portland Trail Blazers,Sacramento Kings
-2006-03-29,Golden State Warriors,New Orleans/Oklahoma City Hornets
+2006-03-29,Golden State Warriors,New Orleans:Oklahoma City Hornets
 2006-03-30,Indiana Pacers,Phoenix Suns
 2006-03-30,Los Angeles Lakers,San Antonio Spurs
 2006-03-31,Atlanta Hawks,New Jersey Nets
@@ -7057,7 +7057,7 @@ date,home_team,away_team
 2006-03-31,Charlotte Bobcats,Chicago Bulls
 2006-03-31,New York Knicks,Philadelphia 76ers
 2006-03-31,Detroit Pistons,Milwaukee Bucks
-2006-03-31,New Orleans/Oklahoma City Hornets,Memphis Grizzlies
+2006-03-31,New Orleans:Oklahoma City Hornets,Memphis Grizzlies
 2006-03-31,Houston Rockets,Washington Wizards
 2006-03-31,Denver Nuggets,Minnesota Timberwolves
 2006-03-31,Golden State Warriors,Sacramento Kings
@@ -7076,14 +7076,14 @@ date,home_team,away_team
 2006-04-02,Charlotte Bobcats,Cleveland Cavaliers
 2006-04-02,New Jersey Nets,Miami Heat
 2006-04-02,Philadelphia 76ers,New York Knicks
-2006-04-02,Toronto Raptors,New Orleans/Oklahoma City Hornets
+2006-04-02,Toronto Raptors,New Orleans:Oklahoma City Hornets
 2006-04-02,Sacramento Kings,Los Angeles Clippers
 2006-04-02,Seattle SuperSonics,Portland Trail Blazers
 2006-04-04,Cleveland Cavaliers,Philadelphia 76ers
 2006-04-04,Toronto Raptors,Boston Celtics
 2006-04-04,Washington Wizards,New York Knicks
 2006-04-04,Charlotte Bobcats,Minnesota Timberwolves
-2006-04-04,Detroit Pistons,New Orleans/Oklahoma City Hornets
+2006-04-04,Detroit Pistons,New Orleans:Oklahoma City Hornets
 2006-04-04,Miami Heat,Milwaukee Bucks
 2006-04-04,New Jersey Nets,Atlanta Hawks
 2006-04-04,Memphis Grizzlies,Golden State Warriors
@@ -7098,7 +7098,7 @@ date,home_team,away_team
 2006-04-05,Orlando Magic,Milwaukee Bucks
 2006-04-05,Philadelphia 76ers,Chicago Bulls
 2006-04-05,New York Knicks,Cleveland Cavaliers
-2006-04-05,New Orleans/Oklahoma City Hornets,Golden State Warriors
+2006-04-05,New Orleans:Oklahoma City Hornets,Golden State Warriors
 2006-04-05,San Antonio Spurs,Sacramento Kings
 2006-04-05,Portland Trail Blazers,Houston Rockets
 2006-04-05,Phoenix Suns,Los Angeles Clippers
@@ -7110,7 +7110,7 @@ date,home_team,away_team
 2006-04-07,Philadelphia 76ers,Boston Celtics
 2006-04-07,Memphis Grizzlies,Milwaukee Bucks
 2006-04-07,Minnesota Timberwolves,Utah Jazz
-2006-04-07,New Orleans/Oklahoma City Hornets,Toronto Raptors
+2006-04-07,New Orleans:Oklahoma City Hornets,Toronto Raptors
 2006-04-07,New York Knicks,Indiana Pacers
 2006-04-07,San Antonio Spurs,Dallas Mavericks
 2006-04-07,Portland Trail Blazers,Seattle SuperSonics
@@ -7120,7 +7120,7 @@ date,home_team,away_team
 2006-04-08,New Jersey Nets,Cleveland Cavaliers
 2006-04-08,Washington Wizards,Miami Heat
 2006-04-08,Chicago Bulls,Philadelphia 76ers
-2006-04-08,Dallas Mavericks,New Orleans/Oklahoma City Hornets
+2006-04-08,Dallas Mavericks,New Orleans:Oklahoma City Hornets
 2006-04-08,Denver Nuggets,Golden State Warriors
 2006-04-08,Utah Jazz,Portland Trail Blazers
 2006-04-09,Detroit Pistons,Indiana Pacers
@@ -7136,7 +7136,7 @@ date,home_team,away_team
 2006-04-10,Indiana Pacers,New York Knicks
 2006-04-10,Orlando Magic,Atlanta Hawks
 2006-04-10,Philadelphia 76ers,Washington Wizards
-2006-04-10,New Orleans/Oklahoma City Hornets,Cleveland Cavaliers
+2006-04-10,New Orleans:Oklahoma City Hornets,Cleveland Cavaliers
 2006-04-10,Utah Jazz,Houston Rockets
 2006-04-10,Portland Trail Blazers,Denver Nuggets
 2006-04-10,Los Angeles Clippers,Dallas Mavericks
@@ -7153,7 +7153,7 @@ date,home_team,away_team
 2006-04-12,New Jersey Nets,Philadelphia 76ers
 2006-04-12,Detroit Pistons,Cleveland Cavaliers
 2006-04-12,Milwaukee Bucks,Washington Wizards
-2006-04-12,New Orleans/Oklahoma City Hornets,Seattle SuperSonics
+2006-04-12,New Orleans:Oklahoma City Hornets,Seattle SuperSonics
 2006-04-12,Houston Rockets,Minnesota Timberwolves
 2006-04-12,Utah Jazz,Denver Nuggets
 2006-04-12,Golden State Warriors,Dallas Mavericks
@@ -7168,7 +7168,7 @@ date,home_team,away_team
 2006-04-14,New York Knicks,Milwaukee Bucks
 2006-04-14,Chicago Bulls,Washington Wizards
 2006-04-14,Indiana Pacers,Minnesota Timberwolves
-2006-04-14,New Orleans/Oklahoma City Hornets,Utah Jazz
+2006-04-14,New Orleans:Oklahoma City Hornets,Utah Jazz
 2006-04-14,Golden State Warriors,Phoenix Suns
 2006-04-14,Los Angeles Lakers,Portland Trail Blazers
 2006-04-14,Seattle SuperSonics,Los Angeles Clippers
@@ -7186,7 +7186,7 @@ date,home_team,away_team
 2006-04-16,New Jersey Nets,Boston Celtics
 2006-04-16,Dallas Mavericks,Utah Jazz
 2006-04-16,Los Angeles Clippers,Seattle SuperSonics
-2006-04-16,Sacramento Kings,New Orleans/Oklahoma City Hornets
+2006-04-16,Sacramento Kings,New Orleans:Oklahoma City Hornets
 2006-04-17,Orlando Magic,Chicago Bulls
 2006-04-17,Toronto Raptors,Indiana Pacers
 2006-04-17,Boston Celtics,Cleveland Cavaliers
@@ -7194,7 +7194,7 @@ date,home_team,away_team
 2006-04-17,Milwaukee Bucks,Detroit Pistons
 2006-04-17,San Antonio Spurs,Utah Jazz
 2006-04-17,Denver Nuggets,Houston Rockets
-2006-04-17,Phoenix Suns,New Orleans/Oklahoma City Hornets
+2006-04-17,Phoenix Suns,New Orleans:Oklahoma City Hornets
 2006-04-17,Golden State Warriors,Portland Trail Blazers
 2006-04-18,Atlanta Hawks,Miami Heat
 2006-04-18,Philadelphia 76ers,New Jersey Nets
@@ -7213,14 +7213,14 @@ date,home_team,away_team
 2006-04-19,Chicago Bulls,Toronto Raptors
 2006-04-19,Utah Jazz,Golden State Warriors
 2006-04-19,Portland Trail Blazers,Phoenix Suns
-2006-04-19,Los Angeles Lakers,New Orleans/Oklahoma City Hornets
+2006-04-19,Los Angeles Lakers,New Orleans:Oklahoma City Hornets
 2006-04-19,Seattle SuperSonics,Denver Nuggets
 2006-10-31,Miami Heat,Chicago Bulls
 2006-10-31,Los Angeles Lakers,Phoenix Suns
 2006-11-01,Charlotte Bobcats,Indiana Pacers
 2006-11-01,Orlando Magic,Chicago Bulls
 2006-11-01,Philadelphia 76ers,Atlanta Hawks
-2006-11-01,Boston Celtics,New Orleans/Oklahoma City Hornets
+2006-11-01,Boston Celtics,New Orleans:Oklahoma City Hornets
 2006-11-01,New Jersey Nets,Toronto Raptors
 2006-11-01,Cleveland Cavaliers,Washington Wizards
 2006-11-01,Detroit Pistons,Milwaukee Bucks
@@ -7232,7 +7232,7 @@ date,home_team,away_team
 2006-11-01,Phoenix Suns,Los Angeles Clippers
 2006-11-02,Dallas Mavericks,San Antonio Spurs
 2006-11-02,Los Angeles Clippers,Denver Nuggets
-2006-11-03,Indiana Pacers,New Orleans/Oklahoma City Hornets
+2006-11-03,Indiana Pacers,New Orleans:Oklahoma City Hornets
 2006-11-03,Orlando Magic,Philadelphia 76ers
 2006-11-03,Toronto Raptors,Milwaukee Bucks
 2006-11-03,Atlanta Hawks,New York Knicks
@@ -7257,7 +7257,7 @@ date,home_team,away_team
 2006-11-05,Toronto Raptors,San Antonio Spurs
 2006-11-05,Atlanta Hawks,Orlando Magic
 2006-11-05,Philadelphia 76ers,Miami Heat
-2006-11-05,New Orleans/Oklahoma City Hornets,Houston Rockets
+2006-11-05,New Orleans:Oklahoma City Hornets,Houston Rockets
 2006-11-05,Seattle SuperSonics,Los Angeles Lakers
 2006-11-06,Orlando Magic,Washington Wizards
 2006-11-06,New York Knicks,San Antonio Spurs
@@ -7270,7 +7270,7 @@ date,home_team,away_team
 2006-11-07,Indiana Pacers,Philadelphia 76ers
 2006-11-07,Miami Heat,Seattle SuperSonics
 2006-11-07,Memphis Grizzlies,Houston Rockets
-2006-11-07,New Orleans/Oklahoma City Hornets,Golden State Warriors
+2006-11-07,New Orleans:Oklahoma City Hornets,Golden State Warriors
 2006-11-07,Los Angeles Lakers,Minnesota Timberwolves
 2006-11-08,Orlando Magic,Seattle SuperSonics
 2006-11-08,Toronto Raptors,Philadelphia 76ers
@@ -7284,7 +7284,7 @@ date,home_team,away_team
 2006-11-08,Los Angeles Clippers,Dallas Mavericks
 2006-11-08,Sacramento Kings,Detroit Pistons
 2006-11-09,Cleveland Cavaliers,Chicago Bulls
-2006-11-09,Golden State Warriors,New Orleans/Oklahoma City Hornets
+2006-11-09,Golden State Warriors,New Orleans:Oklahoma City Hornets
 2006-11-09,Phoenix Suns,Dallas Mavericks
 2006-11-10,Charlotte Bobcats,Seattle SuperSonics
 2006-11-10,Indiana Pacers,Orlando Magic
@@ -7294,7 +7294,7 @@ date,home_team,away_team
 2006-11-10,Boston Celtics,Utah Jazz
 2006-11-10,New Jersey Nets,Miami Heat
 2006-11-10,Houston Rockets,New York Knicks
-2006-11-10,Portland Trail Blazers,New Orleans/Oklahoma City Hornets
+2006-11-10,Portland Trail Blazers,New Orleans:Oklahoma City Hornets
 2006-11-10,Los Angeles Lakers,Detroit Pistons
 2006-11-11,Atlanta Hawks,Seattle SuperSonics
 2006-11-11,Cleveland Cavaliers,Boston Celtics
@@ -7304,7 +7304,7 @@ date,home_team,away_team
 2006-11-11,Milwaukee Bucks,Utah Jazz
 2006-11-11,Phoenix Suns,Memphis Grizzlies
 2006-11-11,Golden State Warriors,Detroit Pistons
-2006-11-12,Los Angeles Clippers,New Orleans/Oklahoma City Hornets
+2006-11-12,Los Angeles Clippers,New Orleans:Oklahoma City Hornets
 2006-11-12,Charlotte Bobcats,Denver Nuggets
 2006-11-12,Washington Wizards,New Jersey Nets
 2006-11-12,Miami Heat,Houston Rockets
@@ -7317,7 +7317,7 @@ date,home_team,away_team
 2006-11-14,Atlanta Hawks,Milwaukee Bucks
 2006-11-14,Miami Heat,Denver Nuggets
 2006-11-14,Minnesota Timberwolves,Portland Trail Blazers
-2006-11-14,New Orleans/Oklahoma City Hornets,Charlotte Bobcats
+2006-11-14,New Orleans:Oklahoma City Hornets,Charlotte Bobcats
 2006-11-14,Dallas Mavericks,Chicago Bulls
 2006-11-14,Houston Rockets,San Antonio Spurs
 2006-11-14,Utah Jazz,Los Angeles Clippers
@@ -7325,7 +7325,7 @@ date,home_team,away_team
 2006-11-15,Cleveland Cavaliers,Portland Trail Blazers
 2006-11-15,Orlando Magic,Denver Nuggets
 2006-11-15,Boston Celtics,Indiana Pacers
-2006-11-15,Detroit Pistons,New Orleans/Oklahoma City Hornets
+2006-11-15,Detroit Pistons,New Orleans:Oklahoma City Hornets
 2006-11-15,New Jersey Nets,Milwaukee Bucks
 2006-11-15,New York Knicks,Washington Wizards
 2006-11-15,San Antonio Spurs,Charlotte Bobcats
@@ -7349,7 +7349,7 @@ date,home_team,away_team
 2006-11-18,Detroit Pistons,Houston Rockets
 2006-11-18,New Jersey Nets,Portland Trail Blazers
 2006-11-18,New York Knicks,Boston Celtics
-2006-11-18,Minnesota Timberwolves,New Orleans/Oklahoma City Hornets
+2006-11-18,Minnesota Timberwolves,New Orleans:Oklahoma City Hornets
 2006-11-18,Dallas Mavericks,Memphis Grizzlies
 2006-11-18,Milwaukee Bucks,Indiana Pacers
 2006-11-18,Denver Nuggets,Toronto Raptors
@@ -7368,7 +7368,7 @@ date,home_team,away_team
 2006-11-21,Cleveland Cavaliers,Memphis Grizzlies
 2006-11-21,Indiana Pacers,Milwaukee Bucks
 2006-11-21,Philadelphia 76ers,Detroit Pistons
-2006-11-21,New Orleans/Oklahoma City Hornets,Miami Heat
+2006-11-21,New Orleans:Oklahoma City Hornets,Miami Heat
 2006-11-21,Dallas Mavericks,Washington Wizards
 2006-11-21,Denver Nuggets,Chicago Bulls
 2006-11-21,Los Angeles Lakers,Los Angeles Clippers
@@ -7380,7 +7380,7 @@ date,home_team,away_team
 2006-11-22,Milwaukee Bucks,Philadelphia 76ers
 2006-11-22,Minnesota Timberwolves,New York Knicks
 2006-11-22,Houston Rockets,Washington Wizards
-2006-11-22,Phoenix Suns,New Orleans/Oklahoma City Hornets
+2006-11-22,Phoenix Suns,New Orleans:Oklahoma City Hornets
 2006-11-22,Portland Trail Blazers,New Jersey Nets
 2006-11-22,Sacramento Kings,Utah Jazz
 2006-11-22,Golden State Warriors,Denver Nuggets
@@ -7392,7 +7392,7 @@ date,home_team,away_team
 2006-11-24,Detroit Pistons,Charlotte Bobcats
 2006-11-24,Indiana Pacers,Cleveland Cavaliers
 2006-11-24,Memphis Grizzlies,Washington Wizards
-2006-11-24,New Orleans/Oklahoma City Hornets,Minnesota Timberwolves
+2006-11-24,New Orleans:Oklahoma City Hornets,Minnesota Timberwolves
 2006-11-24,San Antonio Spurs,Dallas Mavericks
 2006-11-24,Denver Nuggets,Golden State Warriors
 2006-11-24,Utah Jazz,Los Angeles Lakers
@@ -7404,7 +7404,7 @@ date,home_team,away_team
 2006-11-25,Cleveland Cavaliers,Philadelphia 76ers
 2006-11-25,New York Knicks,Chicago Bulls
 2006-11-25,Minnesota Timberwolves,Los Angeles Clippers
-2006-11-25,Dallas Mavericks,New Orleans/Oklahoma City Hornets
+2006-11-25,Dallas Mavericks,New Orleans:Oklahoma City Hornets
 2006-11-25,Houston Rockets,Memphis Grizzlies
 2006-11-25,Milwaukee Bucks,Boston Celtics
 2006-11-25,Sacramento Kings,Portland Trail Blazers
@@ -7420,7 +7420,7 @@ date,home_team,away_team
 2006-11-27,Golden State Warriors,San Antonio Spurs
 2006-11-28,Washington Wizards,Atlanta Hawks
 2006-11-28,New Jersey Nets,Charlotte Bobcats
-2006-11-28,New Orleans/Oklahoma City Hornets,Toronto Raptors
+2006-11-28,New Orleans:Oklahoma City Hornets,Toronto Raptors
 2006-11-28,Chicago Bulls,New York Knicks
 2006-11-28,Houston Rockets,Minnesota Timberwolves
 2006-11-28,Denver Nuggets,Memphis Grizzlies
@@ -7443,7 +7443,7 @@ date,home_team,away_team
 2006-12-01,Atlanta Hawks,Cleveland Cavaliers
 2006-12-01,Detroit Pistons,New York Knicks
 2006-12-01,Minnesota Timberwolves,Denver Nuggets
-2006-12-01,New Orleans/Oklahoma City Hornets,Chicago Bulls
+2006-12-01,New Orleans:Oklahoma City Hornets,Chicago Bulls
 2006-12-01,Dallas Mavericks,Sacramento Kings
 2006-12-01,Phoenix Suns,Milwaukee Bucks
 2006-12-01,Portland Trail Blazers,Orlando Magic
@@ -7484,7 +7484,7 @@ date,home_team,away_team
 2006-12-06,Minnesota Timberwolves,Houston Rockets
 2006-12-06,Chicago Bulls,Philadelphia 76ers
 2006-12-06,Denver Nuggets,Atlanta Hawks
-2006-12-06,Los Angeles Lakers,New Orleans/Oklahoma City Hornets
+2006-12-06,Los Angeles Lakers,New Orleans:Oklahoma City Hornets
 2006-12-07,New Jersey Nets,Phoenix Suns
 2006-12-07,Dallas Mavericks,Detroit Pistons
 2006-12-07,Sacramento Kings,Miami Heat
@@ -7499,7 +7499,7 @@ date,home_team,away_team
 2006-12-08,Milwaukee Bucks,Memphis Grizzlies
 2006-12-08,Denver Nuggets,Miami Heat
 2006-12-08,Los Angeles Lakers,Atlanta Hawks
-2006-12-08,Seattle SuperSonics,New Orleans/Oklahoma City Hornets
+2006-12-08,Seattle SuperSonics,New Orleans:Oklahoma City Hornets
 2006-12-09,Orlando Magic,Philadelphia 76ers
 2006-12-09,Washington Wizards,Houston Rockets
 2006-12-09,Cleveland Cavaliers,Indiana Pacers
@@ -7508,7 +7508,7 @@ date,home_team,away_team
 2006-12-09,Memphis Grizzlies,Los Angeles Clippers
 2006-12-09,Chicago Bulls,Minnesota Timberwolves
 2006-12-09,Dallas Mavericks,Denver Nuggets
-2006-12-09,Golden State Warriors,New Orleans/Oklahoma City Hornets
+2006-12-09,Golden State Warriors,New Orleans:Oklahoma City Hornets
 2006-12-10,Toronto Raptors,Portland Trail Blazers
 2006-12-10,Charlotte Bobcats,Phoenix Suns
 2006-12-10,Sacramento Kings,Atlanta Hawks
@@ -7519,7 +7519,7 @@ date,home_team,away_team
 2006-12-11,Miami Heat,Toronto Raptors
 2006-12-11,New Jersey Nets,Memphis Grizzlies
 2006-12-11,New York Knicks,Boston Celtics
-2006-12-11,New Orleans/Oklahoma City Hornets,Cleveland Cavaliers
+2006-12-11,New Orleans:Oklahoma City Hornets,Cleveland Cavaliers
 2006-12-11,Chicago Bulls,Indiana Pacers
 2006-12-11,Utah Jazz,Dallas Mavericks
 2006-12-11,Los Angeles Clippers,San Antonio Spurs
@@ -7541,7 +7541,7 @@ date,home_team,away_team
 2006-12-13,Dallas Mavericks,Los Angeles Lakers
 2006-12-13,Los Angeles Clippers,Utah Jazz
 2006-12-14,Charlotte Bobcats,Orlando Magic
-2006-12-14,New Orleans/Oklahoma City Hornets,San Antonio Spurs
+2006-12-14,New Orleans:Oklahoma City Hornets,San Antonio Spurs
 2006-12-14,Golden State Warriors,Houston Rockets
 2006-12-15,Indiana Pacers,New York Knicks
 2006-12-15,Toronto Raptors,New Jersey Nets
@@ -7561,7 +7561,7 @@ date,home_team,away_team
 2006-12-16,Miami Heat,Memphis Grizzlies
 2006-12-16,New York Knicks,Denver Nuggets
 2006-12-16,New Jersey Nets,Detroit Pistons
-2006-12-16,New Orleans/Oklahoma City Hornets,Dallas Mavericks
+2006-12-16,New Orleans:Oklahoma City Hornets,Dallas Mavericks
 2006-12-16,San Antonio Spurs,Philadelphia 76ers
 2006-12-16,Milwaukee Bucks,Minnesota Timberwolves
 2006-12-16,Sacramento Kings,Phoenix Suns
@@ -7570,7 +7570,7 @@ date,home_team,away_team
 2006-12-17,Los Angeles Clippers,Houston Rockets
 2006-12-17,Detroit Pistons,Seattle SuperSonics
 2006-12-17,Los Angeles Lakers,Washington Wizards
-2006-12-18,Miami Heat,New Orleans/Oklahoma City Hornets
+2006-12-18,Miami Heat,New Orleans:Oklahoma City Hornets
 2006-12-18,New Jersey Nets,Golden State Warriors
 2006-12-18,New York Knicks,Utah Jazz
 2006-12-18,Memphis Grizzlies,Seattle SuperSonics
@@ -7579,7 +7579,7 @@ date,home_team,away_team
 2006-12-19,Chicago Bulls,Los Angeles Lakers
 2006-12-19,Phoenix Suns,Toronto Raptors
 2006-12-20,Atlanta Hawks,Utah Jazz
-2006-12-20,Orlando Magic,New Orleans/Oklahoma City Hornets
+2006-12-20,Orlando Magic,New Orleans:Oklahoma City Hornets
 2006-12-20,Philadelphia 76ers,Indiana Pacers
 2006-12-20,Boston Celtics,Golden State Warriors
 2006-12-20,New York Knicks,Charlotte Bobcats
@@ -7599,7 +7599,7 @@ date,home_team,away_team
 2006-12-22,New York Knicks,Chicago Bulls
 2006-12-22,Boston Celtics,Philadelphia 76ers
 2006-12-22,Minnesota Timberwolves,Milwaukee Bucks
-2006-12-22,New Orleans/Oklahoma City Hornets,Memphis Grizzlies
+2006-12-22,New Orleans:Oklahoma City Hornets,Memphis Grizzlies
 2006-12-22,San Antonio Spurs,Houston Rockets
 2006-12-22,Dallas Mavericks,Los Angeles Clippers
 2006-12-22,Denver Nuggets,Sacramento Kings
@@ -7611,7 +7611,7 @@ date,home_team,away_team
 2006-12-23,Miami Heat,Golden State Warriors
 2006-12-23,Philadelphia 76ers,New York Knicks
 2006-12-23,Memphis Grizzlies,Utah Jazz
-2006-12-23,New Orleans/Oklahoma City Hornets,San Antonio Spurs
+2006-12-23,New Orleans:Oklahoma City Hornets,San Antonio Spurs
 2006-12-23,Chicago Bulls,Charlotte Bobcats
 2006-12-23,Houston Rockets,Los Angeles Clippers
 2006-12-23,Milwaukee Bucks,New Jersey Nets
@@ -7626,7 +7626,7 @@ date,home_team,away_team
 2006-12-26,Denver Nuggets,Boston Celtics
 2006-12-26,Phoenix Suns,Portland Trail Blazers
 2006-12-26,Utah Jazz,Los Angeles Clippers
-2006-12-26,Seattle SuperSonics,New Orleans/Oklahoma City Hornets
+2006-12-26,Seattle SuperSonics,New Orleans:Oklahoma City Hornets
 2006-12-26,Golden State Warriors,Philadelphia 76ers
 2006-12-27,Atlanta Hawks,Cleveland Cavaliers
 2006-12-27,Charlotte Bobcats,Washington Wizards
@@ -7636,7 +7636,7 @@ date,home_team,away_team
 2006-12-27,New York Knicks,Detroit Pistons
 2006-12-27,Memphis Grizzlies,Milwaukee Bucks
 2006-12-27,Chicago Bulls,Miami Heat
-2006-12-27,Portland Trail Blazers,New Orleans/Oklahoma City Hornets
+2006-12-27,Portland Trail Blazers,New Orleans:Oklahoma City Hornets
 2006-12-27,Sacramento Kings,Philadelphia 76ers
 2006-12-27,Los Angeles Clippers,Boston Celtics
 2006-12-28,Dallas Mavericks,Phoenix Suns
@@ -7649,7 +7649,7 @@ date,home_team,away_team
 2006-12-29,Miami Heat,New Jersey Nets
 2006-12-29,Detroit Pistons,Indiana Pacers
 2006-12-29,Minnesota Timberwolves,Seattle SuperSonics
-2006-12-29,New Orleans/Oklahoma City Hornets,Denver Nuggets
+2006-12-29,New Orleans:Oklahoma City Hornets,Denver Nuggets
 2006-12-29,Houston Rockets,Atlanta Hawks
 2006-12-29,Phoenix Suns,New York Knicks
 2006-12-29,Portland Trail Blazers,Philadelphia 76ers
@@ -7660,7 +7660,7 @@ date,home_team,away_team
 2006-12-30,New Jersey Nets,Minnesota Timberwolves
 2006-12-30,Memphis Grizzlies,Toronto Raptors
 2006-12-30,Chicago Bulls,Cleveland Cavaliers
-2006-12-30,Dallas Mavericks,New Orleans/Oklahoma City Hornets
+2006-12-30,Dallas Mavericks,New Orleans:Oklahoma City Hornets
 2006-12-30,Milwaukee Bucks,Washington Wizards
 2006-12-30,Utah Jazz,Portland Trail Blazers
 2006-12-30,Sacramento Kings,Golden State Warriors
@@ -7675,7 +7675,7 @@ date,home_team,away_team
 2007-01-01,Portland Trail Blazers,Boston Celtics
 2007-01-02,Cleveland Cavaliers,San Antonio Spurs
 2007-01-02,Orlando Magic,Los Angeles Clippers
-2007-01-02,New Orleans/Oklahoma City Hornets,Golden State Warriors
+2007-01-02,New Orleans:Oklahoma City Hornets,Golden State Warriors
 2007-01-02,Chicago Bulls,Phoenix Suns
 2007-01-02,Dallas Mavericks,Seattle SuperSonics
 2007-01-02,Denver Nuggets,Philadelphia 76ers
@@ -7689,7 +7689,7 @@ date,home_team,away_team
 2007-01-03,Houston Rockets,Seattle SuperSonics
 2007-01-03,Utah Jazz,Philadelphia 76ers
 2007-01-03,Portland Trail Blazers,New York Knicks
-2007-01-04,New Orleans/Oklahoma City Hornets,Detroit Pistons
+2007-01-04,New Orleans:Oklahoma City Hornets,Detroit Pistons
 2007-01-04,Dallas Mavericks,Indiana Pacers
 2007-01-04,Sacramento Kings,Los Angeles Lakers
 2007-01-05,Orlando Magic,Charlotte Bobcats
@@ -7706,7 +7706,7 @@ date,home_team,away_team
 2007-01-05,Seattle SuperSonics,New York Knicks
 2007-01-06,Atlanta Hawks,Los Angeles Clippers
 2007-01-06,Cleveland Cavaliers,New Jersey Nets
-2007-01-06,New Orleans/Oklahoma City Hornets,Indiana Pacers
+2007-01-06,New Orleans:Oklahoma City Hornets,Indiana Pacers
 2007-01-06,Chicago Bulls,Detroit Pistons
 2007-01-06,Denver Nuggets,Utah Jazz
 2007-01-06,Sacramento Kings,Portland Trail Blazers
@@ -7718,7 +7718,7 @@ date,home_team,away_team
 2007-01-07,Phoenix Suns,Golden State Warriors
 2007-01-07,Portland Trail Blazers,Miami Heat
 2007-01-07,Los Angeles Lakers,Dallas Mavericks
-2007-01-08,New Orleans/Oklahoma City Hornets,Los Angeles Clippers
+2007-01-08,New Orleans:Oklahoma City Hornets,Los Angeles Clippers
 2007-01-08,Chicago Bulls,Houston Rockets
 2007-01-08,Denver Nuggets,Milwaukee Bucks
 2007-01-09,Indiana Pacers,Atlanta Hawks
@@ -7729,7 +7729,7 @@ date,home_team,away_team
 2007-01-09,Phoenix Suns,Seattle SuperSonics
 2007-01-09,Utah Jazz,Dallas Mavericks
 2007-01-09,Sacramento Kings,Cleveland Cavaliers
-2007-01-10,Atlanta Hawks,New Orleans/Oklahoma City Hornets
+2007-01-10,Atlanta Hawks,New Orleans:Oklahoma City Hornets
 2007-01-10,Washington Wizards,Chicago Bulls
 2007-01-10,Boston Celtics,Indiana Pacers
 2007-01-10,Detroit Pistons,Charlotte Bobcats
@@ -7749,7 +7749,7 @@ date,home_team,away_team
 2007-01-12,Boston Celtics,Toronto Raptors
 2007-01-12,New York Knicks,Charlotte Bobcats
 2007-01-12,Memphis Grizzlies,Minnesota Timberwolves
-2007-01-12,New Orleans/Oklahoma City Hornets,Washington Wizards
+2007-01-12,New Orleans:Oklahoma City Hornets,Washington Wizards
 2007-01-12,Portland Trail Blazers,Sacramento Kings
 2007-01-12,Denver Nuggets,Houston Rockets
 2007-01-12,Golden State Warriors,Miami Heat
@@ -7777,7 +7777,7 @@ date,home_team,away_team
 2007-01-15,Golden State Warriors,Los Angeles Clippers
 2007-01-15,Memphis Grizzlies,Phoenix Suns
 2007-01-15,Los Angeles Lakers,Miami Heat
-2007-01-16,New Orleans/Oklahoma City Hornets,Orlando Magic
+2007-01-16,New Orleans:Oklahoma City Hornets,Orlando Magic
 2007-01-16,Dallas Mavericks,Houston Rockets
 2007-01-16,Seattle SuperSonics,Cleveland Cavaliers
 2007-01-17,Charlotte Bobcats,New Jersey Nets
@@ -7800,7 +7800,7 @@ date,home_team,away_team
 2007-01-19,Boston Celtics,Sacramento Kings
 2007-01-19,New York Knicks,New Jersey Nets
 2007-01-19,Minnesota Timberwolves,Detroit Pistons
-2007-01-19,San Antonio Spurs,New Orleans/Oklahoma City Hornets
+2007-01-19,San Antonio Spurs,New Orleans:Oklahoma City Hornets
 2007-01-19,Phoenix Suns,Portland Trail Blazers
 2007-01-19,Denver Nuggets,Cleveland Cavaliers
 2007-01-19,Seattle SuperSonics,Milwaukee Bucks
@@ -7809,7 +7809,7 @@ date,home_team,away_team
 2007-01-20,Indiana Pacers,New York Knicks
 2007-01-20,Detroit Pistons,Sacramento Kings
 2007-01-20,New Jersey Nets,Orlando Magic
-2007-01-20,New Orleans/Oklahoma City Hornets,Los Angeles Lakers
+2007-01-20,New Orleans:Oklahoma City Hornets,Los Angeles Lakers
 2007-01-20,Washington Wizards,Boston Celtics
 2007-01-20,Chicago Bulls,Utah Jazz
 2007-01-20,Houston Rockets,Denver Nuggets
@@ -7828,7 +7828,7 @@ date,home_team,away_team
 2007-01-22,Sacramento Kings,New Jersey Nets
 2007-01-22,Los Angeles Lakers,Golden State Warriors
 2007-01-23,Orlando Magic,Dallas Mavericks
-2007-01-23,Philadelphia 76ers,New Orleans/Oklahoma City Hornets
+2007-01-23,Philadelphia 76ers,New Orleans:Oklahoma City Hornets
 2007-01-23,Washington Wizards,Phoenix Suns
 2007-01-23,Chicago Bulls,Atlanta Hawks
 2007-01-23,Seattle SuperSonics,Denver Nuggets
@@ -7836,7 +7836,7 @@ date,home_team,away_team
 2007-01-24,Charlotte Bobcats,Detroit Pistons
 2007-01-24,Cleveland Cavaliers,Philadelphia 76ers
 2007-01-24,Indiana Pacers,Miami Heat
-2007-01-24,Toronto Raptors,New Orleans/Oklahoma City Hornets
+2007-01-24,Toronto Raptors,New Orleans:Oklahoma City Hornets
 2007-01-24,Boston Celtics,Atlanta Hawks
 2007-01-24,New York Knicks,Phoenix Suns
 2007-01-24,San Antonio Spurs,Houston Rockets
@@ -7851,7 +7851,7 @@ date,home_team,away_team
 2007-01-26,Philadelphia 76ers,Cleveland Cavaliers
 2007-01-26,Toronto Raptors,Boston Celtics
 2007-01-26,New York Knicks,Miami Heat
-2007-01-26,New Orleans/Oklahoma City Hornets,Sacramento Kings
+2007-01-26,New Orleans:Oklahoma City Hornets,Sacramento Kings
 2007-01-26,San Antonio Spurs,Memphis Grizzlies
 2007-01-26,Houston Rockets,Portland Trail Blazers
 2007-01-26,Milwaukee Bucks,Phoenix Suns
@@ -7861,7 +7861,7 @@ date,home_team,away_team
 2007-01-27,Atlanta Hawks,Philadelphia 76ers
 2007-01-27,Indiana Pacers,Toronto Raptors
 2007-01-27,Memphis Grizzlies,Portland Trail Blazers
-2007-01-27,New Orleans/Oklahoma City Hornets,Utah Jazz
+2007-01-27,New Orleans:Oklahoma City Hornets,Utah Jazz
 2007-01-27,Chicago Bulls,Miami Heat
 2007-01-27,Dallas Mavericks,Sacramento Kings
 2007-01-27,Denver Nuggets,New Jersey Nets
@@ -7876,7 +7876,7 @@ date,home_team,away_team
 2007-01-29,Atlanta Hawks,Orlando Magic
 2007-01-29,Memphis Grizzlies,Sacramento Kings
 2007-01-29,Minnesota Timberwolves,Phoenix Suns
-2007-01-29,New Orleans/Oklahoma City Hornets,Portland Trail Blazers
+2007-01-29,New Orleans:Oklahoma City Hornets,Portland Trail Blazers
 2007-01-29,Houston Rockets,Philadelphia 76ers
 2007-01-29,Denver Nuggets,Charlotte Bobcats
 2007-01-29,Utah Jazz,New Jersey Nets
@@ -7894,7 +7894,7 @@ date,home_team,away_team
 2007-01-31,New Jersey Nets,Detroit Pistons
 2007-01-31,Memphis Grizzlies,Dallas Mavericks
 2007-01-31,Minnesota Timberwolves,Sacramento Kings
-2007-01-31,New Orleans/Oklahoma City Hornets,Philadelphia 76ers
+2007-01-31,New Orleans:Oklahoma City Hornets,Philadelphia 76ers
 2007-01-31,Houston Rockets,Seattle SuperSonics
 2007-01-31,Utah Jazz,San Antonio Spurs
 2007-01-31,Portland Trail Blazers,Denver Nuggets
@@ -7907,7 +7907,7 @@ date,home_team,away_team
 2007-02-02,Boston Celtics,Los Angeles Clippers
 2007-02-02,Cleveland Cavaliers,Charlotte Bobcats
 2007-02-02,Detroit Pistons,Milwaukee Bucks
-2007-02-02,New Orleans/Oklahoma City Hornets,Minnesota Timberwolves
+2007-02-02,New Orleans:Oklahoma City Hornets,Minnesota Timberwolves
 2007-02-02,Orlando Magic,New Jersey Nets
 2007-02-02,Denver Nuggets,Portland Trail Blazers
 2007-02-02,Seattle SuperSonics,Chicago Bulls
@@ -7916,7 +7916,7 @@ date,home_team,away_team
 2007-02-03,Washington Wizards,Los Angeles Lakers
 2007-02-03,Memphis Grizzlies,Indiana Pacers
 2007-02-03,Dallas Mavericks,Minnesota Timberwolves
-2007-02-03,Houston Rockets,New Orleans/Oklahoma City Hornets
+2007-02-03,Houston Rockets,New Orleans:Oklahoma City Hornets
 2007-02-03,Milwaukee Bucks,Miami Heat
 2007-02-03,Phoenix Suns,Utah Jazz
 2007-02-03,Portland Trail Blazers,Chicago Bulls
@@ -7932,7 +7932,7 @@ date,home_team,away_team
 2007-02-05,Houston Rockets,Minnesota Timberwolves
 2007-02-05,Denver Nuggets,Phoenix Suns
 2007-02-05,Utah Jazz,Chicago Bulls
-2007-02-05,Sacramento Kings,New Orleans/Oklahoma City Hornets
+2007-02-05,Sacramento Kings,New Orleans:Oklahoma City Hornets
 2007-02-06,Detroit Pistons,Boston Celtics
 2007-02-06,New York Knicks,Los Angeles Clippers
 2007-02-06,Memphis Grizzlies,Houston Rockets
@@ -7947,9 +7947,9 @@ date,home_team,away_team
 2007-02-07,Boston Celtics,Miami Heat
 2007-02-07,Minnesota Timberwolves,Golden State Warriors
 2007-02-07,Dallas Mavericks,Memphis Grizzlies
-2007-02-07,Denver Nuggets,New Orleans/Oklahoma City Hornets
+2007-02-07,Denver Nuggets,New Orleans:Oklahoma City Hornets
 2007-02-08,Detroit Pistons,Los Angeles Lakers
-2007-02-08,New Orleans/Oklahoma City Hornets,Milwaukee Bucks
+2007-02-08,New Orleans:Oklahoma City Hornets,Milwaukee Bucks
 2007-02-08,Sacramento Kings,Chicago Bulls
 2007-02-09,Charlotte Bobcats,Portland Trail Blazers
 2007-02-09,Indiana Pacers,Denver Nuggets
@@ -7964,7 +7964,7 @@ date,home_team,away_team
 2007-02-09,Golden State Warriors,Chicago Bulls
 2007-02-10,Detroit Pistons,Toronto Raptors
 2007-02-10,New Jersey Nets,Orlando Magic
-2007-02-10,New Orleans/Oklahoma City Hornets,Memphis Grizzlies
+2007-02-10,New Orleans:Oklahoma City Hornets,Memphis Grizzlies
 2007-02-10,Houston Rockets,Charlotte Bobcats
 2007-02-10,Milwaukee Bucks,Denver Nuggets
 2007-02-10,Utah Jazz,New York Knicks
@@ -7983,7 +7983,7 @@ date,home_team,away_team
 2007-02-12,Utah Jazz,Atlanta Hawks
 2007-02-13,Miami Heat,Portland Trail Blazers
 2007-02-13,New Jersey Nets,San Antonio Spurs
-2007-02-13,Memphis Grizzlies,New Orleans/Oklahoma City Hornets
+2007-02-13,Memphis Grizzlies,New Orleans:Oklahoma City Hornets
 2007-02-13,Milwaukee Bucks,Dallas Mavericks
 2007-02-13,Chicago Bulls,Toronto Raptors
 2007-02-13,Houston Rockets,Sacramento Kings
@@ -7996,14 +7996,14 @@ date,home_team,away_team
 2007-02-14,Boston Celtics,Milwaukee Bucks
 2007-02-14,Detroit Pistons,San Antonio Spurs
 2007-02-14,Minnesota Timberwolves,Denver Nuggets
-2007-02-14,New Orleans/Oklahoma City Hornets,Sacramento Kings
+2007-02-14,New Orleans:Oklahoma City Hornets,Sacramento Kings
 2007-02-14,Utah Jazz,Cleveland Cavaliers
 2007-02-14,Seattle SuperSonics,Phoenix Suns
 2007-02-14,Golden State Warriors,New York Knicks
 2007-02-14,Los Angeles Clippers,Atlanta Hawks
 2007-02-15,Houston Rockets,Dallas Mavericks
 2007-02-15,Los Angeles Lakers,Cleveland Cavaliers
-2007-02-20,Charlotte Bobcats,New Orleans/Oklahoma City Hornets
+2007-02-20,Charlotte Bobcats,New Orleans:Oklahoma City Hornets
 2007-02-20,Washington Wizards,Minnesota Timberwolves
 2007-02-20,New York Knicks,Orlando Magic
 2007-02-20,Milwaukee Bucks,Detroit Pistons
@@ -8018,7 +8018,7 @@ date,home_team,away_team
 2007-02-21,Philadelphia 76ers,New York Knicks
 2007-02-21,Toronto Raptors,Cleveland Cavaliers
 2007-02-21,Detroit Pistons,Orlando Magic
-2007-02-21,New Jersey Nets,New Orleans/Oklahoma City Hornets
+2007-02-21,New Jersey Nets,New Orleans:Oklahoma City Hornets
 2007-02-21,Minnesota Timberwolves,Charlotte Bobcats
 2007-02-21,Houston Rockets,Miami Heat
 2007-02-21,Phoenix Suns,Boston Celtics
@@ -8035,7 +8035,7 @@ date,home_team,away_team
 2007-02-23,New York Knicks,Milwaukee Bucks
 2007-02-23,Chicago Bulls,Washington Wizards
 2007-02-23,Minnesota Timberwolves,Phoenix Suns
-2007-02-23,New Orleans/Oklahoma City Hornets,Seattle SuperSonics
+2007-02-23,New Orleans:Oklahoma City Hornets,Seattle SuperSonics
 2007-02-23,Portland Trail Blazers,Memphis Grizzlies
 2007-02-23,Denver Nuggets,Utah Jazz
 2007-02-23,Los Angeles Lakers,Boston Celtics
@@ -8063,7 +8063,7 @@ date,home_team,away_team
 2007-02-26,Utah Jazz,Los Angeles Lakers
 2007-02-26,Seattle SuperSonics,Portland Trail Blazers
 2007-02-26,Los Angeles Clippers,Charlotte Bobcats
-2007-02-27,Cleveland Cavaliers,New Orleans/Oklahoma City Hornets
+2007-02-27,Cleveland Cavaliers,New Orleans:Oklahoma City Hornets
 2007-02-27,Indiana Pacers,Phoenix Suns
 2007-02-27,New Jersey Nets,Washington Wizards
 2007-02-27,Milwaukee Bucks,Golden State Warriors
@@ -8072,7 +8072,7 @@ date,home_team,away_team
 2007-02-28,Washington Wizards,Miami Heat
 2007-02-28,Boston Celtics,New York Knicks
 2007-02-28,Memphis Grizzlies,Utah Jazz
-2007-02-28,New Orleans/Oklahoma City Hornets,Atlanta Hawks
+2007-02-28,New Orleans:Oklahoma City Hornets,Atlanta Hawks
 2007-02-28,Chicago Bulls,Golden State Warriors
 2007-02-28,Houston Rockets,Toronto Raptors
 2007-02-28,Denver Nuggets,Orlando Magic
@@ -8088,7 +8088,7 @@ date,home_team,away_team
 2007-03-02,Miami Heat,Detroit Pistons
 2007-03-02,Minnesota Timberwolves,Utah Jazz
 2007-03-02,San Antonio Spurs,Orlando Magic
-2007-03-02,Chicago Bulls,New Orleans/Oklahoma City Hornets
+2007-03-02,Chicago Bulls,New Orleans:Oklahoma City Hornets
 2007-03-02,Phoenix Suns,Indiana Pacers
 2007-03-02,Denver Nuggets,Houston Rockets
 2007-03-02,Los Angeles Lakers,Sacramento Kings
@@ -8105,7 +8105,7 @@ date,home_team,away_team
 2007-03-04,Milwaukee Bucks,Chicago Bulls
 2007-03-04,Phoenix Suns,Los Angeles Lakers
 2007-03-04,Philadelphia 76ers,New Jersey Nets
-2007-03-04,New Orleans/Oklahoma City Hornets,Utah Jazz
+2007-03-04,New Orleans:Oklahoma City Hornets,Utah Jazz
 2007-03-04,Seattle SuperSonics,Charlotte Bobcats
 2007-03-05,Cleveland Cavaliers,Houston Rockets
 2007-03-05,Orlando Magic,Milwaukee Bucks
@@ -8117,7 +8117,7 @@ date,home_team,away_team
 2007-03-06,New York Knicks,Seattle SuperSonics
 2007-03-06,Minnesota Timberwolves,Los Angeles Lakers
 2007-03-06,Dallas Mavericks,New Jersey Nets
-2007-03-06,Denver Nuggets,New Orleans/Oklahoma City Hornets
+2007-03-06,Denver Nuggets,New Orleans:Oklahoma City Hornets
 2007-03-06,Portland Trail Blazers,San Antonio Spurs
 2007-03-06,Sacramento Kings,Indiana Pacers
 2007-03-07,Atlanta Hawks,Washington Wizards
@@ -8138,7 +8138,7 @@ date,home_team,away_team
 2007-03-09,Miami Heat,Minnesota Timberwolves
 2007-03-09,Houston Rockets,New Jersey Nets
 2007-03-09,Denver Nuggets,Detroit Pistons
-2007-03-09,Phoenix Suns,New Orleans/Oklahoma City Hornets
+2007-03-09,Phoenix Suns,New Orleans:Oklahoma City Hornets
 2007-03-09,Golden State Warriors,Los Angeles Clippers
 2007-03-10,Atlanta Hawks,Minnesota Timberwolves
 2007-03-10,Charlotte Bobcats,Memphis Grizzlies
@@ -8146,7 +8146,7 @@ date,home_team,away_team
 2007-03-10,Washington Wizards,New York Knicks
 2007-03-10,San Antonio Spurs,New Jersey Nets
 2007-03-10,Milwaukee Bucks,Cleveland Cavaliers
-2007-03-10,Utah Jazz,New Orleans/Oklahoma City Hornets
+2007-03-10,Utah Jazz,New Orleans:Oklahoma City Hornets
 2007-03-11,Toronto Raptors,Seattle SuperSonics
 2007-03-11,Los Angeles Clippers,Detroit Pistons
 2007-03-11,Sacramento Kings,Denver Nuggets
@@ -8165,7 +8165,7 @@ date,home_team,away_team
 2007-03-13,Cleveland Cavaliers,Sacramento Kings
 2007-03-13,Miami Heat,Utah Jazz
 2007-03-13,Minnesota Timberwolves,Indiana Pacers
-2007-03-13,New Orleans/Oklahoma City Hornets,New Jersey Nets
+2007-03-13,New Orleans:Oklahoma City Hornets,New Jersey Nets
 2007-03-13,San Antonio Spurs,Los Angeles Clippers
 2007-03-13,Chicago Bulls,Boston Celtics
 2007-03-13,Denver Nuggets,Portland Trail Blazers
@@ -8187,14 +8187,14 @@ date,home_team,away_team
 2007-03-16,Philadelphia 76ers,Utah Jazz
 2007-03-16,Toronto Raptors,Houston Rockets
 2007-03-16,Miami Heat,Sacramento Kings
-2007-03-16,New York Knicks,New Orleans/Oklahoma City Hornets
+2007-03-16,New York Knicks,New Orleans:Oklahoma City Hornets
 2007-03-16,Dallas Mavericks,Boston Celtics
 2007-03-16,Phoenix Suns,Detroit Pistons
 2007-03-16,Golden State Warriors,Minnesota Timberwolves
 2007-03-16,Los Angeles Lakers,Portland Trail Blazers
 2007-03-17,Indiana Pacers,Atlanta Hawks
 2007-03-17,Orlando Magic,Sacramento Kings
-2007-03-17,Washington Wizards,New Orleans/Oklahoma City Hornets
+2007-03-17,Washington Wizards,New Orleans:Oklahoma City Hornets
 2007-03-17,Cleveland Cavaliers,Utah Jazz
 2007-03-17,Memphis Grizzlies,Chicago Bulls
 2007-03-17,San Antonio Spurs,Boston Celtics
@@ -8209,12 +8209,12 @@ date,home_team,away_team
 2007-03-18,Los Angeles Lakers,Minnesota Timberwolves
 2007-03-18,Portland Trail Blazers,Seattle SuperSonics
 2007-03-19,Atlanta Hawks,Sacramento Kings
-2007-03-19,New Orleans/Oklahoma City Hornets,Boston Celtics
+2007-03-19,New Orleans:Oklahoma City Hornets,Boston Celtics
 2007-03-20,Charlotte Bobcats,Cleveland Cavaliers
 2007-03-20,New Jersey Nets,Denver Nuggets
 2007-03-20,Detroit Pistons,Philadelphia 76ers
 2007-03-20,New York Knicks,Dallas Mavericks
-2007-03-20,Memphis Grizzlies,New Orleans/Oklahoma City Hornets
+2007-03-20,Memphis Grizzlies,New Orleans:Oklahoma City Hornets
 2007-03-20,Chicago Bulls,Los Angeles Clippers
 2007-03-20,Utah Jazz,Golden State Warriors
 2007-03-20,Houston Rockets,Indiana Pacers
@@ -8240,7 +8240,7 @@ date,home_team,away_team
 2007-03-23,Atlanta Hawks,Portland Trail Blazers
 2007-03-23,Boston Celtics,Dallas Mavericks
 2007-03-23,Cleveland Cavaliers,New York Knicks
-2007-03-23,New Orleans/Oklahoma City Hornets,Los Angeles Lakers
+2007-03-23,New Orleans:Oklahoma City Hornets,Los Angeles Lakers
 2007-03-23,San Antonio Spurs,Detroit Pistons
 2007-03-23,Golden State Warriors,Washington Wizards
 2007-03-23,Los Angeles Clippers,Utah Jazz
@@ -8255,7 +8255,7 @@ date,home_team,away_team
 2007-03-25,Minnesota Timberwolves,Portland Trail Blazers
 2007-03-25,Sacramento Kings,Phoenix Suns
 2007-03-25,Cleveland Cavaliers,Denver Nuggets
-2007-03-25,New Orleans/Oklahoma City Hornets,Houston Rockets
+2007-03-25,New Orleans:Oklahoma City Hornets,Houston Rockets
 2007-03-25,Seattle SuperSonics,San Antonio Spurs
 2007-03-25,Los Angeles Lakers,Golden State Warriors
 2007-03-26,Boston Celtics,Toronto Raptors
@@ -8269,7 +8269,7 @@ date,home_team,away_team
 2007-03-26,Golden State Warriors,San Antonio Spurs
 2007-03-27,Indiana Pacers,Cleveland Cavaliers
 2007-03-27,Minnesota Timberwolves,Seattle SuperSonics
-2007-03-27,New Orleans/Oklahoma City Hornets,Dallas Mavericks
+2007-03-27,New Orleans:Oklahoma City Hornets,Dallas Mavericks
 2007-03-27,Los Angeles Lakers,Memphis Grizzlies
 2007-03-28,Charlotte Bobcats,Atlanta Hawks
 2007-03-28,Toronto Raptors,Miami Heat
@@ -8277,7 +8277,7 @@ date,home_team,away_team
 2007-03-28,Boston Celtics,Orlando Magic
 2007-03-28,New Jersey Nets,Indiana Pacers
 2007-03-28,New York Knicks,Cleveland Cavaliers
-2007-03-28,San Antonio Spurs,New Orleans/Oklahoma City Hornets
+2007-03-28,San Antonio Spurs,New Orleans:Oklahoma City Hornets
 2007-03-28,Dallas Mavericks,Milwaukee Bucks
 2007-03-28,Denver Nuggets,Seattle SuperSonics
 2007-03-28,Utah Jazz,Minnesota Timberwolves
@@ -8299,7 +8299,7 @@ date,home_team,away_team
 2007-03-30,Seattle SuperSonics,Memphis Grizzlies
 2007-03-31,Chicago Bulls,Cleveland Cavaliers
 2007-03-31,New Jersey Nets,Philadelphia 76ers
-2007-03-31,New Orleans/Oklahoma City Hornets,New York Knicks
+2007-03-31,New Orleans:Oklahoma City Hornets,New York Knicks
 2007-03-31,Portland Trail Blazers,Los Angeles Clippers
 2007-04-01,Detroit Pistons,Miami Heat
 2007-04-01,Atlanta Hawks,Chicago Bulls
@@ -8317,7 +8317,7 @@ date,home_team,away_team
 2007-04-03,Indiana Pacers,Detroit Pistons
 2007-04-03,Miami Heat,Toronto Raptors
 2007-04-03,Memphis Grizzlies,Phoenix Suns
-2007-04-03,Milwaukee Bucks,New Orleans/Oklahoma City Hornets
+2007-04-03,Milwaukee Bucks,New Orleans:Oklahoma City Hornets
 2007-04-03,Minnesota Timberwolves,Cleveland Cavaliers
 2007-04-03,San Antonio Spurs,Seattle SuperSonics
 2007-04-03,Sacramento Kings,Dallas Mavericks
@@ -8328,7 +8328,7 @@ date,home_team,away_team
 2007-04-04,New Jersey Nets,Atlanta Hawks
 2007-04-04,New York Knicks,Philadelphia 76ers
 2007-04-04,Milwaukee Bucks,Boston Celtics
-2007-04-04,New Orleans/Oklahoma City Hornets,Seattle SuperSonics
+2007-04-04,New Orleans:Oklahoma City Hornets,Seattle SuperSonics
 2007-04-04,Houston Rockets,Golden State Warriors
 2007-04-04,Denver Nuggets,Sacramento Kings
 2007-04-04,Portland Trail Blazers,Utah Jazz
@@ -8341,7 +8341,7 @@ date,home_team,away_team
 2007-04-06,Boston Celtics,Miami Heat
 2007-04-06,New York Knicks,Minnesota Timberwolves
 2007-04-06,Memphis Grizzlies,Golden State Warriors
-2007-04-06,New Orleans/Oklahoma City Hornets,Phoenix Suns
+2007-04-06,New Orleans:Oklahoma City Hornets,Phoenix Suns
 2007-04-06,Washington Wizards,Cleveland Cavaliers
 2007-04-06,Chicago Bulls,New Jersey Nets
 2007-04-06,Houston Rockets,Portland Trail Blazers
@@ -8351,7 +8351,7 @@ date,home_team,away_team
 2007-04-07,Indiana Pacers,Boston Celtics
 2007-04-07,Orlando Magic,Memphis Grizzlies
 2007-04-07,New Jersey Nets,Washington Wizards
-2007-04-07,Minnesota Timberwolves,New Orleans/Oklahoma City Hornets
+2007-04-07,Minnesota Timberwolves,New Orleans:Oklahoma City Hornets
 2007-04-07,San Antonio Spurs,Golden State Warriors
 2007-04-07,Milwaukee Bucks,New York Knicks
 2007-04-07,Dallas Mavericks,Portland Trail Blazers
@@ -8376,7 +8376,7 @@ date,home_team,away_team
 2007-04-10,Philadelphia 76ers,Indiana Pacers
 2007-04-10,Washington Wizards,New Jersey Nets
 2007-04-10,Memphis Grizzlies,Sacramento Kings
-2007-04-10,New Orleans/Oklahoma City Hornets,Los Angeles Clippers
+2007-04-10,New Orleans:Oklahoma City Hornets,Los Angeles Clippers
 2007-04-10,Chicago Bulls,New York Knicks
 2007-04-11,Boston Celtics,Philadelphia 76ers
 2007-04-11,Miami Heat,Washington Wizards
@@ -8395,7 +8395,7 @@ date,home_team,away_team
 2007-04-13,New Jersey Nets,New York Knicks
 2007-04-13,Miami Heat,Indiana Pacers
 2007-04-13,Minnesota Timberwolves,San Antonio Spurs
-2007-04-13,New Orleans/Oklahoma City Hornets,Denver Nuggets
+2007-04-13,New Orleans:Oklahoma City Hornets,Denver Nuggets
 2007-04-13,Chicago Bulls,Charlotte Bobcats
 2007-04-13,Dallas Mavericks,Utah Jazz
 2007-04-13,Sacramento Kings,Golden State Warriors
@@ -8404,7 +8404,7 @@ date,home_team,away_team
 2007-04-14,Philadelphia 76ers,Orlando Magic
 2007-04-14,Cleveland Cavaliers,Atlanta Hawks
 2007-04-14,Memphis Grizzlies,Denver Nuggets
-2007-04-14,Houston Rockets,New Orleans/Oklahoma City Hornets
+2007-04-14,Houston Rockets,New Orleans:Oklahoma City Hornets
 2007-04-14,Milwaukee Bucks,Charlotte Bobcats
 2007-04-14,Utah Jazz,Phoenix Suns
 2007-04-14,Portland Trail Blazers,Seattle SuperSonics
@@ -8424,7 +8424,7 @@ date,home_team,away_team
 2007-04-16,Houston Rockets,Phoenix Suns
 2007-04-16,Denver Nuggets,Minnesota Timberwolves
 2007-04-16,Utah Jazz,Portland Trail Blazers
-2007-04-16,Sacramento Kings,New Orleans/Oklahoma City Hornets
+2007-04-16,Sacramento Kings,New Orleans:Oklahoma City Hornets
 2007-04-17,Atlanta Hawks,Indiana Pacers
 2007-04-17,Philadelphia 76ers,Cleveland Cavaliers
 2007-04-17,Washington Wizards,Orlando Magic
@@ -8444,7 +8444,7 @@ date,home_team,away_team
 2007-04-18,Portland Trail Blazers,Golden State Warriors
 2007-04-18,Sacramento Kings,Los Angeles Lakers
 2007-04-18,Seattle SuperSonics,Dallas Mavericks
-2007-04-18,Los Angeles Clippers,New Orleans/Oklahoma City Hornets
+2007-04-18,Los Angeles Clippers,New Orleans:Oklahoma City Hornets
 2007-10-30,San Antonio Spurs,Portland Trail Blazers
 2007-10-30,Golden State Warriors,Utah Jazz
 2007-10-30,Los Angeles Lakers,Houston Rockets
