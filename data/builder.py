@@ -87,6 +87,9 @@ def create_dataset(
         "home_tov_pct",
         "home_orb_pct",
         "home_ft_rate",
+        "home_tov_imp",
+        "home_fg_pct_split_diff",
+        "home_net_rating",
         "away_pts",
         "away_fg",
         "away_fga",
@@ -122,6 +125,9 @@ def create_dataset(
         "away_tov_pct",
         "away_orb_pct",
         "away_ft_rate",
+        "away_tov_imp",
+        "away_fg_pct_split_diff",
+        "away_net_rating",
     ]
 
     with open(final_dataset_file, mode="a", newline="") as file:
