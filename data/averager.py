@@ -18,15 +18,8 @@ OUTPUT_FILE: str = os.path.join(CSV_DIR, "averages.csv")
 # Game window size
 game_window: int = 25
 
-# Feature interaction definitions
-FEATURE_INTERACTIONS = {
-    "tov_imp": ("tov_pct", "ortg"),
-    "fg_pct_split_diff": ("fg3_pct", "fg2_pct"),
-    "net_rating": ("ortg", "drtg"),
-}
 
-
-# Calculate rolling averages and add feature engineering stats
+# Calculate the rolling average over the last n game_window games
 def compute_rolling_averages(game_window: int, gamelogs_file: str, output_file: str):
     # Load the CSV file
     console.print("[bold green]Loading CSV file...[/bold green]")
@@ -35,20 +28,7 @@ def compute_rolling_averages(game_window: int, gamelogs_file: str, output_file: 
     # Sort by team and date
     console.print("[bold green]Sorting data by team and date...[/bold green]")
     df["date"] = pd.to_datetime(df["date"])
-    df = df.sort_values(by=["team", "date"])
-
-    # Compute feature interactions
-    console.print("[bold green]Computing feature interactions...[/bold green]")
-    for new_col, (col1, col2) in FEATURE_INTERACTIONS.items():
-        if col1 in df.columns and col2 in df.columns:
-            if new_col == "tov_imp":
-                df[new_col] = (df[col1] / 100) * df[
-                    col2
-                ]  # Convert tov_pct to decimal before multiplying
-            else:
-                df[new_col] = (
-                    df[col1] - df[col2]
-                )  # Subtract values for split comparison and net rating
+    df: pd.DataFrame = df.sort_values(by=["team", "date"])
 
     # Identify columns for rolling averages (excluding 'date' and 'team')
     stat_columns: list[str] = [col for col in df.columns if col not in ["date", "team"]]
