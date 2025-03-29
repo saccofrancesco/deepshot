@@ -25,6 +25,11 @@ with console.status("[green]Loading Data...") as status:
 # Drop columns that are not used for training (just home_team and away_team)
 df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
 
+# Drop irrelvant stats columns
+stats_to_drop: list[str] = []
+for stat in stats_to_drop:
+    df: pd.DataFrame = df.drop([f"home_{stat}", f"away_{stat}"], axis=1)
+
 # Define features (X) and target (y)
 X: pd.DataFrame = df.drop(
     "winning_team", axis=1
