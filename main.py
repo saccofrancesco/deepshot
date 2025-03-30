@@ -69,8 +69,6 @@ stat_to_full_name_desc: dict[str, str] = {
     "tov_pct": "Turnover %",
     "orb_pct": "Offensive Rebound %",
     "ft_rate": "Free Throws Per Field Goal Attempt",
-    "ast_to_tov": "Assist-to-Turnover Ratio (AST/TOV)",
-    "ast_to_fg": "Assist-to-Field Goal Ration (AST/FG)",
 }
 
 # Storing stats that if lower are better:
@@ -283,6 +281,11 @@ class GameList:
 
             # Drop non-numeric columns (team names)
             df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
+
+            # Drop irrelvant stats columns
+            stats_to_drop: list[str] = []
+            for stat in stats_to_drop:
+                df: pd.DataFrame = df.drop([f"home_{stat}", f"away_{stat}"], axis=1)
 
             # Convert all values to float (they are strings in the provided data)
             df: pd.DataFrame = df.astype(float)
