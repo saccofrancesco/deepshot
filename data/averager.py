@@ -35,6 +35,7 @@ def compute_rolling_averages(game_window: int, gamelogs_file: str, output_file: 
 
     # Feature engeneering
     df["ast_to_tov"] = round(df["ast"] / df["tov"], 2)
+    df["ast_to_fg"] = round(df["ast"] / df["fg"], 2)
 
     # Compute rolling averages
     console.print("[bold green]Computing rolling averages...[/bold green]")
