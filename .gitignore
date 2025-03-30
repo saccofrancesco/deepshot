@@ -1,5 +1,4 @@
 .venv
 data/csv/averages.csv
 data/csv/dataset.csv
-data/csv/test
 model/deepshot.pkl

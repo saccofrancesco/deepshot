@@ -3,6 +3,8 @@ import os
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
+import shap
+import plotly.express as px
 from sklearn.metrics import accuracy_score, classification_report
 import numpy as np
 from rich.console import Console
@@ -98,37 +100,28 @@ pd.reset_option("display.max_columns")
 pd.reset_option("display.width")
 pd.reset_option("display.max_rows")
 
-# Get the absolute path to the script's directory
-BASE_DIR: str = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR: str = os.path.join(
-    BASE_DIR, "..", "data", "csv", "test"
-)  # Adjust for relative path
-DATASET_FILE: str = os.path.join(DATA_DIR, "testing_dataset.csv")
+# Compute SHAP values
+explainer = shap.Explainer(rf)
+shap_values = explainer(X_test)
 
-# Start spinner for data loading
-with console.status("[green]Loading Data...") as status:
-    # Load CSV Data
-    df: pd.DataFrame = pd.read_csv(DATASET_FILE)
-    status.update("Data Loaded Successfully!")
+# Convert to DataFrame
+shap_df = pd.DataFrame(
+    {"Feature": X_test.columns, "Mean SHAP Value": abs(shap_values.values).mean(axis=0)}
+).sort_values(
+    by="Mean SHAP Value", ascending=True
+)  # Ascending for Plotly horizontal bar
 
-# Drop columns that are not used for training (just home_team and away_team)
-df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
-
-# Define features (X) and target (y)
-X: pd.DataFrame = df.drop(
-    "winning_team", axis=1
-)  # Features (all columns except 'winning_team')
-y: pd.Series = df["winning_team"]  # Target variable (already 0 or 1)
-
-# Evaluate the model
-console.print("Evaluating the model...", style="bold cyan")
-y_pred: np.ndarray = rf.predict(X)
-accuracy: float = accuracy_score(y, y_pred)
-
-# Print the accuracy with rich styling
-console.print(
-    f"\n[bold green]Model Accuracy: {accuracy * 100:.2f}%[/bold green]", style="bold"
+# Plot
+fig = px.bar(
+    shap_df,
+    x="Mean SHAP Value",
+    y="Feature",
+    orientation="h",
+    title="Feature Importance (SHAP Values)",
+    color="Mean SHAP Value",
+    color_continuous_scale="blues",
 )
+fig.show()
 
 # Save the model
 joblib.dump(rf, "deepshot.pkl")

@@ -170,11 +170,6 @@ if __name__ == "__main__":
         "[bold magenta]Starting the dataset creation process...", style="bold blue"
     )
     create_dataset("csv/training_schedule.csv", "csv/averages.csv", "csv/dataset.csv")
-    create_dataset(
-        "csv/test/testing_schedule.csv",
-        "csv/averages.csv",
-        "csv/test/testing_dataset.csv",
-    )
     console.print(
         "[bold magenta]Dataset creation process completed!", style="bold green"
     )
