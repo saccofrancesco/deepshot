@@ -14,9 +14,9 @@ script_dir = os.path.dirname(os.path.abspath(__file__))
 
 # Merge the gamelogs and csv files to create the dataset
 def create_dataset(
-    schedule_file: str = "csv/training_schedule.csv",
-    gamelogs_file: str = "csv/averages.csv",
-    final_dataset_file: str = "csv/dataset.csv",
+    schedule_file: str,
+    gamelogs_file: str,
+    final_dataset_file: str,
 ):
     # Convert relative paths to absolute paths based on the script's directory
     schedule_file: str = os.path.join(script_dir, schedule_file)
@@ -169,7 +169,12 @@ if __name__ == "__main__":
     console.print(
         "[bold magenta]Starting the dataset creation process...", style="bold blue"
     )
-    create_dataset()
+    create_dataset("csv/training_schedule.csv", "csv/averages.csv", "csv/dataset.csv")
+    create_dataset(
+        "csv/test/testing_schedule.csv",
+        "csv/averages.csv",
+        "csv/test/testing_dataset.csv",
+    )
     console.print(
         "[bold magenta]Dataset creation process completed!", style="bold green"
     )
