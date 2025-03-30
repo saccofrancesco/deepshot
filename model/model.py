@@ -98,5 +98,37 @@ pd.reset_option("display.max_columns")
 pd.reset_option("display.width")
 pd.reset_option("display.max_rows")
 
+# Get the absolute path to the script's directory
+BASE_DIR: str = os.path.dirname(os.path.abspath(__file__))
+DATA_DIR: str = os.path.join(
+    BASE_DIR, "..", "data", "csv", "test"
+)  # Adjust for relative path
+DATASET_FILE: str = os.path.join(DATA_DIR, "testing_dataset.csv")
+
+# Start spinner for data loading
+with console.status("[green]Loading Data...") as status:
+    # Load CSV Data
+    df: pd.DataFrame = pd.read_csv(DATASET_FILE)
+    status.update("Data Loaded Successfully!")
+
+# Drop columns that are not used for training (just home_team and away_team)
+df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
+
+# Define features (X) and target (y)
+X: pd.DataFrame = df.drop(
+    "winning_team", axis=1
+)  # Features (all columns except 'winning_team')
+y: pd.Series = df["winning_team"]  # Target variable (already 0 or 1)
+
+# Evaluate the model
+console.print("Evaluating the model...", style="bold cyan")
+y_pred: np.ndarray = rf.predict(X)
+accuracy: float = accuracy_score(y, y_pred)
+
+# Print the accuracy with rich styling
+console.print(
+    f"\n[bold green]Model Accuracy: {accuracy * 100:.2f}%[/bold green]", style="bold"
+)
+
 # Save the model
 joblib.dump(rf, "deepshot.pkl")
