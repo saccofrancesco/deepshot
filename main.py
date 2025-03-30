@@ -97,14 +97,12 @@ def extract_games(date: str) -> list[dict[str, str | int | float]]:
 
 # Search the last available stat for each team and append it as home and away
 @lru_cache(maxsize=128)
+# Search the last available stat for each team and append it as home and away
 def find_most_recent_stats(
-    team_name: str, until_date: str, file_path: str = "./data/csv/averages.csv"
+    team_name: str, file_path: str = "./data/csv/averages.csv"
 ) -> tuple[str, str]:
     most_recent_row = None
     most_recent_date = None
-
-    if until_date:
-        until_date = datetime.datetime.strptime(until_date, "%Y-%m-%d")
 
     with open(file_path, mode="r", newline="") as file:
         reader: csv.reader = csv.reader(file)
@@ -114,12 +112,13 @@ def find_most_recent_stats(
 
         for row in reader:
             date_str, team = row[0], row[1]
-            current_date = datetime.datetime.strptime(date_str, "%Y-%m-%d")
 
-            if team == team_name and (until_date is None or current_date <= until_date):
+            if team == team_name:
+                current_date: str = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+
                 if most_recent_date is None or current_date > most_recent_date:
-                    most_recent_date = current_date
-                    most_recent_row = row
+                    most_recent_date: str = current_date
+                    most_recent_row: str = row
 
     if most_recent_row:
         return headers[2:], most_recent_row[2:]
@@ -269,10 +268,10 @@ class GameList:
         try:
             games: list[dict[str, str | int | float]] = list()
             for game in extract_games(self.date):
-                stat_label, stats = find_most_recent_stats(game["home_team"], self.date)
+                stat_label, stats = find_most_recent_stats(game["home_team"])
                 for i, _ in enumerate(stat_label):
                     game[f"home_{stat_label[i]}"] = stats[i]
-                stat_label, stats = find_most_recent_stats(game["away_team"], self.date)
+                stat_label, stats = find_most_recent_stats(game["away_team"])
                 for i, _ in enumerate(stat_label):
                     game[f"away_{stat_label[i]}"] = stats[i]
                 games.append(game)
