@@ -3,9 +3,8 @@ import os
 import pandas as pd
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-import shap
-import plotly.express as px
 from sklearn.metrics import accuracy_score, classification_report
+import shap
 import numpy as np
 from rich.console import Console
 import joblib
@@ -100,28 +99,12 @@ pd.reset_option("display.max_columns")
 pd.reset_option("display.width")
 pd.reset_option("display.max_rows")
 
-# Compute SHAP values
-explainer = shap.Explainer(rf)
-shap_values = explainer(X_test)
-
-# Convert to DataFrame
-shap_df = pd.DataFrame(
-    {"Feature": X_test.columns, "Mean SHAP Value": abs(shap_values.values).mean(axis=0)}
-).sort_values(
-    by="Mean SHAP Value", ascending=True
-)  # Ascending for Plotly horizontal bar
-
-# Plot
-fig = px.bar(
-    shap_df,
-    x="Mean SHAP Value",
-    y="Feature",
-    orientation="h",
-    title="Feature Importance (SHAP Values)",
-    color="Mean SHAP Value",
-    color_continuous_scale="blues",
-)
-fig.show()
+# Analyzing feature importance with SHAP values and chart
+sample = X_test.sample(500, random_state=42)
+explainer = shap.TreeExplainer(rf, sample)
+shap_values = explainer(sample)
+shap_values = shap_values[:, :, 1]
+shap.summary_plot(shap_values, sample)
 
 # Save the model
 joblib.dump(rf, "deepshot.pkl")
