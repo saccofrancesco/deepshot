@@ -107,4 +107,6 @@ shap_values = shap_values[:, :, 1]
 shap.summary_plot(shap_values, sample)
 
 # Save the model
+if os.path.exists("deepshot.pkl"):
+    os.remove("deepshot.pkl")
 joblib.dump(rf, "deepshot.pkl")
