@@ -70,6 +70,7 @@ stat_to_full_name_desc: dict[str, str] = {
     "orb_pct": "Offensive Rebound %",
     "ft_rate": "Free Throws Per Field Goal Attempt",
     "poss": "Possessions",
+    "usg_pct": "Usage % (USG%)",
 }
 
 # Storing stats that if lower are better:
