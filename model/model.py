@@ -31,32 +31,6 @@ stats_to_drop: list[str] = []
 for stat in stats_to_drop:
     df: pd.DataFrame = df.drop([f"home_{stat}", f"away_{stat}"], axis=1)
 
-# Creating features
-df["home_usg"] = round(
-    (100 * (df["home_fga"] + 0.44 * df["home_fta"] + df["home_tov"]))
-    / (
-        df["home_fga"]
-        + 0.44 * df["home_fta"]
-        + df["home_tov"]
-        + df["away_fga"]
-        + 0.44 * df["away_fta"]
-        + df["away_tov"]
-    ),
-    2,
-)
-df["away_usg"] = round(
-    (100 * (df["away_fga"] + 0.44 * df["away_fta"] + df["away_tov"]))
-    / (
-        df["away_fga"]
-        + 0.44 * df["away_fta"]
-        + df["away_tov"]
-        + df["home_fga"]
-        + 0.44 * df["home_fta"]
-        + df["home_tov"]
-    ),
-    2,
-)
-
 # Define features (X) and target (y)
 X: pd.DataFrame = df.drop(
     "winning_team", axis=1
