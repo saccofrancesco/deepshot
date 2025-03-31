@@ -99,14 +99,14 @@ pd.reset_option("display.max_columns")
 pd.reset_option("display.width")
 pd.reset_option("display.max_rows")
 
+# Save the model
+if os.path.exists("deepshot.pkl"):
+    os.remove("deepshot.pkl")
+joblib.dump(rf, "deepshot.pkl")
+
 # Analyzing feature importance with SHAP values and chart
 sample = X_test.sample(250, random_state=42)
 explainer = shap.TreeExplainer(rf, sample)
 shap_values = explainer(sample)
 shap_values = shap_values[:, :, 1]
 shap.summary_plot(shap_values, sample)
-
-# Save the model
-if os.path.exists("deepshot.pkl"):
-    os.remove("deepshot.pkl")
-joblib.dump(rf, "deepshot.pkl")

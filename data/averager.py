@@ -38,6 +38,7 @@ def compute_rolling_averages(game_window: int, gamelogs_file: str, output_file: 
     df["usg_pct"] = round(
         (100 * (df["fga"] + 0.44 * df["fta"] + df["tov"])) / df["poss"], 2
     )
+    df["tov_to_poss"] = round(df["tov"] / df["poss"], 2)
 
     # Compute rolling averages
     console.print("[bold green]Computing rolling averages...[/bold green]")
