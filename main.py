@@ -71,10 +71,11 @@ stat_to_full_name_desc: dict[str, str] = {
     "ft_rate": "Free Throws Per Field Goal Attempt",
     "poss": "Possessions",
     "usg_pct": "Usage % (USG%)",
+    "tov_to_poss": "Turnover-to-Possesion Ratio (TOV/POSS)",
 }
 
 # Storing stats that if lower are better:
-lower_better_stats: set = {"tov", "pf", "drtg", "tov_pct"}
+lower_better_stats: set = {"tov", "pf", "drtg", "tov_pct", "tov_to_poss"}
 
 # Get the next day NBA game
 year: datetime.datetime = datetime.datetime.now().strftime("%Y")
