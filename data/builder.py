@@ -49,6 +49,7 @@ def create_dataset(
 
     # Creating the file and the headers
     headers: list[str] = [
+        "date",
         "home_team",
         "away_team",
         "winning_team",
@@ -154,7 +155,7 @@ def create_dataset(
                 # If both home and away stats are found, create a row
                 if home_stats and away_stats:
                     row: str = (
-                        [home_team, away_team, winner]
+                        [date, home_team, away_team, winner]
                         + list(home_stats.values())
                         + list(away_stats.values())
                     )
