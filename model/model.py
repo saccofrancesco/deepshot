@@ -100,7 +100,7 @@ pd.reset_option("display.width")
 pd.reset_option("display.max_rows")
 
 # Analyzing feature importance with SHAP values and chart
-sample = X_test.sample(500, random_state=42)
+sample = X_test.sample(250, random_state=42)
 explainer = shap.TreeExplainer(rf, sample)
 shap_values = explainer(sample)
 shap_values = shap_values[:, :, 1]
