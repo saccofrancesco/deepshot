@@ -24,7 +24,7 @@ with console.status("[green]Loading Data...") as status:
     status.update("Data Loaded Successfully!")
 
 # Drop columns that are not used for training (just home_team and away_team)
-df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
+df: pd.DataFrame = df.drop(["date", "home_team", "away_team"], axis=1)
 
 # Drop irrelvant stats columns
 stats_to_drop: list[str] = []
