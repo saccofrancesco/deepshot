@@ -34,6 +34,7 @@ def compute_rolling_averages(game_window: int, gamelogs_file: str, output_file: 
     stat_columns: list[str] = [col for col in df.columns if col not in ["date", "team"]]
 
     # Feature engeneering
+    df["poss"] = round(df["fga"] + 0.44 * df["fta"] - df["orb"] + df["tov"], 2)
 
     # Compute rolling averages
     console.print("[bold green]Computing rolling averages...[/bold green]")
