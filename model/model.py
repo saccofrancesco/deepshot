@@ -10,7 +10,10 @@ from rich.console import Console
 import joblib
 
 # Removing the already existing model to overwrite it with the new one
-os.remove("deepshot.pkl")
+try:
+    os.remove("deepshot.pkl")
+except:
+    pass
 
 # Initialize rich console for pretty printing
 console: Console = Console()
