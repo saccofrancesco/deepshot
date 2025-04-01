@@ -144,10 +144,10 @@ class GameCard(ui.card):
         with self:
 
             # Row for Team Logos and "VS"
-            with ui.row().classes("items-center justify-between w-full"):
-                ui.image(f"./img/badges/{game['home_team']}.svg").classes("w-32")
+            with ui.row().classes("items-center justify-between w-full mb-2"):
+                ui.image(f"./img/badges/{game['home_team']}.png").classes("w-32")
                 ui.label("VS").classes("text-lg font-semibold text-center w-20")
-                ui.image(f"./img/badges/{game['away_team']}.svg").classes("w-32")
+                ui.image(f"./img/badges/{game['away_team']}.png").classes("w-32")
 
             # Row for Team Names and Win Probabilities
             with ui.row().classes("items-center justify-between w-full mb-2"):
