@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 # Loading the dataset
 def load_data(file_path: str) -> pd.DataFrame:
     df: pd.DataFrame = pd.read_csv(file_path)
-    return df.drop(["home_team", "away_team"], axis=1)
+    return df.drop(["date", "home_team", "away_team"], axis=1)
 
 
 # Plot the selected features organized in a correlations matrix
