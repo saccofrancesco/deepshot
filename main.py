@@ -66,12 +66,13 @@ stat_to_full_name_desc: dict[str, str] = {
     "stl_pct": "Steal % (STL%)",
     "blk_pct": "Block % (BLK%)",
     "efg_pct": "Effective Field Goal % (eFG%)",
-    "tov_pct": "Turnover %",
-    "orb_pct": "Offensive Rebound %",
-    "ft_rate": "Free Throws Per Field Goal Attempt",
-    "poss": "Possessions",
+    "tov_pct": "Turnover % (TOV%)",
+    "orb_pct": "Offensive Rebound % (ORB%)",
+    "ft_rate": "Free Throws Per Field Goal Attempt (FT/FTA)",
+    "poss": "Possessions (POSS)",
     "usg_pct": "Usage % (USG%)",
     "tov_to_poss": "Turnover-to-Possesion Ratio (TOV/POSS)",
+    "ft_to_poss": "Free Throw per Possesion (FT/POSS),"
 }
 
 # Storing stats that if lower are better:
