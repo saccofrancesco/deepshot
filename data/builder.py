@@ -176,7 +176,7 @@ if __name__ == "__main__":
     console.print(
         "[bold magenta]Starting the dataset creation process...", style="bold blue"
     )
-    create_dataset("csv/training_schedule.csv", "csv/averages.csv", "csv/dataset.csv")
+    create_dataset("csv/results.csv", "csv/averages.csv", "csv/dataset.csv")
     console.print(
         "[bold magenta]Dataset creation process completed!", style="bold green"
     )
