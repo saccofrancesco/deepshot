@@ -28,6 +28,7 @@ def check_feature_correlation(df: pd.DataFrame, feature: str):
     print(f"\nCorrelation of {feature} with other features:\n")
     print(correlations)
 
+
 # Incorporate all the correlator functionality in one simple main steps function
 def main():
     file_path: str = "../data/csv/dataset.csv"  # Change if needed
@@ -47,6 +48,7 @@ def main():
         check_feature_correlation(df, check_feature)
     else:
         print("Feature not found in dataset.")
+
 
 # Main section
 if __name__ == "__main__":
