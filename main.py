@@ -68,11 +68,11 @@ stat_to_full_name_desc: dict[str, str] = {
     "efg_pct": "Effective Field Goal % (eFG%)",
     "tov_pct": "Turnover % (TOV%)",
     "orb_pct": "Offensive Rebound % (ORB%)",
-    "ft_rate": "Free Throws Per Field Goal Attempt (FT/FTA)",
+    "ft_rate": "Free Throws Per Field Goal Attempt (FT/FGA)",
     "poss": "Possessions (POSS)",
     "usg_pct": "Usage % (USG%)",
     "tov_to_poss": "Turnover-to-Possesion Ratio (TOV/POSS)",
-    "ft_to_poss": "Free Throw per Possesion (FT/POSS),",
+    "ft_to_poss": "Free Throw per Possesion (FT/POSS),"
 }
 
 # Storing stats that if lower are better:
@@ -136,9 +136,7 @@ class GameCard(ui.card):
 
         # Initializing the super class
         super().__init__()
-        self.classes("m-4 p-8 rounded-2xl shadow-md border w-[650px]").style(
-            "background-color: #F8FAFC;"
-        )
+        self.classes("m-4 p-8 rounded-2xl shadow-md border w-[650px]")
 
         # Arranging the info
         with self:
@@ -165,10 +163,8 @@ class GameCard(ui.card):
 
             # Wide & Rounded "See More" Expansion
             with ui.expansion().classes(
-                "w-full shadow-md rounded-2xl overflow-hidden mx-auto"
-            ).props("duration=550 hide-expand-icon").style(
-                "background-color: #D9EAFD;"
-            ) as expansion:
+                "w-full shadow-md bg-gray-100 rounded-2xl overflow-hidden mx-auto"
+            ).props("duration=550 hide-expand-icon") as expansion:
 
                 # Toggle the label on / off based on the expansion state
                 def toggle_label() -> None:
@@ -329,13 +325,11 @@ with ui.element("div").classes("w-full h-full flex"):
 
     # Creating the 2 containers
     with ui.element("div").classes(
-        "w-1/3 flex justify-center items-center fixed h-full"
-    ).style("background-color: #9AA6B2;"):
+        "w-1/3 flex justify-center items-center fixed h-full bg-blue"
+    ):
         date_container: ui.element = ui.element("div")
 
-    with ui.element("div").classes("w-2/3 ml-auto h-full overflow-auto p-16").style(
-        "background-color: #BCCCDC;"
-    ):
+    with ui.element("div").classes("w-2/3 ml-auto h-full overflow-auto bg-red p-16"):
         cards_container: ui.element = ui.element("div")
 
     # Rendering the games list
@@ -350,13 +344,13 @@ with ui.element("div").classes("w-full h-full flex"):
             date: ui.date = (
                 ui.date(today)
                 .bind_value_to(games_list, "date")
-                .props("")
+                .props("color=black")
                 .style("border-radius: 16px;")
             )
 
             predict_button: ui.button = (
                 ui.button("Predict", on_click=games_list.render.refresh)
-                .props("rounded push size=lg")
+                .props("rounded push size=lg color=black")
                 .classes("rounded-2xl mt-4")
             )
 
