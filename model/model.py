@@ -9,6 +9,9 @@ import numpy as np
 from rich.console import Console
 import joblib
 
+# Removing the already existing model to overwrite it with the new one
+os.remove("deepshot.pkl")
+
 # Initialize rich console for pretty printing
 console: Console = Console()
 
@@ -100,8 +103,6 @@ pd.reset_option("display.width")
 pd.reset_option("display.max_rows")
 
 # Save the model
-if os.path.exists("deepshot.pkl"):
-    os.remove("deepshot.pkl")
 joblib.dump(rf, "deepshot.pkl")
 
 # Analyzing feature importance with SHAP values and chart
