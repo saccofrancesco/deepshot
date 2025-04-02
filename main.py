@@ -74,7 +74,7 @@ stat_to_full_name_desc: dict[str, str] = {
     "poss": "Possessions (POSS)",
     "usg_pct": "Usage % (USG%)",
     "tov_to_poss": "Turnover-to-Possesion Ratio (TOV/POSS)",
-    "ft_to_poss": "Free Throw per Possesion (FT/POSS),",
+    "ft_to_poss": "Free Throw per Possesion (FT/POSS)",
 }
 
 # Teams color codes list
