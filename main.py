@@ -224,7 +224,7 @@ class GameCard(ui.card):
             # Row for Team Logos and "VS"
             with ui.row().classes("items-center justify-between w-full"):
                 ui.image(f"./img/badges/{game['home_team']}.png").classes("w-32")
-                ui.label("VS").classes("text-lg font-semibold text-center w-20")
+                ui.image(f"./img/badges/vs.png").classes("w-16")
                 ui.image(f"./img/badges/{game['away_team']}.png").classes("w-32")
 
             # Row for Team Names and Win Probabilities
@@ -248,7 +248,7 @@ class GameCard(ui.card):
                 ).classes("rounded-md mr-1")
                 ui.element("div").style(
                     f"flex: {game['away_prob']}; background-color: {away_color}"
-                ).classes("rounded-lg ml-1")
+                ).classes("rounded-md ml-1")
 
             # Wide & Rounded "See More" Expansion toggle
             with ui.expansion().classes(
