@@ -75,6 +75,7 @@ stat_to_full_name_desc: dict[str, str] = {
     "usg_pct": "Usage % (USG%)",
     "tov_to_poss": "Turnover-to-Possesion Ratio (TOV/POSS)",
     "ft_to_poss": "Free Throw per Possesion (FT/POSS)",
+    "ast_to_tov": "Assist-to-Turnover Ratio (AST/TOV)",
 }
 
 # Teams color codes list
@@ -173,36 +174,26 @@ def extract_games(date: str) -> list[dict[str, str | int | float]]:
 @lru_cache(maxsize=128)
 # Search the last available stat for each team and append it as home and away
 def find_most_recent_stats(
-    team_name: str, file_path: str = "./data/csv/averages.csv"
+    team_name: str, target_date: str, file_path: str = "./data/csv/averages.csv"
 ) -> tuple[str, str]:
     most_recent_row = None
     most_recent_date = None
 
     # Open the specified file
     with open(file_path, mode="r", newline="") as file:
-        reader: csv.reader = csv.reader(file)
+        reader = csv.reader(file)
+        headers = next(reader)  # Read the headers
 
-        # Read the headers
-        headers: list[str] = next(reader)
-
-        # Loop the rows to extract the date and stats
+        # Loop through rows to find the most recent stats up to target_date
         for row in reader:
             date_str, team = row[0], row[1]
 
-            # If the name founded is equal to the inputed one
-            if team == team_name:
-                current_date: str = datetime.datetime.strptime(date_str, "%Y-%m-%d")
+            if team == team_name and date_str <= target_date:
+                if most_recent_date is None or date_str > most_recent_date:
+                    most_recent_date = date_str
+                    most_recent_row = row
 
-                # Check if the date of that much is the most recent
-                if most_recent_date is None or current_date > most_recent_date:
-                    most_recent_date: str = current_date
-                    most_recent_row: str = row
-
-    # If so return that game stats
-    if most_recent_row:
-        return headers[2:], most_recent_row[2:]
-    else:
-        return None, None
+    return (headers[2:], most_recent_row[2:]) if most_recent_row else (None, None)
 
 
 # Creating the Card UI
@@ -361,10 +352,10 @@ class GameList:
         try:
             games: list[dict[str, str | int | float]] = list()
             for game in extract_games(self.date):
-                stat_label, stats = find_most_recent_stats(game["home_team"])
+                stat_label, stats = find_most_recent_stats(game["home_team"], self.date)
                 for i, _ in enumerate(stat_label):
                     game[f"home_{stat_label[i]}"] = stats[i]
-                stat_label, stats = find_most_recent_stats(game["away_team"])
+                stat_label, stats = find_most_recent_stats(game["away_team"], self.date)
                 for i, _ in enumerate(stat_label):
                     game[f"away_{stat_label[i]}"] = stats[i]
                 games.append(game)
