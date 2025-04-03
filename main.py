@@ -71,6 +71,11 @@ stat_to_full_name_desc: dict[str, str] = {
     "tov_pct": "Turnover % (TOV%)",
     "orb_pct": "Offensive Rebound % (ORB%)",
     "ft_rate": "Free Throws Per Field Goal Attempt (FT/FGA)",
+    "poss": "Possessions (POSS)",
+    "usg_pct": "Usage % (USG%)",
+    "tov_to_poss": "Turnover-to-Possesion Ratio (TOV/POSS)",
+    "ft_to_poss": "Free Throw per Possesion (FT/POSS)",
+    "ast_to_tov": "Assist-to-Turnover Ratio (AST/TOV)",
 }
 
 # Teams color codes list
