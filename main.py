@@ -188,7 +188,7 @@ def find_most_recent_stats(
         for row in reader:
             date_str, team = row[0], row[1]
 
-            if team == team_name and date_str <= target_date:
+            if team == team_name and date_str < target_date:
                 if most_recent_date is None or date_str > most_recent_date:
                     most_recent_date = date_str
                     most_recent_row = row
