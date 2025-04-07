@@ -80,6 +80,30 @@ stat_to_full_name_desc: dict[str, str] = {
     "pct_pts_ft": "Points from FT % (PTSFT%)",
 }
 
+# Stats -> Tooltip (for advanced one)
+stats_to_tooltip: dict[str, str] = {
+    "ortg": "An estimate of points scored per 100 possessions",
+    "drtg": "An estimate of points allowed per 100 possesions",
+    "pace": "An estimate of possessions per 48 minutes",
+    "ftr": "Number of FT Attempts Per FG Attempt",
+    "3ptar": "Percentage of FG Attempts from 3-Point Range",
+    "ts": "A measure of shooting efficiency that takes into account 2-point field goals, 3-point field goals, and free throws",
+    "trb_pct": "An estimate of the percentage of available rebounds grabbed",
+    "ast_pct": "An estimate of the percentage of teammate field goals assisted",
+    "stl_pct": "An estimate of the percentage of opponent possesions that end with a steal",
+    "blk_pct": "An estimate of the percentage of opponent two-point field goal attempt blocked",
+    "efg_pct": "This statistics adjusts for the fact that a 3-point field goal is worth one more point than a 2-point field goal",
+    "tov_pct": "An estimate of turnovers commited per 100 plays",
+    "orb_pct": "An estimate of the percentage of available offensive rebounds grabbed",
+    "nrtg": "Measures the overall efficiency of a team in both scoring and preventing points",
+    "ast_tov": "The ratio of assists to turnovers, measuring the team's passing efficiency",
+    "ast_ratio": "The percentage of a team’s possessions that end in an assist",
+    "poss": "An estimate of the number of possessions a team has during a game",
+    "pct_pts_2pt": "The percentage of a team’s total points that come from 2-point field goals",
+    "pct_pts_3pt": "The percentage of a team’s total points that come from 3-point field goals",
+    "pct_pts_ft": "The percentage of a team’s total points that come from free throws",
+}
+
 # Teams color codes list
 team_color_codes: dict[str, list[str]] = {
     "Atlanta Hawks": ["#e03a3e", "#c1d32f"],
