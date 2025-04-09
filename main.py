@@ -228,7 +228,9 @@ class GameCard(ui.card):
 
         # Initializing the super class
         super().__init__()
-        self.classes("m-4 p-10 rounded-2xl shadow-md border w-[650px]")
+        self.classes("m-4 p-10 rounded-2xl shadow-md border w-[650px]").style(
+            "background-color: #e3e4e6;"
+        )
 
         # Arranging the info
         with self:
@@ -431,11 +433,13 @@ with ui.element("div").classes("w-full h-full flex"):
 
     # Creating the 2 containers
     with ui.element("div").classes(
-        "w-1/3 flex justify-center items-center fixed h-full bg-blue"
-    ):
+        "w-1/3 flex justify-center items-center fixed h-full"
+    ).style("background-color: #272829;"):
         date_container: ui.element = ui.element("div")
 
-    with ui.element("div").classes("w-2/3 ml-auto h-full overflow-auto p-16 bg-red"):
+    with ui.element("div").classes("w-2/3 ml-auto h-full overflow-auto p-16").style(
+        "background-color: #505463;"
+    ):
         cards_container: ui.element = ui.element("div")
 
     # Rendering the games list
@@ -450,13 +454,13 @@ with ui.element("div").classes("w-full h-full flex"):
             date: ui.date = (
                 ui.date(today)
                 .bind_value_to(games_list, "date")
-                .style("border-radius: 16px;")
-                .props("color=black")
+                .style("border-radius: 16px; background-color: #e3e4e6;")
+                .props("minimal color=orange-14")
             )
 
             predict_button: ui.button = (
                 ui.button("Predict", on_click=games_list.render.refresh)
-                .props("rounded push size=lg color=black")
+                .props("rounded push size=lg color=orange-14")
                 .classes("rounded-2xl mt-4")
             )
 
