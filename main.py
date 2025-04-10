@@ -434,11 +434,11 @@ with ui.element("div").classes("w-full h-full flex"):
     # Creating the 2 containers
     with ui.element("div").classes(
         "w-1/3 flex justify-center items-center fixed h-full"
-    ).style("background-color: #272829;"):
+    ).style("background-color: #333436;"):
         date_container: ui.element = ui.element("div")
 
     with ui.element("div").classes("w-2/3 ml-auto h-full overflow-auto p-16").style(
-        "background-color: #505463;"
+        "background-color: #5a5f70;"
     ):
         cards_container: ui.element = ui.element("div")
 
@@ -451,11 +451,13 @@ with ui.element("div").classes("w-full h-full flex"):
     # Creating the date picker
     with date_container:
         with ui.column(align_items="center"):
+            ui.image("./img/logo.svg").classes("mb-2")
             date: ui.date = (
                 ui.date(today)
                 .bind_value_to(games_list, "date")
                 .style("border-radius: 16px; background-color: #e3e4e6;")
                 .props("minimal color=orange-14")
+                .classes("mt-2")
             )
 
             predict_button: ui.button = (
