@@ -466,6 +466,12 @@ with ui.element("div").classes("w-full h-full flex"):
                 .classes("rounded-2xl mt-4")
             )
 
+            with ui.row().classes("mt-8 justify-center items-center gap-2"):
+                ui.label("Data provided by: ").style("color: #e3e4e6;")
+                ui.link(
+                    "Basketaball Reference", "https://www.basketball-reference.com"
+                ).style("color: #e3e4e6;")
+
 
 # Running the app
-ui.run(title="Deepshot AI")
+ui.run(title="Deepshot AI", favicon="./img/icon.png")
