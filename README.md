@@ -50,7 +50,9 @@ $ cd deepshot
 $ pip install -r requirements.txt
 ```
 
-4. Run the program:
+4. Run the "Model Training and Evaluation Workflow" cell in `model.ipynb`, to create the model file `deepshot.pkl`
+
+5. Run the program:
 
 ```bash
 $ python main.py
