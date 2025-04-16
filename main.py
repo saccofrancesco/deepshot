@@ -5,10 +5,13 @@ import pandas as pd
 import joblib
 import sklearn.ensemble
 import numpy as np
-from nicegui import ui
+from nicegui import app, ui
 from functools import lru_cache
 from itertools import product
 from colorsys import rgb_to_hsv
+
+# Adding static files (teams' logos)
+app.add_static_files("./img", "img")
 
 # Loading the model
 model: sklearn.ensemble._forest.RandomForestClassifier = joblib.load(
