@@ -252,13 +252,13 @@ class GameCard(ui.card):
                     ui.label(game["home_team"]).classes("text-left text-lg font-bold")
                     ui.label(f"W {game['home_prob']} %").classes(
                         f"text-left text-lg font-bold"
-                    ).style(f"color: {home_color}")
+                    )
 
                 with ui.column(align_items="end"):
                     ui.label(game["away_team"]).classes("text-right text-lg font-bold")
                     ui.label(f"W {game['away_prob']} %").classes(
                         f"text-right text-lg font-bold"
-                    ).style(f"color: {away_color}")
+                    )
 
             # HTML element to create W % bars
             with ui.element("div").classes("flex w-full h-6"):
