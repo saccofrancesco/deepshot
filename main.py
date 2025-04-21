@@ -62,7 +62,7 @@ stat_to_full_name_desc: dict[str, str] = {
     "pf": "Personal Fouls (PF)",
     "ortg": "Offensive Rating (ORtg)",
     "drtg": "Defensive Rating (DRtg)",
-    "pace": "Pace",
+    "pace": "Pace (Possessions per 48 minutes)",
     "ftr": "Free Throw Attempt Rate (FTr)",
     "3ptar": "3-Point Attempt Rate (3PAr)",
     "ts": "True Shooting % (TS%)",
