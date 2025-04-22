@@ -376,7 +376,6 @@ class GameList:
         self.date: str = date
 
     # Render all the cards
-    @ui.refreshable
     def render(self) -> None:
 
         # For each game shcedule for today date, extract the home team and away team
@@ -426,55 +425,62 @@ class GameList:
             pass
 
 
-# Add custom CSS to remove unwanted borders and padding
-ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100%; }")
-ui.add_css(".nicegui-content { height: 100%; }")
-ui.add_css(".w-1/3, .w-2/3 { border: none; box-shadow: none; }")
+# Redirect to page
+@ui.page("/")
+def redirect() -> None:
+    ui.navigate.to(f"/{today}")
 
-# Main app logic
-with ui.element("div").classes("w-full h-full flex"):
 
-    # Creating the 2 containers
-    with ui.element("div").classes(
-        "w-1/3 flex justify-center items-center fixed h-full"
-    ).style("background-color: #333436;"):
-        date_container: ui.element = ui.element("div")
+# Home day prediction and stats page template
+@ui.page("/{date}")
+def home(date: str) -> None:
 
-    with ui.element("div").classes("w-2/3 ml-auto h-full overflow-auto p-16").style(
-        "background-color: #5a5f70;"
-    ):
-        cards_container: ui.element = ui.element("div")
+    # Add custom CSS to remove unwanted borders and padding
+    ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100%; }")
+    ui.add_css(".nicegui-content { height: 100%; }")
+    ui.add_css(".w-1/3, .w-2/3 { border: none; box-shadow: none; }")
 
-    # Rendering the games list
-    with cards_container:
-        games_list: GameList = GameList(today)
-        with ui.column(align_items="center"):
-            games_list.render()
+    # Main app logic
+    with ui.element("div").classes("w-full h-full flex"):
 
-    # Creating the date picker
-    with date_container:
-        with ui.column(align_items="center"):
-            ui.image("./img/logo.svg").classes("mb-2")
-            date: ui.date = (
-                ui.date(today)
-                .bind_value_to(games_list, "date")
-                .style("border-radius: 16px; background-color: #e3e4e6;")
-                .props("minimal color=orange-14")
-                .classes("mt-2")
-            )
+        # Creating the 2 containers
+        with ui.element("div").classes(
+            "w-1/3 flex justify-center items-center fixed h-full"
+        ).style("background-color: #333436;"):
+            date_container: ui.element = ui.element("div")
 
-            predict_button: ui.button = (
-                ui.button("Predict", on_click=games_list.render.refresh)
-                .props("rounded push size=lg color=orange-14")
-                .classes("rounded-2xl mt-4")
-            )
+        with ui.element("div").classes("w-2/3 ml-auto h-full overflow-auto p-16").style(
+            "background-color: #5a5f70;"
+        ):
+            cards_container: ui.element = ui.element("div")
 
-            with ui.row().classes("mt-8 justify-center items-center gap-2"):
-                ui.label("Data provided by: ").style("color: #e3e4e6;")
-                ui.link(
-                    "Basketaball Reference", "https://www.basketball-reference.com"
-                ).style("color: #e3e4e6;")
+        # Rendering the games list
+        with cards_container:
+            games_list: GameList = GameList(date)
+            with ui.column(align_items="center"):
+                games_list.render()
 
+        # Creating the date picker
+        with date_container:
+            with ui.column(align_items="center"):
+                ui.image("./img/logo.svg").classes("mb-2")
+                date: ui.date = (
+                    ui.date(date)
+                    .bind_value_to(games_list, "date")
+                    .style("border-radius: 16px; background-color: #e3e4e6;")
+                    .props("minimal color=orange-14")
+                    .classes("mt-2")
+                )
+
+                ui.button("Predict", on_click=lambda: ui.navigate.to(f"/{date.value}")).props(
+                    "rounded push size=lg color=orange-14"
+                ).classes("rounded-2xl mt-4")
+
+                with ui.row().classes("mt-8 justify-center items-center gap-2"):
+                    ui.label("Data provided by: ").style("color: #e3e4e6;")
+                    ui.link(
+                        "Basketaball Reference", "https://www.basketball-reference.com"
+                    ).style("color: #e3e4e6;")
 
 # Running the app
 ui.run(title="Deepshot AI", favicon="./img/icon.png")
