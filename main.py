@@ -9,6 +9,8 @@ from nicegui import app, ui
 from functools import lru_cache
 from itertools import product
 from colorsys import rgb_to_hsv
+import json
+from urllib.parse import quote, unquote
 
 # Adding static files (teams' logos)
 app.add_static_files("./img", "img")
@@ -244,10 +246,20 @@ class GameCard(ui.card):
             )
 
             # Row for Team Logos and "VS"
-            with ui.row().classes("items-center justify-between w-full"):
+            with ui.row(align_items="center").classes(
+                "items-center justify-between w-full"
+            ):
                 ui.image(f"./img/badges/{game['home_team']}.png").classes("w-32")
                 ui.image(f"./img/badges/vs.png").classes("w-16")
                 ui.image(f"./img/badges/{game['away_team']}.png").classes("w-32")
+
+            # Row for the info / details button
+            with ui.row().classes("w-full flex justify-center items-center"):
+                with ui.column().classes("items-center"):
+                    ui.button(
+                        "Details",
+                        icon="info",
+                    ).props("unelevated rounded color=grey-2 text-color=grey-5")
 
             # Row for Team Names and Win Probabilities
             with ui.row(align_items="stretch").classes("justify-between w-full"):
@@ -472,15 +484,18 @@ def home(date: str) -> None:
                     .classes("mt-2")
                 )
 
-                ui.button("Predict", on_click=lambda: ui.navigate.to(f"/{date.value}")).props(
-                    "rounded push size=lg color=orange-14"
-                ).classes("rounded-2xl mt-4")
+                ui.button(
+                    "Predict", on_click=lambda: ui.navigate.to(f"/{date.value}")
+                ).props("rounded push size=lg color=orange-14").classes(
+                    "rounded-2xl mt-4"
+                )
 
                 with ui.row().classes("mt-8 justify-center items-center gap-2"):
                     ui.label("Data provided by: ").style("color: #e3e4e6;")
                     ui.link(
                         "Basketaball Reference", "https://www.basketball-reference.com"
                     ).style("color: #e3e4e6;")
+
 
 # Running the app
 ui.run(title="Deepshot AI", favicon="./img/icon.png")
