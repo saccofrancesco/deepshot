@@ -229,7 +229,7 @@ def find_most_recent_stats(
 
 # Creating the Card UI
 class GameCard(ui.card):
-    def __init__(self, game: dict[str, str | int | float]) -> None:
+    def __init__(self, game: dict[str, str | int | float], date: str) -> None:
 
         # Initializing the super class
         super().__init__()
@@ -259,6 +259,9 @@ class GameCard(ui.card):
                     ui.button(
                         "Details",
                         icon="info",
+                        on_click=lambda: ui.navigate.to(
+                            f"/{date}/{quote(json.dumps(game))}"
+                        ),
                     ).props("unelevated rounded color=grey-2 text-color=grey-5")
 
             # Row for Team Names and Win Probabilities
@@ -432,7 +435,7 @@ class GameList:
 
             # After clearing the container, rendering the game cards
             for game in games:
-                GameCard(game)
+                GameCard(game, self.date)
         except:
             pass
 
@@ -449,7 +452,6 @@ def home(date: str) -> None:
 
     # Add custom CSS to remove unwanted borders and padding
     ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100%; }")
-    ui.add_css(".nicegui-content { height: 100%; }")
     ui.add_css(".w-1/3, .w-2/3 { border: none; box-shadow: none; }")
 
     # Main app logic
@@ -495,6 +497,76 @@ def home(date: str) -> None:
                     ui.link(
                         "Basketaball Reference", "https://www.basketball-reference.com"
                     ).style("color: #e3e4e6;")
+
+
+# Single game details page
+@ui.page("/{date}/{game}")
+def game(date: str, game: str) -> None:
+
+    # Re-converting the game object
+    game: list[dict[str, str | int | float]] = json.loads(unquote(game))
+
+    # Add custom CSS to remove unwanted borders and padding
+    ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100%; }")
+    ui.add_css(".nicegui-content { display: flex; flex-direction: column; }")
+    ui.add_css(".nicegui-content { justify-content: center;  align-items: center; }")
+
+    # Back button
+    with ui.page_sticky("top-left", x_offset=32, y_offset=32).classes("mt-8 ml-8"):
+        ui.button("", icon="arrow_back", on_click=lambda: ui.navigate.to(f"/{date}"))
+
+    # Creating the card fot the games details
+    card: ui.card = (
+        ui.card()
+        .classes("m-8 p-10 rounded-2xl shadow-md border w-[1000px]")
+        .style("background-color: #e3e4e6;")
+    )
+
+    # Filling the card
+    with card:
+
+        # Calculating the color for each team
+        home_color, away_color = get_best_color_pair(
+            game["home_team"], game["away_team"]
+        )
+
+        # Row for Team Logos and "VS"
+        with ui.row(align_items="center").classes(
+            "items-center justify-between w-full"
+        ):
+            ui.image(f"./img/badges/{game["home_team"]}.png").classes("w-36")
+            ui.image(f"./img/badges/vs.png").classes("w-20")
+            ui.image(f"./img/badges/{game["away_team"]}.png").classes("w-36")
+
+        # Row for Team Names and Win Probabilities
+        with ui.row(align_items="stretch").classes("justify-between w-full"):
+            with ui.column(align_items="start"):
+                ui.label(game["home_team"]).classes("text-left text-xl font-bold")
+                ui.label(f"W {game['home_prob']} %").classes(
+                    f"text-left text-xl font-bold"
+                )
+            with ui.column(align_items="end"):
+                ui.label(game["away_team"]).classes("text-right text-xl font-bold")
+                ui.label(f"W {game['away_prob']} %").classes(
+                    f"text-right text-xl font-bold"
+                )
+
+        # HTML element to create W % bars
+        with ui.element("div").classes("flex w-full h-10"):
+            ui.element("div").style(
+                f"flex: {game['home_prob']}; background-color: {home_color}"
+            ).classes("rounded-xl mr-1")
+            ui.element("div").style(
+                f"flex: {game['away_prob']}; background-color: {away_color}"
+            ).classes("rounded-xl ml-1")
+
+        # Dropdown selectin to choose stats to display for both teams
+        feature: ui.select = (
+            ui.select(stat_to_full_name_desc, value="pts", with_input=True)
+            .style("border-radius: 0.25rem;")
+            .classes("w-full")
+            .props("outlined color=grey-9  bg-color=grey-2")
+        )
 
 
 # Running the app
