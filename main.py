@@ -79,7 +79,7 @@ stat_to_full_name_desc: dict[str, str] = {
     "nrtg": "Net Rating (NRtg)",
     "ast_tov": "Assist-to-Turnover (AST/TOV)",
     "ast_ratio": "Assist Ratio (ASTr)",
-    "poss": "Possesions (POSS)",
+    "poss": "Possessions (POSS)",
     "pct_pts_2pt": "Points from 2 % (PTS2%)",
     "pct_pts_3pt": "Points from 3 % (PTS3%)",
     "pct_pts_ft": "Points from FT % (PTSFT%)",
@@ -451,7 +451,7 @@ def redirect() -> None:
 def home(date: str) -> None:
 
     # Add custom CSS to remove unwanted borders and padding
-    ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100%; }")
+    ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100vh; }")
     ui.add_css(".w-1/3, .w-2/3 { border: none; box-shadow: none; }")
 
     # Main app logic
@@ -499,6 +499,97 @@ def home(date: str) -> None:
                     ).style("color: #e3e4e6;")
 
 
+# Creating the Head-2-Head plot component
+class H2HPlot:
+    def __init__(
+        self,
+        stat: str,
+        date: str,
+        team1: str,
+        team2: str,
+        home_color: str,
+        away_color: str,
+        csv_path: str,
+    ) -> None:
+
+        # Storing vars for future plot updates
+        self.stat: str = stat
+        self.date: str = date
+        self.team1: str = team1
+        self.team2: str = team2
+        self.home_color: str = home_color
+        self.away_color: str = away_color
+        self.path: str = csv_path
+
+        # Plotting at first component mount
+        self.plot_stat()
+
+    @ui.refreshable
+    def plot_stat(self) -> ui.plotly:
+
+        # Load data
+        df: pd.DataFrame = pd.read_csv(self.path, parse_dates=["date"])
+
+        # Checking if the selected stat is present in the column
+        if self.stat not in df.columns:
+            raise ValueError(f"'{self.stat}' not found in dataset columns.")
+
+        # Specify the start date (converting to timestamp)
+        start_date: pd.Timestamp = pd.to_datetime(self.date)
+
+        # Function to convert date to JS timestamp (ms since epoch)
+        def make_series(df: pd.DataFrame, team: str, color: str) -> dict[str, str]:
+
+            # Filter for games starting from the given date and going backwards
+            df_team: pd.DataFrame = (
+                df[(df["team"] == team) & (df["date"] < start_date)]
+                .sort_values("date", ascending=False)
+                .head(25)
+            )  # Get the last 25 games
+
+            # Prepare the data
+            data: list[str] = [
+                [int(d.date.timestamp() * 1000), float(getattr(d, self.stat))]
+                for d in df_team.itertuples()
+            ]
+            return {
+                "name": team,
+                "data": data,
+                "color": color,
+            }
+
+        # Generate both series
+        series: list[dict[str, str]] = [
+            make_series(df, self.team1, self.home_color),
+            make_series(df, self.team2, self.away_color),
+        ]
+
+        # Highcharts config with datetime x-axis
+        config: dict[str, dict[str, str]] = {
+            "chart": {"type": "line"},
+            "title": {
+                "text": f"{self.team1} vs {self.team2} {stat_to_full_name_desc[self.stat]}"
+            },
+            "xAxis": {
+                "type": "datetime",
+                "labels": {"format": "{value:%b %d}"},
+            },
+            "yAxis": {"title": {"text": stat_to_full_name_desc[self.stat]}},
+            "legend": {
+                "layout": "horizontal",
+                "align": "center",
+                "verticalAlign": "top",
+            },
+            "tooltip": {
+                "xDateFormat": "%b %d, %Y",
+                "shared": True,
+            },
+            "series": series,
+        }
+
+        ui.highchart(options=config).classes("rounded-lg")
+
+
 # Single game details page
 @ui.page("/{date}/{game}")
 def game(date: str, game: str) -> None:
@@ -507,18 +598,25 @@ def game(date: str, game: str) -> None:
     game: list[dict[str, str | int | float]] = json.loads(unquote(game))
 
     # Add custom CSS to remove unwanted borders and padding
-    ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100%; }")
+    ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100vh; }")
     ui.add_css(".nicegui-content { display: flex; flex-direction: column; }")
+
+    # Alligning the details card to the center
     ui.add_css(".nicegui-content { justify-content: center;  align-items: center; }")
+
+    # Customizing the bg color
+    ui.add_css(".nicegui-content { background-color: #5a5f70; }")
 
     # Back button
     with ui.page_sticky("top-left", x_offset=32, y_offset=32).classes("mt-8 ml-8"):
-        ui.button("", icon="arrow_back", on_click=lambda: ui.navigate.to(f"/{date}"))
+        ui.icon("arrow_back").classes("cursor-pointer text-3xl").style(
+            "color: #e3e4e6"
+        ).on("click", lambda: ui.navigate.to(f"/{date}"))
 
     # Creating the card fot the games details
     card: ui.card = (
         ui.card()
-        .classes("m-8 p-10 rounded-2xl shadow-md border w-[1000px]")
+        .classes("m-4 p-6 rounded-2xl shadow-md border w-[850px]")
         .style("background-color: #e3e4e6;")
     )
 
@@ -534,39 +632,60 @@ def game(date: str, game: str) -> None:
         with ui.row(align_items="center").classes(
             "items-center justify-between w-full"
         ):
-            ui.image(f"./img/badges/{game["home_team"]}.png").classes("w-36")
-            ui.image(f"./img/badges/vs.png").classes("w-20")
-            ui.image(f"./img/badges/{game["away_team"]}.png").classes("w-36")
+            ui.image(f"./img/badges/{game["home_team"]}.png").classes("w-28")
+            ui.image(f"./img/badges/vs.png").classes("w-12")
+            ui.image(f"./img/badges/{game["away_team"]}.png").classes("w-28")
 
         # Row for Team Names and Win Probabilities
         with ui.row(align_items="stretch").classes("justify-between w-full"):
             with ui.column(align_items="start"):
-                ui.label(game["home_team"]).classes("text-left text-xl font-bold")
+                ui.label(game["home_team"]).classes("text-left text-md font-bold")
                 ui.label(f"W {game['home_prob']} %").classes(
-                    f"text-left text-xl font-bold"
+                    f"text-left text-md font-bold"
                 )
             with ui.column(align_items="end"):
-                ui.label(game["away_team"]).classes("text-right text-xl font-bold")
+                ui.label(game["away_team"]).classes("text-right text-md font-bold")
                 ui.label(f"W {game['away_prob']} %").classes(
-                    f"text-right text-xl font-bold"
+                    f"text-right text-md font-bold"
                 )
 
         # HTML element to create W % bars
-        with ui.element("div").classes("flex w-full h-10"):
+        with ui.element("div").classes("flex w-full h-6"):
             ui.element("div").style(
                 f"flex: {game['home_prob']}; background-color: {home_color}"
-            ).classes("rounded-xl mr-1")
+            ).classes("rounded-md mr-1")
             ui.element("div").style(
                 f"flex: {game['away_prob']}; background-color: {away_color}"
-            ).classes("rounded-xl ml-1")
+            ).classes("rounded-md ml-1")
+
+        # Creating the 2 containers for the selection and plotting of a specified stat
+        selectors_section: ui.element = ui.element("div").classes("w-full")
+        plotting_section: ui.element = ui.element("div").classes("w-full")
+
+        # Creating a first plot
+        with plotting_section:
+            plot: H2HPlot = H2HPlot(
+                "pts",
+                date,
+                game["home_team"],
+                game["away_team"],
+                home_color,
+                away_color,
+                "./data/csv/averages.csv",
+            )
 
         # Dropdown selectin to choose stats to display for both teams
-        feature: ui.select = (
-            ui.select(stat_to_full_name_desc, value="pts", with_input=True)
-            .style("border-radius: 0.25rem;")
-            .classes("w-full")
-            .props("outlined color=grey-9  bg-color=grey-2")
-        )
+        with selectors_section:
+            ui.select(
+                stat_to_full_name_desc,
+                value="pts",
+                with_input=True,
+                on_change=plot.plot_stat.refresh,
+            ).style("border-radius: 0.25rem;").classes("w-full").props(
+                "outlined color=grey-9  bg-color=grey-2"
+            ).bind_value_to(
+                plot, "stat"
+            )
 
 
 # Running the app
