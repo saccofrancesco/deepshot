@@ -79,10 +79,6 @@ stat_to_full_name_desc: dict[str, str] = {
     "nrtg": "Net Rating (NRtg)",
     "ast_tov": "Assist-to-Turnover (AST/TOV)",
     "ast_ratio": "Assist Ratio (ASTr)",
-    "poss": "Possessions (POSS)",
-    "pct_pts_2pt": "Points from 2 % (PTS2%)",
-    "pct_pts_3pt": "Points from 3 % (PTS3%)",
-    "pct_pts_ft": "Points from FT % (PTSFT%)",
 }
 
 # Stats -> Tooltip (for advanced one)
@@ -103,10 +99,6 @@ stats_to_tooltip: dict[str, str] = {
     "nrtg": "Measures the overall efficiency of a team in both scoring and preventing points",
     "ast_tov": "The ratio of assists to turnovers, measuring the team's passing efficiency",
     "ast_ratio": "The percentage of a team’s possessions that end in an assist",
-    "poss": "An estimate of the number of possessions a team has during a game",
-    "pct_pts_2pt": "The percentage of a team’s total points that come from 2-point field goals",
-    "pct_pts_3pt": "The percentage of a team’s total points that come from 3-point field goals",
-    "pct_pts_ft": "The percentage of a team’s total points that come from free throws",
 }
 
 # Teams color codes list
