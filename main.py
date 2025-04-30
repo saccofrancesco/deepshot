@@ -566,7 +566,11 @@ class H2HPlot:
 
         # Highcharts config with datetime x-axis
         config: dict[str, dict[str, str]] = {
-            "chart": {"type": "line"},
+            "chart": {
+                "type": "line",
+                "spacingTop": 25,
+                "spacingBottom": 25,
+            },
             "title": {
                 "text": f"{self.team1} vs {self.team2} {stat_to_full_name_desc[self.stat]}"
             },
