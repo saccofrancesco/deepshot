@@ -628,9 +628,9 @@ def game(date: str, game: str) -> None:
         with ui.row(align_items="center").classes(
             "items-center justify-between w-full"
         ):
-            ui.image(f"./img/badges/{game["home_team"]}.png").classes("w-28")
+            ui.image(f"./img/badges/{game['home_team']}.png").classes("w-28")
             ui.image(f"./img/badges/vs.png").classes("w-12")
-            ui.image(f"./img/badges/{game["away_team"]}.png").classes("w-28")
+            ui.image(f"./img/badges/{game['away_team']}.png").classes("w-28")
 
         # Row for Team Names and Win Probabilities
         with ui.row(align_items="stretch").classes("justify-between w-full"):
