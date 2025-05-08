@@ -13,7 +13,7 @@ import json
 from urllib.parse import quote, unquote
 
 # Adding static files (teams' logos)
-app.add_static_files("./img", "img")
+app.add_static_files("./static", "static")
 
 # Loading the model
 model: sklearn.ensemble._forest.RandomForestClassifier = joblib.load(
@@ -241,9 +241,9 @@ class GameCard(ui.card):
             with ui.row(align_items="center").classes(
                 "items-center justify-between w-full"
             ):
-                ui.image(f"./img/badges/{game['home_team']}.png").classes("w-32")
-                ui.image(f"./img/badges/vs.png").classes("w-16")
-                ui.image(f"./img/badges/{game['away_team']}.png").classes("w-32")
+                ui.image(f"./static/{game['home_team']}.png").classes("w-32")
+                ui.image(f"./static/vs.png").classes("w-16")
+                ui.image(f"./static/{game['away_team']}.png").classes("w-32")
 
             # Row for the info / details button
             with ui.row().classes("w-full flex justify-center items-center"):
@@ -469,7 +469,7 @@ def home(date: str) -> None:
         # Creating the date picker
         with date_container:
             with ui.column(align_items="center"):
-                ui.image("./img/logo.svg").classes("mb-2")
+                ui.image("./static/logo.svg").classes("mb-2")
                 date: ui.date = (
                     ui.date(date)
                     .bind_value_to(games_list, "date")
@@ -628,9 +628,9 @@ def game(date: str, game: str) -> None:
         with ui.row(align_items="center").classes(
             "items-center justify-between w-full"
         ):
-            ui.image(f"./img/badges/{game['home_team']}.png").classes("w-28")
-            ui.image(f"./img/badges/vs.png").classes("w-12")
-            ui.image(f"./img/badges/{game['away_team']}.png").classes("w-28")
+            ui.image(f"./static/{game['home_team']}.png").classes("w-28")
+            ui.image(f"./static/vs.png").classes("w-12")
+            ui.image(f"./static/{game['away_team']}.png").classes("w-28")
 
         # Row for Team Names and Win Probabilities
         with ui.row(align_items="stretch").classes("justify-between w-full"):
@@ -685,4 +685,4 @@ def game(date: str, game: str) -> None:
 
 
 # Running the app
-ui.run(title="Deepshot AI", favicon="./img/icon.png")
+ui.run(title="Deepshot AI", favicon="./static/icon.png")
