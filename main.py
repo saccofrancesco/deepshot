@@ -435,7 +435,7 @@ class GameList:
 # Redirect to page
 @ui.page("/")
 def redirect() -> None:
-    ui.navigate.to(f"/{today}")
+    ui.navigate.to(f"/2025-04-13")
 
 
 # Home day prediction and stats page template
@@ -470,16 +470,18 @@ def home(date: str) -> None:
         with date_container:
             with ui.column(align_items="center"):
                 ui.image("./static/logo.svg").classes("mb-2")
-                date: ui.date = (
+                date_picker: ui.date = (
                     ui.date(date)
                     .bind_value_to(games_list, "date")
                     .style("border-radius: 16px; background-color: #e3e4e6;")
-                    .props("minimal color=orange-14")
+                    .props(
+                        '''minimal color=orange-14 :options="date => {const d = new Date(date); const start = new Date('2024-10-21'); const end = new Date('2025-04-13'); return d >= start && d <= end;}"'''
+                    )
                     .classes("mt-2")
                 )
 
                 ui.button(
-                    "Predict", on_click=lambda: ui.navigate.to(f"/{date.value}")
+                    "Predict", on_click=lambda: ui.navigate.to(f"/{date_picker.value}")
                 ).props("rounded push size=lg color=orange-14").classes(
                     "rounded-2xl mt-4"
                 )
