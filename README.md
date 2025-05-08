@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="img/icon.png" alt="DeepShot - NBA Game Prediction Model" width="350">
+  <img src="static/icon.png" alt="DeepShot - NBA Game Prediction Model" width="350">
   <h1>DeepShot: NBA Game Prediction Model</h1>
 </div>
 
@@ -19,7 +19,7 @@
 </p>
 
 <div align="center">
-  <img src="./img/usage.gif" alt="DeepShot in action">
+  <img src="./static/usage.gif" alt="DeepShot in action">
 </div>
 
 ## Key Features of DeepShot
