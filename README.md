@@ -3,6 +3,10 @@
   <h1>DeepShot: NBA Game Prediction Model</h1>
 </div>
 
+<div align="center">
+  <a href="https://www.buymeacoffee.com/saccofrancesco"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=saccofrancesco&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff" /></a>
+</div>
+
 <h4 align="center">An advanced NBA game predictor powered by historical data - provided by <a href="https://www.basketball-reference.com" target="_blank">Basketball Reference</a> - rolling statistics and machine learning, built with <a href="https://nicegui.io" target="_blank">NiceGUI</a> for seamless interaction.</h4>
 
 <p align="center">
