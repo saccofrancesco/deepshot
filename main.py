@@ -7,6 +7,7 @@ import sklearn.ensemble
 import numpy as np
 from nicegui import app, ui
 from functools import lru_cache
+from collections import defaultdict
 from itertools import product
 from colorsys import rgb_to_hsv
 import json
@@ -14,6 +15,30 @@ from urllib.parse import quote, unquote
 
 # Adding static files (teams' logos)
 app.add_static_files("./static", "static")
+
+# Global dictionary to hold team stats
+team_stats_data: defaultdict = defaultdict(list)
+headers: list[str] = list()
+
+
+# Load CSV once
+def load_team_stats(file_path: str = "./data/csv/averages.csv"):
+    global headers
+    with open(file_path, mode="r", newline="") as file:
+        reader: csv.reader = csv.reader(file)
+        headers = next(reader)  # store headers
+
+        for row in reader:
+            date_str, team = row[0], row[1]
+            team_stats_data[team].append((date_str, row))
+
+    # Sort each team’s data by date descending for quick retrieval
+    for team in team_stats_data:
+        team_stats_data[team].sort(reverse=True)
+
+
+# Call once at startup
+load_team_stats()
 
 # Loading the model
 model: sklearn.ensemble._forest.RandomForestClassifier = joblib.load(
@@ -195,28 +220,17 @@ def extract_games(date: str) -> list[dict[str, str | int | float]]:
 
 
 @lru_cache(maxsize=128)
-# Search the last available stat for each team and append it as home and away
 def find_most_recent_stats(
-    team_name: str, target_date: str, file_path: str = "./data/csv/averages.csv"
-) -> tuple[str, str]:
-    most_recent_row = None
-    most_recent_date = None
+    team_name: str, target_date: str
+) -> tuple[list[str], list[str]]:
+    if team_name not in team_stats_data:
+        return (None, None)
 
-    # Open the specified file
-    with open(file_path, mode="r", newline="") as file:
-        reader = csv.reader(file)
-        headers = next(reader)  # Read the headers
+    for date_str, row in team_stats_data[team_name]:
+        if date_str < target_date:
+            return (headers[2:], row[2:])  # Skip date and team name
 
-        # Loop through rows to find the most recent stats up to target_date
-        for row in reader:
-            date_str, team = row[0], row[1]
-
-            if team == team_name and date_str < target_date:
-                if most_recent_date is None or date_str > most_recent_date:
-                    most_recent_date = date_str
-                    most_recent_row = row
-
-    return (headers[2:], most_recent_row[2:]) if most_recent_row else (None, None)
+    return (None, None)
 
 
 # Creating the Card UI
