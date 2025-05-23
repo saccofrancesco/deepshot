@@ -1,6 +1,6 @@
 <div align="center">
   <img src="static/icon.png" alt="DeepShot - NBA Game Prediction Model" width="350">
-  <h1>🏀 DeepShot: Predict NBA Games with Machine Learning & Rolling Stats</h1>
+  <h1>🏀 DeepShot: Predict NBA Games with Machine Learning</h1>
 </div>
 
 <div align="center">
