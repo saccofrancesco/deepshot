@@ -255,9 +255,9 @@ class GameCard(ui.card):
             with ui.row(align_items="center").classes(
                 "items-center justify-between w-full"
             ):
-                ui.image(f"./static/{game['home_team']}.png").classes("w-32")
-                ui.image(f"./static/vs.png").classes("w-16")
-                ui.image(f"./static/{game['away_team']}.png").classes("w-32")
+                ui.image(f"static/{game['home_team']}.png").classes("w-32")
+                ui.image(f"static/vs.png").classes("w-16")
+                ui.image(f"static/{game['away_team']}.png").classes("w-32")
 
             # Row for the info / details button
             with ui.row().classes("w-full flex justify-center items-center"):
@@ -483,10 +483,10 @@ def home(date: str) -> None:
         # Creating the date picker
         with date_container:
             with ui.column(align_items="center"):
-                ui.image("./static/logo.svg").classes("mb-2")
+                ui.image("static/logo.svg").classes("mb-2")
                 with ui.link(target="https://www.buymeacoffee.com/saccofrancesco"):
                     ui.image(
-                        "https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=saccofrancesco&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                        "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
                     ).classes("w-[250px]")
                 date_picker: ui.date = (
                     ui.date(date)
@@ -648,9 +648,9 @@ def game(date: str, game: str) -> None:
         with ui.row(align_items="center").classes(
             "items-center justify-between w-full"
         ):
-            ui.image(f"./static/{game['home_team']}.png").classes("w-28")
-            ui.image(f"./static/vs.png").classes("w-12")
-            ui.image(f"./static/{game['away_team']}.png").classes("w-28")
+            ui.image(f"static/{game['home_team']}.png").classes("w-28")
+            ui.image(f"static/vs.png").classes("w-12")
+            ui.image(f"static/{game['away_team']}.png").classes("w-28")
 
         # Row for Team Names and Win Probabilities
         with ui.row(align_items="stretch").classes("justify-between w-full"):
@@ -705,4 +705,4 @@ def game(date: str, game: str) -> None:
 
 
 # Running the app
-ui.run(title="Deepshot AI", favicon="./static/icon.png")
+ui.run(title="Deepshot AI", favicon="static/icon.png")
