@@ -67,7 +67,7 @@ numpy==2.2.6
 optuna==4.3.0
 optuna-integration==4.3.0
 orjson==3.10.18
-packaging==24.2
+packaging==25.0
 pandas==2.2.3
 parso==0.8.4
 pexpect==4.9.0
@@ -83,8 +83,8 @@ psutil==7.0.0
 ptyprocess==0.7.0
 pure_eval==0.2.3
 pyaml==25.5.0
-pydantic==2.11.3
-pydantic_core==2.33.1
+pydantic==2.11.5
+pydantic_core==2.33.2
 Pygments==2.19.1
 pyparsing==3.2.3
 python-dateutil==2.9.0.post0
