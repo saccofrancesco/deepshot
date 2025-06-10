@@ -97,7 +97,7 @@ pywebview==5.4
 PyYAML==6.0.2
 pyzmq==26.4.0
 referencing==0.36.2
-requests==2.32.3
+requests==2.32.4
 rpds-py==0.25.1
 scikit-learn==1.6.1
 scikit-optimize==0.10.2
