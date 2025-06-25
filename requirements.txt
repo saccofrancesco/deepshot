@@ -55,8 +55,8 @@ markdown2==2.5.3
 MarkupSafe==3.0.2
 matplotlib==3.10.3
 matplotlib-inline==0.1.7
-multidict==6.5.0
-narwhals==1.43.1
+multidict==6.5.1
+narwhals==1.44.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
@@ -88,7 +88,7 @@ pydantic_core==2.33.2
 Pygments==2.19.2
 pyparsing==3.2.3
 python-dateutil==2.9.0.post0
-python-dotenv==1.1.0
+python-dotenv==1.1.1
 python-engineio==4.12.2
 python-multipart==0.0.20
 python-socketio==5.13.0
