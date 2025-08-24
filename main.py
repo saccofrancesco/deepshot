@@ -449,7 +449,7 @@ class GameList:
 # Redirect to page
 @ui.page("/")
 def redirect() -> None:
-    ui.navigate.to(f"/2025-04-13")
+    ui.navigate.to(f"/2025-10-21")
 
 
 # Home day prediction and stats page template
@@ -493,7 +493,7 @@ def home(date: str) -> None:
                     .bind_value_to(games_list, "date")
                     .style("border-radius: 16px; background-color: #e3e4e6;")
                     .props(
-                        '''minimal color=orange-14 :options="date => {const d = new Date(date); const start = new Date('2024-10-21'); const end = new Date('2025-04-13'); return d >= start && d <= end;}"'''
+                        '''minimal color=orange-14 :options="date => {const d = new Date(date); const start = new Date('2025-10-20'); const end = new Date('2026-04-12'); return d >= start && d <= end;}"'''
                     )
                     .classes("mt-2")
                 )
