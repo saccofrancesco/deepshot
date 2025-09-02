@@ -22,7 +22,7 @@ cycler==0.12.1
 debugpy==1.8.16
 decorator==5.2.1
 docutils==0.20.1
-executing==2.2.0
+executing==2.2.1
 fastapi==0.116.1
 fastjsonschema==2.21.2
 fonttools==4.59.2
@@ -57,7 +57,7 @@ MarkupSafe==3.0.2
 matplotlib==3.10.6
 matplotlib-inline==0.1.7
 multidict==6.6.4
-narwhals==2.2.0
+narwhals==2.3.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
