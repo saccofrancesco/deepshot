@@ -44,7 +44,7 @@ jedi==0.19.2
 Jinja2==3.1.6
 joblib==1.5.2
 jsonschema==4.25.1
-jsonschema-specifications==2025.4.1
+jsonschema-specifications==2025.9.1
 jupyter_client==8.6.3
 jupyter_core==5.8.1
 jupyterlab_widgets==3.0.15
@@ -57,11 +57,11 @@ MarkupSafe==3.0.2
 matplotlib==3.10.6
 matplotlib-inline==0.1.7
 multidict==6.6.4
-narwhals==2.3.0
+narwhals==2.4.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
-nicegui==2.23.3
+nicegui==2.24.0
 nicegui-highcharts==2.1.0
 numba==0.61.2
 numpy==2.2.6
@@ -101,11 +101,11 @@ python-socketio==5.13.0
 pytz==2025.2
 pywebview==6.0
 PyYAML==6.0.2
-pyzmq==27.0.2
+pyzmq==27.1.0
 referencing==0.36.2
 requests==2.32.5
 rpds-py==0.27.1
-scikit-learn==1.7.1
+scikit-learn==1.7.2
 scikit-optimize==0.10.2
 scipy==1.16.1
 seaborn==0.13.2
@@ -136,5 +136,5 @@ wcwidth==0.2.13
 websockets==15.0.1
 widgetsnbextension==4.0.14
 wsproto==1.2.0
-xgboost==3.0.4
+xgboost==3.0.5
 yarl==1.20.1
