@@ -4,7 +4,7 @@ aiohttp==3.12.15
 aiosignal==1.4.0
 alembic==1.16.5
 annotated-types==0.7.0
-anyio==4.10.0
+anyio==4.11.0
 appnope==0.1.4
 asttokens==3.0.0
 attrs==25.3.0
@@ -61,7 +61,7 @@ narwhals==2.5.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
-nicegui==2.24.1
+nicegui==2.24.2
 nicegui-highcharts==2.1.0
 numba==0.62.0
 numpy==2.2.6
@@ -127,12 +127,12 @@ typing-inspection==0.4.1
 typing_extensions==4.15.0
 tzdata==2025.2
 urllib3==2.5.0
-uvicorn==0.36.0
+uvicorn==0.37.0
 uvloop==0.21.0
 vbuild==0.8.2
 wait_for2==0.4.1
 watchfiles==1.1.0
-wcwidth==0.2.13
+wcwidth==0.2.14
 websockets==15.0.1
 widgetsnbextension==4.0.14
 wsproto==1.2.0
