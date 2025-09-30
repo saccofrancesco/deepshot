@@ -3,6 +3,10 @@ import requests
 import bs4
 from collections import defaultdict
 import plotly.graph_objects as go
+import plotly.io as pio
+
+# Setting the browser to be the default renderer for charts
+pio.renderers.default = "browser"
 
 # Storing the teams names - codes pair
 team_codes: dict[str, str] = {
