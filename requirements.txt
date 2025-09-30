@@ -25,7 +25,7 @@ docutils==0.20.1
 executing==2.2.1
 fastapi==0.118.0
 fastjsonschema==2.21.2
-fonttools==4.60.0
+fonttools==4.60.1
 frozenlist==1.7.0
 graphviz==0.21
 h11==0.16.0
@@ -69,7 +69,7 @@ optuna==4.5.0
 optuna-integration==4.5.0
 orjson==3.11.3
 packaging==25.0
-pandas==2.3.2
+pandas==2.3.3
 parso==0.8.5
 pexpect==4.9.0
 pillow==11.3.0
