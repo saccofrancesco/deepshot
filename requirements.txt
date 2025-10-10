@@ -1,4 +1,4 @@
-aiofiles==24.1.0
+aiofiles==25.1.0
 aiohappyeyeballs==2.6.1
 aiohttp==3.13.0
 aiosignal==1.4.0
@@ -23,14 +23,14 @@ debugpy==1.8.17
 decorator==5.2.1
 docutils==0.20.1
 executing==2.2.1
-fastapi==0.118.2
+fastapi==0.118.3
 fastjsonschema==2.21.2
 fonttools==4.60.1
 frozenlist==1.8.0
 graphviz==0.21
 h11==0.16.0
 httpcore==1.0.9
-httptools==0.6.4
+httptools==0.7.1
 httpx==0.28.1
 idna==3.10
 ifaddr==0.2.0
@@ -63,7 +63,7 @@ narwhals==2.7.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
-nicegui==3.0.3
+nicegui==3.0.4
 nicegui-highcharts==3.0.0
 numba==0.62.1
 numpy==2.2.6
@@ -106,7 +106,7 @@ PyYAML==6.0.3
 pyzmq==27.1.0
 referencing==0.36.2
 requests==2.32.5
-rich==14.1.0
+rich==14.2.0
 rpds-py==0.27.1
 scikit-learn==1.7.2
 scikit-optimize==0.10.2
@@ -119,7 +119,7 @@ sklearn-compat==0.1.4
 slicer==0.0.8
 sniffio==1.3.1
 soupsieve==2.8
-SQLAlchemy==2.0.43
+SQLAlchemy==2.0.44
 stack-data==0.6.3
 starlette==0.48.0
 threadpoolctl==3.6.0
