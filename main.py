@@ -481,11 +481,6 @@ def home(date: str) -> None:
         # Creating the date picker
         with date_container:
             with ui.column(align_items="center"):
-                ui.image("static/logo.svg").classes("mb-2")
-                with ui.link(target="https://www.buymeacoffee.com/saccofrancesco"):
-                    ui.image(
-                        "https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
-                    ).classes("w-[250px]")
                 date_picker: ui.date = (
                     ui.date(date)
                     .bind_value_to(games_list, "date")
