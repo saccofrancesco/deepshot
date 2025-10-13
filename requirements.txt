@@ -32,7 +32,7 @@ h11==0.16.0
 httpcore==1.0.9
 httptools==0.7.1
 httpx==0.28.1
-idna==3.10
+idna==3.11
 ifaddr==0.2.0
 imbalanced-learn==0.14.0
 ipykernel==6.30.1
@@ -59,7 +59,7 @@ matplotlib==3.10.7
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 multidict==6.7.0
-narwhals==2.7.0
+narwhals==2.8.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
