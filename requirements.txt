@@ -23,7 +23,7 @@ debugpy==1.8.17
 decorator==5.2.1
 docutils==0.20.1
 executing==2.2.1
-fastapi==0.119.0
+fastapi==0.119.1
 fastjsonschema==2.21.2
 fonttools==4.60.1
 frozenlist==1.8.0
@@ -59,7 +59,7 @@ matplotlib==3.10.7
 matplotlib-inline==0.1.7
 mdurl==0.1.2
 multidict==6.7.0
-narwhals==2.8.0
+narwhals==2.9.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
@@ -82,7 +82,7 @@ prompt_toolkit==3.0.52
 propcache==0.4.1
 proxy_tools==0.1.0
 pscript==0.7.7
-psutil==7.1.0
+psutil==7.1.1
 ptyprocess==0.7.0
 pure_eval==0.2.3
 pyaml==25.7.0
