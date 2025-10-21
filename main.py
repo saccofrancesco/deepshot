@@ -350,7 +350,7 @@ class GameCard(ui.card):
                             )
 
                     # Stat labels (Centered)
-                    with ui.column().classes("items-center flex-2"):
+                    with ui.column().classes("items-center flex-3"):
                         for stat in stats_tags:
                             ui.label(stat_to_full_name_desc[stat]).classes(
                                 "text-center text-sm font-bold"
