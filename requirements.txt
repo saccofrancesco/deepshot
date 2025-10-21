@@ -89,11 +89,11 @@ pyaml==25.7.0
 pydantic==2.11.7
 pydantic_core==2.33.2
 Pygments==2.19.2
-pyobjc-core==11.1
-pyobjc-framework-Cocoa==11.1
-pyobjc-framework-Quartz==11.1
-pyobjc-framework-Security==11.1
-pyobjc-framework-WebKit==11.1
+pyobjc-core==12.0
+pyobjc-framework-Cocoa==12.0
+pyobjc-framework-Quartz==12.0
+pyobjc-framework-Security==12.0
+pyobjc-framework-WebKit==12.0
 pyparsing==3.2.5
 python-dateutil==2.9.0.post0
 python-dotenv==1.1.1
