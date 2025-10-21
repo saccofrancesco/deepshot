@@ -101,6 +101,7 @@ stat_to_full_name_desc: dict[str, str] = {
     "tov_pct": "Turnover % (TOV%)",
     "orb_pct": "Offensive Rebound % (ORB%)",
     "ft_rate": "Free Throws Per Field Goal Attempt (FT/FGA)",
+    "nrtg": "Net Rating (NRtg)",
     "ast_tov": "Assist-to-Turnover (AST/TOV)",
     "ast_ratio": "Assist Ratio (ASTr)",
 }
@@ -120,6 +121,7 @@ stats_to_tooltip: dict[str, str] = {
     "efg_pct": "This statistics adjusts for the fact that a 3-point field goal is worth one more point than a 2-point field goal",
     "tov_pct": "An estimate of turnovers commited per 100 plays",
     "orb_pct": "An estimate of the percentage of available offensive rebounds grabbed",
+    "nrtg": "Measures the overall efficiency of a team in both scoring and preventing points",
     "ast_tov": "The ratio of assists to turnovers, measuring the team's passing efficiency",
     "ast_ratio": "The percentage of a team’s possessions that end in an assist",
 }
@@ -447,7 +449,7 @@ class GameList:
 # Redirect to page
 @ui.page("/")
 def redirect() -> None:
-    ui.navigate.to(today)
+    ui.navigate.to(f"/2025-10-21")
 
 
 # Home day prediction and stats page template
