@@ -449,7 +449,7 @@ class GameList:
 # Redirect to page
 @ui.page("/")
 def redirect() -> None:
-    ui.navigate.to(f"/2025-10-21")
+    ui.navigate.to(today)
 
 
 # Home day prediction and stats page template
