@@ -93,6 +93,7 @@ pyobjc-core==12.0
 pyobjc-framework-Cocoa==12.0
 pyobjc-framework-Quartz==12.0
 pyobjc-framework-Security==12.0
+pyobjc-framework-UniformTypeIdentifiers==12.0
 pyobjc-framework-WebKit==12.0
 pyparsing==3.2.5
 python-dateutil==2.9.0.post0
@@ -101,7 +102,7 @@ python-engineio==4.12.3
 python-multipart==0.0.20
 python-socketio==5.14.2
 pytz==2025.2
-pywebview==6.0
+pywebview==6.1
 PyYAML==6.0.3
 pyzmq==27.1.0
 referencing==0.37.0
@@ -139,5 +140,5 @@ wcwidth==0.2.14
 websockets==15.0.1
 widgetsnbextension==4.0.14
 wsproto==1.2.0
-xgboost==3.1.0
+xgboost==3.1.1
 yarl==1.22.0
