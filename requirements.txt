@@ -56,14 +56,14 @@ markdown-it-py==4.0.0
 markdown2==2.5.4
 MarkupSafe==3.0.3
 matplotlib==3.10.7
-matplotlib-inline==0.1.7
+matplotlib-inline==0.2.1
 mdurl==0.1.2
 multidict==6.7.0
 narwhals==2.9.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
-nicegui==3.0.4
+nicegui==3.1.0
 nicegui-highcharts==3.0.0
 numba==0.62.1
 numpy==2.3.4
@@ -108,7 +108,7 @@ pyzmq==27.1.0
 referencing==0.37.0
 requests==2.32.5
 rich==14.2.0
-rpds-py==0.27.1
+rpds-py==0.28.0
 scikit-learn==1.7.2
 scikit-optimize==0.10.2
 scipy==1.16.2
