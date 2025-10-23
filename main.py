@@ -436,8 +436,8 @@ class GameList:
                 game["winner"] = (
                     game["home_team"] if predictions[i] == 0 else game["away_team"]
                 )
-                game["home_prob"] = round(float(prob[i][0]) * 100, 2)
-                game["away_prob"] = round(float(prob[i][1]) * 100, 2)
+                game["home_prob"] = round(float(prob[i][0]) * 100)
+                game["away_prob"] = round(float(prob[i][1]) * 100)
 
             # After clearing the container, rendering the game cards
             for game in games:
