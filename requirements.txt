@@ -3,6 +3,7 @@ aiohappyeyeballs==2.6.1
 aiohttp==3.13.1
 aiosignal==1.4.0
 alembic==1.17.0
+annotated-doc==0.0.2
 annotated-types==0.7.0
 anyio==4.11.0
 appnope==0.1.4
@@ -23,7 +24,7 @@ debugpy==1.8.17
 decorator==5.2.1
 docutils==0.20.1
 executing==2.2.1
-fastapi==0.119.1
+fastapi==0.120.0
 fastjsonschema==2.21.2
 fonttools==4.60.1
 frozenlist==1.8.0
