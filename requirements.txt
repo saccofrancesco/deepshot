@@ -3,7 +3,7 @@ aiohappyeyeballs==2.6.1
 aiohttp==3.13.1
 aiosignal==1.4.0
 alembic==1.17.0
-annotated-doc==0.0.2
+annotated-doc==0.0.3
 annotated-types==0.7.0
 anyio==4.11.0
 appnope==0.1.4
@@ -70,7 +70,7 @@ numba==0.62.1
 numpy==2.3.4
 optuna==4.5.0
 optuna-integration==4.5.0
-orjson==3.11.3
+orjson==3.11.4
 packaging==25.0
 pandas==2.3.3
 parso==0.8.5
@@ -83,7 +83,7 @@ prompt_toolkit==3.0.52
 propcache==0.4.1
 proxy_tools==0.1.0
 pscript==0.7.7
-psutil==7.1.1
+psutil==7.1.2
 ptyprocess==0.7.0
 pure_eval==0.2.3
 pyaml==25.7.0
