@@ -36,7 +36,7 @@ httpx==0.28.1
 idna==3.11
 ifaddr==0.2.0
 imbalanced-learn==0.14.0
-ipykernel==7.0.1
+ipykernel==7.1.0
 ipython==9.6.0
 ipython_pygments_lexers==1.1.1
 ipywidgets==8.1.7
@@ -98,7 +98,7 @@ pyobjc-framework-UniformTypeIdentifiers==12.0
 pyobjc-framework-WebKit==12.0
 pyparsing==3.2.5
 python-dateutil==2.9.0.post0
-python-dotenv==1.1.1
+python-dotenv==1.2.1
 python-engineio==4.12.3
 python-multipart==0.0.20
 python-socketio==5.14.2
