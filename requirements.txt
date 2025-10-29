@@ -1,8 +1,8 @@
 aiofiles==25.1.0
 aiohappyeyeballs==2.6.1
-aiohttp==3.13.1
+aiohttp==3.13.2
 aiosignal==1.4.0
-alembic==1.17.0
+alembic==1.17.1
 annotated-doc==0.0.3
 annotated-types==0.7.0
 anyio==4.11.0
@@ -24,7 +24,7 @@ debugpy==1.8.17
 decorator==5.2.1
 docutils==0.20.1
 executing==2.2.1
-fastapi==0.120.1
+fastapi==0.120.2
 fastjsonschema==2.21.2
 fonttools==4.60.1
 frozenlist==1.8.0
@@ -101,7 +101,7 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
 python-engineio==4.12.3
 python-multipart==0.0.20
-python-socketio==5.14.2
+python-socketio==5.14.3
 pytz==2025.2
 pywebview==6.1
 PyYAML==6.0.3
