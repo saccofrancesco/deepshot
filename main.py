@@ -154,7 +154,7 @@ team_color_codes: dict[str, list[str]] = {
     "Sacramento Kings": ["#5a2d81", "#63727a"],
     "San Antonio Spurs": ["#c4ced4", "#000000"],
     "Toronto Raptors": ["#ce1141", "#b4975a"],
-    "Utah Jazz": ["#f9a01b"],
+    "Utah Jazz": ["#753bbd"],
     "Washington Wizards": ["#002b5c", "#e31837"],
 }
 
