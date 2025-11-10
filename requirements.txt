@@ -68,8 +68,8 @@ nicegui==3.2.0
 nicegui-highcharts==3.0.0
 numba==0.62.1
 numpy==2.3.4
-optuna==4.5.0
-optuna-integration==4.5.0
+optuna==4.6.0
+optuna-integration==4.6.0
 orjson==3.11.4
 packaging==25.0
 pandas==2.3.3
