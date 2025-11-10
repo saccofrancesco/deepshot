@@ -330,7 +330,7 @@ class GameCard(ui.card):
                             is_lower_better: bool = stat in lower_better_stats
 
                             if (
-                                diff >= 5
+                                diff >= 3
                             ):  # Apply coloring only when the difference is at least 5%
                                 if (home_val > away_val and not is_lower_better) or (
                                     home_val < away_val and is_lower_better
