@@ -368,7 +368,7 @@ class GameCard(ui.card):
                             # Determine if the stat is "better" when lower
                             is_lower_better: bool = stat in lower_better_stats
 
-                            if diff >= 5:
+                            if diff >= 3:
                                 if (away_val > home_val and not is_lower_better) or (
                                     away_val < home_val and is_lower_better
                                 ):
