@@ -3,7 +3,7 @@ aiohappyeyeballs==2.6.1
 aiohttp==3.13.2
 aiosignal==1.4.0
 alembic==1.17.1
-annotated-doc==0.0.3
+annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.11.0
 appnope==0.1.4
@@ -60,7 +60,7 @@ matplotlib==3.10.7
 matplotlib-inline==0.2.1
 mdurl==0.1.2
 multidict==6.7.0
-narwhals==2.10.2
+narwhals==2.11.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
