@@ -2,7 +2,7 @@ aiofiles==25.1.0
 aiohappyeyeballs==2.6.1
 aiohttp==3.13.2
 aiosignal==1.4.0
-alembic==1.17.1
+alembic==1.17.2
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.11.0
@@ -24,7 +24,7 @@ debugpy==1.8.17
 decorator==5.2.1
 docutils==0.20.1
 executing==2.2.1
-fastapi==0.121.1
+fastapi==0.121.2
 fastjsonschema==2.21.2
 fonttools==4.60.1
 frozenlist==1.8.0
@@ -64,7 +64,7 @@ narwhals==2.11.0
 nbformat==5.10.4
 nbstripout==0.8.1
 nest-asyncio==1.6.0
-nicegui==3.2.0
+nicegui==3.3.0
 nicegui-highcharts==3.1.0
 numba==0.62.1
 numpy==2.3.4
@@ -90,12 +90,12 @@ pyaml==25.7.0
 pydantic==2.11.7
 pydantic_core==2.33.2
 Pygments==2.19.2
-pyobjc-core==12.0
-pyobjc-framework-Cocoa==12.0
-pyobjc-framework-Quartz==12.0
-pyobjc-framework-Security==12.0
-pyobjc-framework-UniformTypeIdentifiers==12.0
-pyobjc-framework-WebKit==12.0
+pyobjc-core==12.1
+pyobjc-framework-Cocoa==12.1
+pyobjc-framework-Quartz==12.1
+pyobjc-framework-Security==12.1
+pyobjc-framework-UniformTypeIdentifiers==12.1
+pyobjc-framework-WebKit==12.1
 pyparsing==3.2.5
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
