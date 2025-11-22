@@ -101,7 +101,7 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
 python-engineio==4.12.3
 python-multipart==0.0.20
-python-socketio==5.14.3
+python-socketio==5.15.0
 pytz==2025.2
 pywebview==6.1
 PyYAML==6.0.3
