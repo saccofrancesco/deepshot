@@ -5,7 +5,7 @@ aiosignal==1.4.0
 alembic==1.17.2
 annotated-doc==0.0.4
 annotated-types==0.7.0
-anyio==4.11.0
+anyio==4.12.0
 appnope==0.1.4
 asttokens==3.0.1
 attrs==25.4.0
@@ -26,7 +26,7 @@ docutils==0.22.3
 executing==2.2.1
 fastapi==0.122.0
 fastjsonschema==2.21.2
-fonttools==4.60.1
+fonttools==4.61.0
 frozenlist==1.8.0
 graphviz==0.21
 h11==0.16.0
