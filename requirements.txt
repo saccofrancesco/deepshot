@@ -9,7 +9,7 @@ anyio==4.12.0
 appnope==0.1.4
 asttokens==3.0.1
 attrs==25.4.0
-beautifulsoup4==4.14.2
+beautifulsoup4==4.14.3
 bidict==0.23.1
 bottle==0.13.4
 certifi==2025.11.12
@@ -24,7 +24,7 @@ debugpy==1.8.17
 decorator==5.2.1
 docutils==0.22.3
 executing==2.2.1
-fastapi==0.122.0
+fastapi==0.123.0
 fastjsonschema==2.21.2
 fonttools==4.61.0
 frozenlist==1.8.0
@@ -110,7 +110,7 @@ pyzmq==27.1.0
 referencing==0.37.0
 requests==2.32.5
 rich==14.2.0
-rpds-py==0.29.0
+rpds-py==0.30.0
 scikit-learn==1.7.2
 scikit-optimize==0.10.2
 scipy==1.16.3
