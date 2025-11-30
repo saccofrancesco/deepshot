@@ -103,8 +103,6 @@ stat_to_full_name_desc: dict[str, str] = {
     "ft_rate": "Free Throws Per Field Goal Attempt (FT/FGA)",
     "ast_tov": "Assist-to-Turnover (AST/TOV)",
     "ast_ratio": "Assist Ratio (ASTr)",
-    "3pt_imp": "3-Point Impact (3PA × 3P%)",
-    "ts_residual": "TS% Residual (Actual TS% minus Expected TS%)",
 }
 
 # Stats -> Tooltip (for advanced one)
