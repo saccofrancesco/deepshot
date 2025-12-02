@@ -24,7 +24,7 @@ debugpy==1.8.17
 decorator==5.2.1
 docutils==0.22.3
 executing==2.2.1
-fastapi==0.123.0
+fastapi==0.123.5
 fastjsonschema==2.21.2
 fonttools==4.61.0
 frozenlist==1.8.0
@@ -60,7 +60,7 @@ matplotlib==3.10.7
 matplotlib-inline==0.2.1
 mdurl==0.1.2
 multidict==6.7.0
-narwhals==2.12.0
+narwhals==2.13.0
 nba_api==1.11.3
 nbformat==5.10.4
 nbstripout==0.8.2
