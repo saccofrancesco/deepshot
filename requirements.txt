@@ -24,9 +24,9 @@ debugpy==1.8.18
 decorator==5.2.1
 docutils==0.22.3
 executing==2.2.1
-fastapi==0.124.2
+fastapi==0.124.4
 fastjsonschema==2.21.2
-fonttools==4.61.0
+fonttools==4.61.1
 frozenlist==1.8.0
 graphviz==0.21
 h11==0.16.0
@@ -132,7 +132,7 @@ traitlets==5.14.3
 typing-inspection==0.4.2
 typing_extensions==4.15.0
 tzdata==2025.2
-urllib3==2.6.1
+urllib3==2.6.2
 uvicorn==0.38.0
 uvloop==0.22.1
 vbuild==0.8.2
