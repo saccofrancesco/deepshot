@@ -60,12 +60,12 @@ matplotlib==3.10.8
 matplotlib-inline==0.2.1
 mdurl==0.1.2
 multidict==6.7.0
-narwhals==2.13.0
+narwhals==2.14.0
 nba_api==1.11.3
 nbformat==5.10.4
 nbstripout==0.8.2
 nest-asyncio==1.6.0
-nicegui==3.4.0
+nicegui==3.4.1
 nicegui-highcharts==3.1.0
 numba==0.63.1
 numpy==2.3.5
@@ -101,8 +101,8 @@ pyparsing==3.2.5
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
 python-engineio==4.12.3
-python-multipart==0.0.20
-python-socketio==5.15.0
+python-multipart==0.0.21
+python-socketio==5.15.1
 pytz==2025.2
 pywebview==6.1
 PyYAML==6.0.3
