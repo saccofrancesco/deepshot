@@ -463,6 +463,10 @@ def home(date: str) -> None:
         with date_container:
             with ui.column(align_items="center"):
                 ui.image("static/logo.svg").classes("mb-2")
+                with ui.link(target="https://www.buymeacoffee.com/saccofrancesco"):
+                    ui.image(
+                        "https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=saccofrancesco&button_colour=FFDD00&font_colour=000000&font_family=Cookie&outline_colour=000000&coffee_colour=ffffff"
+                    ).classes("w-[250px]")
                 date_picker: ui.date = (
                     ui.date(date)
                     .bind_value_to(games_list, "date")
