@@ -23,6 +23,43 @@ headers: list[str] = list()
 
 # Load CSV once
 def load_team_stats(file_path: str = "./data/csv/averages.csv"):
+    """
+    Load per-team statistics from a CSV file into memory for fast lookup.
+
+    This function reads a CSV file containing team statistics, stores the
+    header row in a global variable, and groups the remaining rows by team
+    in a global data structure. Each team's data is sorted by date in
+    descending order to allow efficient retrieval of the most recent
+    available statistics.
+
+    Parameters
+    ----------
+    file_path : str, optional
+        Path to the CSV file containing team statistics.
+        Defaults to "./data/csv/averages.csv".
+
+    Returns
+    -------
+    None
+        This function does not return a value. It populates global
+        variables used elsewhere in the application.
+
+    Raises
+    ------
+    FileNotFoundError
+        If the specified CSV file does not exist.
+    StopIteration
+        If the CSV file is empty and no header row is found.
+    OSError
+        If the file cannot be opened or read.
+
+    Notes
+    -----
+    - This function relies on and mutates global variables (`headers`,
+      `team_stats_data`).
+    - Team statistics are stored as `(date_str, row)` tuples.
+    - Data is sorted in descending date order for fast access to recent games.
+    """
     global headers
     with open(file_path, mode="r", newline="") as file:
         reader: csv.reader = csv.reader(file)
@@ -142,6 +179,46 @@ team_color_codes: dict[str, list[str]] = {
 
 # Function to get the best colors from a set of two list mapped by two team names
 def get_best_color_pair(team1: str, team2: str) -> tuple[str, str]:
+    """
+    Select the most visually contrasting color pair for two teams.
+
+    This function compares all possible color combinations between two teams
+    and returns the pair with the highest visual contrast. Contrast is
+    approximated using differences in saturation and value (brightness)
+    in HSV color space.
+
+    Team colors are retrieved from a predefined mapping of team names
+    to lists of hex color codes.
+
+    Parameters
+    ----------
+    team1 : str
+        Name of the first team.
+    team2 : str
+        Name of the second team.
+
+    Returns
+    -------
+    tuple[str, str]
+        A tuple containing the selected hex color codes
+        `(team1_color, team2_color)` with the highest contrast.
+
+    Raises
+    ------
+    ValueError
+        If one or both team names are not found in the color mapping
+        or do not have associated colors.
+
+    Notes
+    -----
+    - Hex colors are converted to HSV for contrast evaluation.
+    - Contrast is defined as the sum of absolute differences in
+      saturation and value components.
+    - Hue is not considered, prioritizing brightness and intensity
+      differences for better readability.
+    - This function assumes `team_color_codes` is defined in the
+      enclosing scope.
+    """
 
     # Convert the hex color code in to rgb
     def hex_to_hsv(hex_color: str) -> tuple:
@@ -184,9 +261,41 @@ today: datetime.datetime = datetime.datetime.now().strftime(f"{year}-%m-%d")
 
 # Function to retrieve and get the scheduled games for today
 def extract_games(date: str) -> list[dict[str, str | int | float]]:
+    """
+    Retrieve all scheduled games for a specific date.
 
+    This function reads the schedule CSV file and extracts the home and
+    away teams for all games scheduled on the given date.
+
+    Parameters
+    ----------
+    date : str
+        Target date in `YYYY-MM-DD` format.
+
+    Returns
+    -------
+    list[dict[str, str]]
+        A list of dictionaries, each containing:
+        - "home_team": name of the home team
+        - "away_team": name of the away team
+
+        Returns an empty list if no games are scheduled for the given date.
+
+    Raises
+    ------
+    FileNotFoundError
+        If the schedule CSV file cannot be found.
+    KeyError
+        If expected columns are missing from the CSV file.
+    OSError
+        If the file cannot be opened or read.
+
+    Notes
+    -----
+    - The schedule is read from `./data/csv/schedule.csv`.
+    - No date parsing is performed; the comparison is string-based.
+    """
     games: list = list()
-
     with open("./data/csv/schedule.csv", "r", newline="") as file:
         reader: csv.DictReader = csv.DictReader(file)
         for row in reader:
@@ -194,7 +303,6 @@ def extract_games(date: str) -> list[dict[str, str | int | float]]:
                 games.append(
                     {"home_team": row["home_team"], "away_team": row["away_team"]}
                 )
-
     return games
 
 
@@ -202,6 +310,43 @@ def extract_games(date: str) -> list[dict[str, str | int | float]]:
 def find_most_recent_stats(
     team_name: str, target_date: str
 ) -> tuple[list[str], list[str]]:
+    """
+    Retrieve the most recent available statistics for a team before a given date.
+
+    This function searches cached, in-memory team statistics and returns the
+    latest statistics entry that occurred strictly before the specified
+    target date. Results are memoized using an LRU cache to speed up repeated
+    lookups for the same team and date.
+
+    Parameters
+    ----------
+    team_name : str
+        Name of the team whose statistics are requested.
+    target_date : str
+        Cutoff date in `YYYY-MM-DD` format. Only statistics recorded
+        before this date are considered.
+
+    Returns
+    -------
+    tuple[list[str], list[str]]
+        A tuple containing:
+        - A list of statistic column names
+        - A list of corresponding statistic values
+
+        Returns `(None, None)` if the team is not found or no prior
+        statistics exist for the given date.
+
+    Notes
+    -----
+    - Date comparison is performed lexicographically and assumes
+      `YYYY-MM-DD` formatting.
+    - The returned columns and values exclude the `date` and `team`
+      fields.
+    - This function relies on globally loaded data structures
+      (`team_stats_data`, `headers`).
+    - Caching improves performance when querying multiple games
+      on the same date.
+    """
     if team_name not in team_stats_data:
         return (None, None)
 
@@ -215,6 +360,41 @@ def find_most_recent_stats(
 # Creating the Card UI
 class GameCard(ui.card):
     def __init__(self, game: dict[str, str | int | float], date: str) -> None:
+        """
+        UI card component displaying a scheduled NBA game and its analytics.
+
+        This class renders an interactive card showing two teams facing each
+        other on a given date, including team logos, win probabilities,
+        color-coded probability bars, and an expandable section with detailed
+        statistical comparisons.
+
+        The card visually highlights statistical advantages using color cues
+        and allows navigation to a detailed game view.
+
+        Parameters
+        ----------
+        game : dict[str, str | int | float]
+            Dictionary containing all game-related data, including:
+            - team names
+            - win probabilities
+            - per-team statistics prefixed with `home_` and `away_`
+        date : str
+            Game date in `YYYY-MM-DD` format, used for routing and display.
+
+        Notes
+        -----
+        - Team colors are dynamically selected to maximize visual contrast.
+        - Win probability bars are scaled proportionally to predicted win chances.
+        - Detailed stats are shown in an expandable section with conditional
+          coloring based on relative performance.
+        - This component depends on several globally defined utilities and
+          mappings, including:
+            - `get_best_color_pair`
+            - `stats_tags`
+            - `lower_better_stats`
+            - `stat_to_full_name_desc`
+        - Designed for use with NiceGUI (`ui.card`, `ui.row`, `ui.column`, etc.).
+        """
 
         # Initializing the super class
         super().__init__()
@@ -371,12 +551,55 @@ class GameCard(ui.card):
 # Creating the game list UI
 class GameList:
     def __init__(self, date: str) -> None:
+        """
+        Controller class responsible for rendering game cards for a given date.
+
+        This class retrieves scheduled games for a specific date, enriches them
+        with the most recent available team statistics, runs model predictions
+        to estimate game outcomes, and renders a `GameCard` UI component for
+        each game.
+
+        Parameters
+        ----------
+        date : str
+            Target date in `YYYY-MM-DD` format for which games should be rendered.
+
+        Notes
+        -----
+        - Team statistics are retrieved using cached historical data to avoid
+          data leakage.
+        - Predictions are generated using a pre-trained machine learning model.
+        - This class orchestrates data extraction, feature preparation,
+          prediction, and UI rendering.
+        """
 
         # Storing the date to render the cards
         self.date: str = date
 
     # Render all the cards
     def render(self) -> None:
+        """
+        Render game cards for all scheduled games on the specified date.
+
+        This method:
+        - Retrieves scheduled games for the given date
+        - Augments each game with the most recent team statistics
+        - Prepares features and runs model predictions
+        - Attaches win probabilities to each game
+        - Instantiates a `GameCard` UI component for each game
+
+        Returns
+        -------
+        None
+            This method does not return a value. It renders UI components
+            directly.
+
+        Notes
+        -----
+        - Non-numeric columns are removed before prediction.
+        - Feature values are cast to float prior to model inference.
+        - Any exceptions during rendering are silently ignored.
+        """
 
         # For each game shcedule for today date, extract the home team and away team
         try:
@@ -428,12 +651,58 @@ class GameList:
 # Redirect to page
 @ui.page("/")
 def redirect() -> None:
+    """
+    Redirect the root page to the current day's games view.
+
+    This page handler automatically navigates users from the application
+    root URL to the page corresponding to today's date.
+
+    Returns
+    -------
+    None
+        This function does not return a value. It performs a client-side
+        navigation using NiceGUI.
+    """
     ui.navigate.to(today)
 
 
 # Home day prediction and stats page template
 @ui.page("/{date}")
 def home(date: str) -> None:
+    """
+    Render the main home page for a specific date with game predictions and statistics.
+
+    This page displays a split layout with:
+    - A left sidebar containing the app logo, a date picker, and a donation link.
+    - A right main container showing all scheduled games for the selected date,
+      with interactive `GameCard` components and predicted outcomes.
+
+    Users can select a different date using the date picker and update predictions
+    by clicking the "Predict" button.
+
+    Parameters
+    ----------
+    date : str
+        The target date in `YYYY-MM-DD` format for which games, predictions,
+        and statistics should be displayed.
+
+    Returns
+    -------
+    None
+        This function does not return a value. It renders a full-page UI
+        using NiceGUI.
+
+    Notes
+    -----
+    - Custom CSS is applied to remove default padding and borders and to style
+      containers.
+    - Game predictions and statistics are handled by the `GameList` class.
+    - The date picker is bound to the `games_list.date` attribute to trigger
+      updates when a new date is selected.
+    - External data sources:
+        - Game schedules and stats are sourced from preprocessed CSV files.
+        - Data attribution: Basketball Reference.
+    """
 
     # Add custom CSS to remove unwanted borders and padding
     ui.add_css(".nicegui-content { margin: 0; padding: 0; height: 100vh; }")
@@ -502,6 +771,41 @@ class H2HPlot:
         away_color: str,
         csv_path: str,
     ) -> None:
+        """
+        Component to render a head-to-head (H2H) performance plot between two teams.
+
+        This class generates an interactive line chart comparing a specific
+        statistical metric for two teams over their most recent games prior
+        to a selected date. It uses historical game data from a CSV file
+        and renders the chart with NiceGUI's `ui.highchart`.
+
+        Parameters
+        ----------
+        stat : str
+            The statistical metric to plot (must exist in the CSV columns).
+        date : str
+            Reference date in `YYYY-MM-DD` format. Only games before this
+            date are included in the plot.
+        team1 : str
+            Name of the first team (home team).
+        team2 : str
+            Name of the second team (away team).
+        home_color : str
+            Hex color code for the first team's plot line.
+        away_color : str
+            Hex color code for the second team's plot line.
+        csv_path : str
+            Path to the CSV file containing historical team statistics.
+
+        Notes
+        -----
+        - The plot displays up to the last 25 games for each team prior to the
+          specified date.
+        - The x-axis represents game dates, formatted as month/day.
+        - The y-axis shows the selected statistic values.
+        - Series colors are set according to `home_color` and `away_color`.
+        - Raises ValueError if the specified stat is not present in the dataset.
+        """
 
         # Storing vars for future plot updates
         self.stat: str = stat
@@ -517,6 +821,22 @@ class H2HPlot:
 
     @ui.refreshable
     def plot_stat(self) -> ui.plotly:
+        """
+        Render or refresh the head-to-head plot.
+
+        Loads the CSV data, filters games by date, generates series for
+        each team, and configures a Highcharts line chart.
+
+        Returns
+        -------
+        ui.plotly
+            The NiceGUI Highcharts plot component for the H2H comparison.
+
+        Raises
+        ------
+        ValueError
+            If the selected stat is not found in the CSV dataset columns.
+        """
 
         # Load data
         df: pd.DataFrame = pd.read_csv(self.path, parse_dates=["date"])
@@ -588,6 +908,40 @@ class H2HPlot:
 # Single game details page
 @ui.page("/{date}/{game}")
 def game(date: str, game: str) -> None:
+    """
+    Render a single game details page with team stats and head-to-head plot.
+
+    This page displays a detailed view for a specific game, including:
+    - Team logos, names, and win probabilities
+    - Visual win probability bars
+    - Interactive head-to-head (H2H) plot for selectable statistics
+    - A dropdown to select different stats to visualize
+
+    A back button allows users to return to the main date page.
+
+    Parameters
+    ----------
+    date : str
+        The date of the game in `YYYY-MM-DD` format.
+    game : str
+        JSON-encoded string representing the game object with home/away
+        team names, statistics, and prediction probabilities.
+
+    Returns
+    -------
+    None
+        This function does not return a value. It renders the UI directly
+        using NiceGUI.
+
+    Notes
+    -----
+    - The `game` parameter is decoded using `json.loads` after URL unquoting.
+    - Team colors are determined using `get_best_color_pair`.
+    - H2H plots are created with the `H2HPlot` class, allowing interactive
+      selection of statistics to display.
+    - Custom CSS is applied to style the layout, align elements, and set
+      background colors.
+    """
 
     # Re-converting the game object
     game: list[dict[str, str | int | float]] = json.loads(unquote(game))
