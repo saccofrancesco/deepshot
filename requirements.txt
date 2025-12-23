@@ -97,7 +97,7 @@ pyobjc-framework-Quartz==12.1
 pyobjc-framework-Security==12.1
 pyobjc-framework-UniformTypeIdentifiers==12.1
 pyobjc-framework-WebKit==12.1
-pyparsing==3.2.5
+pyparsing==3.3.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
 python-engineio==4.12.3
