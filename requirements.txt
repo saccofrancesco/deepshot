@@ -84,7 +84,7 @@ prompt_toolkit==3.0.52
 propcache==0.4.1
 proxy_tools==0.1.0
 pscript==0.7.7
-psutil==7.2.0
+psutil==7.2.1
 ptyprocess==0.7.0
 pure_eval==0.2.3
 pyaml==25.7.0
