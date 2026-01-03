@@ -12,6 +12,7 @@ from itertools import product
 from colorsys import rgb_to_hsv
 import json
 from urllib.parse import quote, unquote
+import traceback
 
 # Adding static files (teams' logos)
 app.add_static_files("./static", "static")
@@ -89,7 +90,7 @@ importance_scores: np.ndarray = model.feature_importances_
 sorted_indices: np.ndarray = np.argsort(importance_scores)[::-1]
 
 # Extract feature names while ensuring uniqueness
-unique_stats: list = list()
+unique_stats: list[str] = list()
 for i in sorted_indices:
     stat_name: str = (
         model.feature_names_in_[i].replace("home_", "").replace("away_", "")
@@ -295,7 +296,7 @@ def extract_games(date: str) -> list[dict[str, str | int | float]]:
     - The schedule is read from `./data/csv/schedule.csv`.
     - No date parsing is performed; the comparison is string-based.
     """
-    games: list = list()
+    games: list[dict[str, str | int | float]] = list()
     with open("./data/csv/schedule.csv", "r", newline="") as file:
         reader: csv.DictReader = csv.DictReader(file)
         for row in reader:
@@ -481,8 +482,8 @@ class GameCard(ui.card):
                     # Home team stats
                     with ui.column().classes("items-start flex-1"):
                         for stat in stats_tags:
-                            home_val: str = float(game[f"home_{stat}"])
-                            away_val: str = float(game[f"away_{stat}"])
+                            home_val: float = float(game[f"home_{stat}"])
+                            away_val: float = float(game[f"away_{stat}"])
                             diff: float = (
                                 abs(home_val - away_val) / max(home_val, away_val) * 100
                             )
@@ -520,8 +521,8 @@ class GameCard(ui.card):
                     # Away team stats
                     with ui.column().classes("items-end flex-1"):
                         for stat in stats_tags:
-                            home_val: str = float(game[f"home_{stat}"])
-                            away_val: str = float(game[f"away_{stat}"])
+                            home_val: float = float(game[f"home_{stat}"])
+                            away_val: float = float(game[f"away_{stat}"])
                             diff: float = (
                                 abs(home_val - away_val) / max(home_val, away_val) * 100
                             )
@@ -613,6 +614,11 @@ class GameList:
                     game[f"away_{stat_label[i]}"] = stats[i]
                 games.append(game)
 
+            # Check if games is empty
+            if not games:
+                print("No games found for this date")
+                return
+
             # Convert data into DataFrame
             df: pd.DataFrame = pd.DataFrame(games)
 
@@ -620,7 +626,7 @@ class GameList:
             df: pd.DataFrame = df.drop(["home_team", "away_team"], axis=1)
 
             # Drop irrelvant stats columns
-            stats_to_drop: list[str] = []
+            stats_to_drop: list[str] = list()
             for stat in stats_to_drop:
                 df: pd.DataFrame = df.drop([f"home_{stat}", f"away_{stat}"], axis=1)
 
@@ -644,8 +650,16 @@ class GameList:
             # After clearing the container, rendering the game cards
             for game in games:
                 GameCard(game, self.date)
-        except:
-            pass
+
+        except FileNotFoundError as e:
+            print(f"Error: Could not find required files - {e}")
+        except KeyError as e:
+            print(f"Error: Missing expected data field - {e}")
+        except ValueError as e:
+            print(f"Error: Invalid data format - {e}")
+        except Exception as e:
+            print(f"Unexpected error during prediction: {e}")
+            traceback.print_exc()
 
 
 # Redirect to page
