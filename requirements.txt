@@ -1,11 +1,12 @@
 aiofiles==25.1.0
 aiohappyeyeballs==2.6.1
-aiohttp==3.13.2
+aiohttp==3.13.3
 aiosignal==1.4.0
 alembic==1.17.2
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.12.0
+appnope==0.1.4
 asttokens==3.0.1
 attrs==25.4.0
 beautifulsoup4==4.14.3
@@ -90,6 +91,12 @@ pyaml==25.7.0
 pydantic==2.12.5
 pydantic_core==2.41.5
 Pygments==2.19.2
+pyobjc-core==12.1
+pyobjc-framework-Cocoa==12.1
+pyobjc-framework-Quartz==12.1
+pyobjc-framework-Security==12.1
+pyobjc-framework-UniformTypeIdentifiers==12.1
+pyobjc-framework-WebKit==12.1
 pyparsing==3.3.1
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
