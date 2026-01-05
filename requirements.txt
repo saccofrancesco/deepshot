@@ -12,7 +12,7 @@ attrs==25.4.0
 beautifulsoup4==4.14.3
 bidict==0.23.1
 bottle==0.13.4
-certifi==2025.11.12
+certifi==2026.1.4
 charset-normalizer==3.4.4
 click==8.3.1
 cloudpickle==3.1.2
@@ -37,7 +37,7 @@ idna==3.11
 ifaddr==0.2.0
 imbalanced-learn==0.14.1
 ipykernel==7.1.0
-ipython==9.8.0
+ipython==9.9.0
 ipython_pygments_lexers==1.1.1
 ipywidgets==8.1.8
 itsdangerous==2.2.0
