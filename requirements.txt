@@ -2,7 +2,7 @@ aiofiles==25.1.0
 aiohappyeyeballs==2.6.1
 aiohttp==3.13.3
 aiosignal==1.4.0
-alembic==1.17.2
+alembic==1.18.0
 annotated-doc==0.0.4
 annotated-types==0.7.0
 anyio==4.12.1
@@ -46,7 +46,7 @@ Jinja2==3.1.6
 joblib==1.5.3
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
-jupyter_client==8.7.0
+jupyter_client==8.8.0
 jupyter_core==5.9.1
 jupyterlab_widgets==3.0.16
 kiwisolver==1.4.9
