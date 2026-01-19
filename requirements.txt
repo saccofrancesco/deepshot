@@ -88,7 +88,7 @@ notebook==7.5.2
 notebook_shim==0.2.4
 numba==0.63.0b1
 numpy==2.4.1
-optuna==4.6.0
+optuna==4.7.0
 orjson==3.11.5
 packaging==25.0
 pandas==2.3.3
