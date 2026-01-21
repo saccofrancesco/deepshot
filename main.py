@@ -779,6 +779,7 @@ class H2HPlot:
         self,
         stat: str,
         date: str,
+        window: int,
         team1: str,
         team2: str,
         home_color: str,
@@ -824,6 +825,7 @@ class H2HPlot:
         # Storing vars for future plot updates
         self.stat: str = stat
         self.date: str = date
+        self.window: int = window
         self.team1: str = team1
         self.team2: str = team2
         self.home_color: str = home_color
@@ -869,8 +871,8 @@ class H2HPlot:
             df_team: pd.DataFrame = (
                 df[(df["team"] == team) & (df["date"] < start_date)]
                 .sort_values("date", ascending=False)
-                .head(25)
-            )  # Get the last 25 games
+                .head(self.window)
+            )  # Get the N game (controlled by the window input)
 
             # Prepare the data
             data: list[str] = [
@@ -1030,6 +1032,7 @@ def game(date: str, game: str) -> None:
             plot: H2HPlot = H2HPlot(
                 "pts",
                 date,
+                10,
                 game["home_team"],
                 game["away_team"],
                 home_color,
@@ -1037,18 +1040,31 @@ def game(date: str, game: str) -> None:
                 "./data/csv/averages.csv",
             )
 
-        # Dropdown selectin to choose stats to display for both teams
+        # Dropdown selectin to choose stats, and used game window, to display for both teams
         with selectors_section:
-            ui.select(
-                stat_to_full_name_desc,
-                value="pts",
-                with_input=True,
-                on_change=plot.plot_stat.refresh,
-            ).style("border-radius: 0.25rem;").classes("w-full").props(
-                "outlined color=grey-9  bg-color=grey-2"
-            ).bind_value_to(
-                plot, "stat"
-            )
+            with ui.grid(columns="1fr 1fr"):
+                ui.select(
+                    stat_to_full_name_desc,
+                    label="Selected a stat:",
+                    value="pts",
+                    with_input=True,
+                    on_change=plot.plot_stat.refresh,
+                ).style("border-radius: 0.25rem;").classes("w-full").props(
+                    "outlined color=grey-9  bg-color=grey-2"
+                ).bind_value_to(
+                    plot, "stat"
+                )
+                ui.select(
+                    [n for n in range(5, 25)],
+                    value=10,
+                    label="Selected a game window:",
+                    with_input=True,
+                    on_change=plot.plot_stat.refresh,
+                ).style("border-radius: 0.25rem;").classes("w-full").props(
+                    "outlined color=grey-9  bg-color=grey-2"
+                ).bind_value_to(
+                    plot, "window"
+                )
 
 
 # Running the app
