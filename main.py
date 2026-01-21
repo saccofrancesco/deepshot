@@ -1055,7 +1055,7 @@ def game(date: str, game: str) -> None:
                     plot, "stat"
                 )
                 ui.select(
-                    [n for n in range(5, 25)],
+                    [n for n in range(5, 26)],
                     value=10,
                     label="Selected a game window:",
                     with_input=True,
