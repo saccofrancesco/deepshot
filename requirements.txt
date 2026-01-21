@@ -83,7 +83,7 @@ nbconvert==7.16.6
 nbformat==5.10.4
 nbstripout==0.9.0
 nest-asyncio==1.6.0
-nicegui==3.6.0
+nicegui==3.6.1
 nicegui-highcharts==3.1.0
 notebook==7.5.2
 notebook_shim==0.2.4
@@ -105,7 +105,7 @@ propcache==0.4.1
 psutil==7.2.1
 ptyprocess==0.7.0
 pure_eval==0.2.3
-pycparser==2.23
+pycparser==3.0
 pydantic==2.12.5
 pydantic_core==2.41.5
 Pygments==2.19.2
@@ -129,14 +129,14 @@ scikit-learn==1.8.0
 scipy==1.17.0
 seaborn==0.13.2
 Send2Trash==2.1.0
-setuptools==80.9.0
+setuptools==80.10.1
 shap==0.50.0
 simple-websocket==1.1.0
 six==1.17.0
 sklearn-compat==0.1.5
 slicer==0.0.8
 soupsieve==2.8.3
-SQLAlchemy==2.0.45
+SQLAlchemy==2.0.46
 stack-data==0.6.3
 starlette==0.50.0
 terminado==0.18.1
@@ -153,7 +153,7 @@ urllib3==2.6.3
 uvicorn==0.40.0
 uvloop==0.22.1
 watchfiles==1.1.1
-wcwidth==0.2.14
+wcwidth==0.3.0
 webcolors==25.10.0
 webencodings==0.5.1
 websocket-client==1.9.0
