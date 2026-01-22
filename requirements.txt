@@ -91,7 +91,7 @@ numba==0.63.0b1
 numpy==2.4.1
 optuna==4.7.0
 orjson==3.11.5
-packaging==25.0
+packaging==26.0
 pandas==2.3.3
 pandocfilters==1.5.1
 parso==0.8.5
