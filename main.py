@@ -141,6 +141,7 @@ stat_to_full_name_desc: dict[str, str] = {
     "ft_rate": "Free Throws Per Field Goal Attempt (FT/FGA)",
     "ast_tov": "Assist-to-Turnover (AST/TOV)",
     "ast_ratio": "Assist Ratio (ASTr)",
+    "elo": "ELO Rating",
 }
 
 # Teams color codes list
