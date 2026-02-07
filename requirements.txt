@@ -31,7 +31,7 @@ decorator==5.2.1
 defusedxml==0.7.1
 docutils==0.22.4
 executing==2.2.1
-fastapi==0.128.2
+fastapi==0.128.4
 fastjsonschema==2.21.2
 fonttools==4.61.1
 fqdn==1.5.1
@@ -43,7 +43,7 @@ httpx==0.28.1
 idna==3.11
 ifaddr==0.2.0
 imbalanced-learn==0.14.1
-ipykernel==7.1.0
+ipykernel==7.2.0
 ipython==9.10.0
 ipython_pygments_lexers==1.1.1
 ipywidgets==8.1.8
@@ -112,10 +112,10 @@ Pygments==2.19.2
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.1
-python-engineio==4.13.0
+python-engineio==4.13.1
 python-json-logger==4.0.0
 python-multipart==0.0.22
-python-socketio==5.16.0
+python-socketio==5.16.1
 pytz==2025.2
 PyYAML==6.0.3
 pyzmq==27.1.0
@@ -129,7 +129,7 @@ scikit-learn==1.8.0
 scipy==1.17.0
 seaborn==0.13.2
 Send2Trash==2.1.0
-setuptools==80.10.2
+setuptools==81.0.0
 shap==0.50.0
 simple-websocket==1.1.0
 six==1.17.0
@@ -153,7 +153,7 @@ urllib3==2.6.3
 uvicorn==0.40.0
 uvloop==0.22.1
 watchfiles==1.1.1
-wcwidth==0.5.3
+wcwidth==0.6.0
 webcolors==25.10.0
 webencodings==0.5.1
 websocket-client==1.9.0
