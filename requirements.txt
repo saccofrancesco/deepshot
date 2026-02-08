@@ -31,7 +31,7 @@ decorator==5.2.1
 defusedxml==0.7.1
 docutils==0.22.4
 executing==2.2.1
-fastapi==0.128.4
+fastapi==0.128.5
 fastjsonschema==2.21.2
 fonttools==4.61.1
 fqdn==1.5.1
@@ -129,7 +129,7 @@ scikit-learn==1.8.0
 scipy==1.17.0
 seaborn==0.13.2
 Send2Trash==2.1.0
-setuptools==81.0.0
+setuptools==82.0.0
 shap==0.50.0
 simple-websocket==1.1.0
 six==1.17.0
