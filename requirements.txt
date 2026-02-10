@@ -138,7 +138,7 @@ slicer==0.0.8
 soupsieve==2.8.3
 SQLAlchemy==2.0.46
 stack-data==0.6.3
-starlette==0.50.0
+starlette==0.52.1
 terminado==0.18.1
 threadpoolctl==3.6.0
 tinycss2==1.5.1
