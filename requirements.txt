@@ -31,7 +31,7 @@ decorator==5.2.1
 defusedxml==0.7.1
 docutils==0.22.4
 executing==2.2.1
-fastapi==0.128.7
+fastapi==0.128.8
 fastjsonschema==2.21.2
 fonttools==4.61.1
 fqdn==1.5.1
@@ -141,7 +141,7 @@ stack-data==0.6.3
 starlette==0.52.1
 terminado==0.18.1
 threadpoolctl==3.6.0
-tinycss2==1.4.0
+tinycss2==1.5.1
 tornado==6.5.4
 tqdm==4.67.3
 traitlets==5.14.3
