@@ -1,6 +1,6 @@
 <div align="center">
   <img src="static/icon.png" alt="DeepShot - NBA Game Prediction Model" width="350">
-  <h1>🏀 DeepShot: Predict NBA Games with Machine Learning</h1>
+  <h1>DeepShot: Predict NBA Games with Machine Learning</h1>
 </div>
 
 <p align="center">
@@ -104,7 +104,7 @@ DeepShot uses the following awesome libraries:
 
 Check out more by the same author:
 
-* [Supreme Bot](https://github.com/saccofrancesco/supremebot): A user-friendly Supreme bot built with [NiceGUI](https://nicegui.io) to help you buy Supreme items effortlessly.
+* [Supremebot](https://github.com/saccofrancesco/supremebot): A user-friendly Supreme bot built with [NiceGUI](https://nicegui.io) to help you buy Supreme items effortlessly.
 
 ---
 
