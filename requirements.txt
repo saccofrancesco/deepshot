@@ -11,7 +11,7 @@ argon2-cffi==25.1.0
 argon2-cffi-bindings==25.1.0
 arrow==1.4.0
 asttokens==3.0.1
-async-lru==2.1.0
+async-lru==2.2.0
 attrs==25.4.0
 babel==2.18.0
 beautifulsoup4==4.14.3
@@ -31,7 +31,7 @@ decorator==5.2.1
 defusedxml==0.7.1
 docutils==0.22.4
 executing==2.2.1
-fastapi==0.129.0
+fastapi==0.129.1
 fastjsonschema==2.21.2
 fonttools==4.61.1
 fqdn==1.5.1
