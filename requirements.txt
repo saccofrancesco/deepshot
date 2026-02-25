@@ -17,7 +17,7 @@ babel==2.18.0
 beautifulsoup4==4.14.3
 bidict==0.23.1
 bleach==6.3.0
-certifi==2026.1.4
+certifi==2026.2.25
 cffi==2.0.0
 charset-normalizer==3.4.4
 click==8.3.1
@@ -83,9 +83,9 @@ nbconvert==7.17.0
 nbformat==5.10.4
 nbstripout==0.9.1
 nest-asyncio==1.6.0
-nicegui==3.7.1
+nicegui==3.8.0
 nicegui-highcharts==3.2.0
-notebook==7.5.3
+notebook==7.5.4
 notebook_shim==0.2.4
 numba==0.63.0b1
 numpy==2.4.2
@@ -136,7 +136,7 @@ six==1.17.0
 sklearn-compat==0.1.5
 slicer==0.0.8
 soupsieve==2.8.3
-SQLAlchemy==2.0.46
+SQLAlchemy==2.0.47
 stack-data==0.6.3
 starlette==0.52.1
 terminado==0.18.1
