@@ -130,7 +130,7 @@ scipy==1.17.1
 seaborn==0.13.2
 Send2Trash==2.1.0
 setuptools==82.0.0
-shap==0.50.0
+shap==0.51.0
 simple-websocket==1.1.0
 six==1.17.0
 sklearn-compat==0.1.5
