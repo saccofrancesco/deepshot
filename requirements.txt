@@ -5,7 +5,7 @@ aiosignal==1.4.0
 alembic==1.18.4
 annotated-doc==0.0.4
 annotated-types==0.7.0
-anyio==4.12.1
+anyio==4.13.0
 appnope==0.1.4
 argon2-cffi==25.1.0
 argon2-cffi-bindings==25.1.0
@@ -31,7 +31,7 @@ decorator==5.2.1
 defusedxml==0.7.1
 docutils==0.22.4
 executing==2.2.1
-fastapi==0.135.1
+fastapi==0.135.2
 fastjsonschema==2.21.2
 fonttools==4.62.1
 fqdn==1.5.1
@@ -53,7 +53,7 @@ jedi==0.19.2
 Jinja2==3.1.6
 joblib==1.5.3
 json5==0.13.0
-jsonpointer==3.1.0
+jsonpointer==3.1.1
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
 jupyter==1.1.1
