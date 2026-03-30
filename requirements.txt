@@ -90,7 +90,7 @@ nicegui-highcharts==3.2.1
 notebook==7.5.5
 notebook_shim==0.2.4
 numba==0.64.0
-numpy==2.4.3
+numpy==2.4.4
 optuna==4.8.0
 orjson==3.11.7
 packaging==26.0
@@ -110,12 +110,12 @@ pure_eval==0.2.3
 pycparser==3.0
 pydantic==2.12.5
 pydantic_core==2.41.5
-Pygments==2.19.2
+Pygments==2.20.0
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 python-engineio==4.13.1
-python-json-logger==4.0.0
+python-json-logger==4.1.0
 python-multipart==0.0.22
 python-socketio==5.16.1
 pytz==2026.1.post1
