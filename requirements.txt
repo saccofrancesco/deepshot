@@ -94,7 +94,7 @@ numpy==2.4.4
 optuna==4.8.0
 orjson==3.11.8
 packaging==26.0
-pandas==3.0.1
+pandas==3.0.2
 pandocfilters==1.5.1
 parso==0.8.6
 pexpect==4.9.0
@@ -143,7 +143,7 @@ stack-data==0.6.3
 starlette==1.0.0
 terminado==0.18.1
 threadpoolctl==3.6.0
-tinycss2==1.4.0
+tinycss2==1.5.1
 tornado==6.5.5
 tqdm==4.67.3
 traitlets==5.14.3
