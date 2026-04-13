@@ -4,8 +4,8 @@
 </div>
 
 <p align="center">
-  <a href="https://www.buymeacoffee.com/saccofrancesco">
-    <img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=☕&slug=saccofrancesco&button_colour=FFDD00&font_colour=000000&font_family=Bree&outline_colour=000000&coffee_colour=ffffff" />
+  <a href="https://buymeacoffee.com/saccofrancesco">
+    <img src="https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black" />
   </a>
 </p>
 
