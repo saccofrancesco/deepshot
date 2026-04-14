@@ -258,7 +258,7 @@ lower_better_stats: set = {"tov", "pf", "drtg", "tov_pct", "tov_to_poss"}
 
 # Get the next day NBA game
 year: datetime.datetime = datetime.datetime.now().strftime("%Y")
-today: datetime.datetime = datetime.datetime.now().strftime(f"{year}-%m-%d")
+today: datetime.datetime = f"{year}-04-12"
 
 
 # Function to retrieve and get the scheduled games for today
