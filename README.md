@@ -26,7 +26,7 @@
 </p>
 
 <div align="center">
-  <img src="./static/usage.gif" alt="DeepShot in action">
+  <video src="./static/demo.mp4" controls alt="DeepShot in action"></video>
 </div>
 
 ---
