@@ -25,10 +25,6 @@
   <a href="#license">License</a>
 </p>
 
-<div align="center">
-  <video src="./static/demo.mp4" controls alt="DeepShot in action"></video>
-</div>
-
 ---
 
 ## 📌 TL;DR
