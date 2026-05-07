@@ -1,2 +1,3 @@
 .venv
 data/cache
+.DS_Store
