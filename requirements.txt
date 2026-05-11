@@ -41,7 +41,7 @@ h11==0.16.0
 httpcore==1.0.9
 httptools==0.7.1
 httpx==0.28.1
-idna==3.13
+idna==3.14
 ifaddr==0.2.0
 imbalanced-learn==0.14.1
 ipykernel==7.2.0
@@ -124,7 +124,7 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 python-engineio==4.13.1
 python-json-logger==4.1.0
-python-multipart==0.0.27
+python-multipart==0.0.28
 python-socketio==5.16.1
 pytz==2026.2
 pywebview==6.2.1
