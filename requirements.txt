@@ -95,7 +95,7 @@ numpy==2.4.4
 optuna==4.8.0
 orjson==3.11.9
 packaging==26.2
-pandas==3.0.2
+pandas==3.0.3
 pandocfilters==1.5.1
 parso==0.8.7
 pexpect==4.9.0
@@ -131,7 +131,7 @@ pywebview==6.2.1
 PyYAML==6.0.3
 pyzmq==27.1.0
 referencing==0.37.0
-requests==2.33.1
+requests==2.34.0
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
