@@ -124,7 +124,7 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 python-engineio==4.13.1
 python-json-logger==4.1.0
-python-multipart==0.0.28
+python-multipart==0.0.29
 python-socketio==5.16.1
 pytz==2026.2
 pywebview==6.2.1
