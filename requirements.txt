@@ -41,7 +41,7 @@ h11==0.16.0
 httpcore==1.0.9
 httptools==0.8.0
 httpx==0.28.1
-idna==3.16
+idna==3.17
 ifaddr==0.2.0
 imbalanced-learn==0.14.1
 ipykernel==7.2.0
@@ -135,13 +135,13 @@ requests==2.34.2
 rfc3339-validator==0.1.4
 rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
-rpds-py==0.30.0
+rpds-py==2026.5.1
 scikit-learn==1.8.0
 scipy==1.17.1
 seaborn==0.13.2
 Send2Trash==2.1.0
 setuptools==82.0.1
-shap==0.51.0
+shap==0.52.0
 simple-websocket==1.1.0
 six==1.17.0
 sklearn-compat==0.1.5
@@ -149,7 +149,7 @@ slicer==0.0.8
 soupsieve==2.8.4
 SQLAlchemy==2.0.50
 stack-data==0.6.3
-starlette==1.1.0
+starlette==1.2.0
 terminado==0.18.1
 threadpoolctl==3.6.0
 tinycss2==1.5.1
