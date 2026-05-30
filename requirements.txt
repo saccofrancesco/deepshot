@@ -113,12 +113,12 @@ pycparser==3.0
 pydantic==2.13.4
 pydantic_core==2.46.4
 Pygments==2.20.0
-pyobjc-core==12.1
-pyobjc-framework-Cocoa==12.1
-pyobjc-framework-Quartz==12.1
-pyobjc-framework-Security==12.1
-pyobjc-framework-UniformTypeIdentifiers==12.1
-pyobjc-framework-WebKit==12.1
+pyobjc-core==12.2
+pyobjc-framework-Cocoa==12.2
+pyobjc-framework-Quartz==12.2
+pyobjc-framework-Security==12.2
+pyobjc-framework-UniformTypeIdentifiers==12.2
+pyobjc-framework-WebKit==12.2
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
@@ -152,7 +152,7 @@ stack-data==0.6.3
 starlette==1.2.0
 terminado==0.18.1
 threadpoolctl==3.6.0
-tinycss2==1.4.0
+tinycss2==1.5.1
 tornado==6.5.6
 tqdm==4.67.3
 traitlets==5.15.0
