@@ -81,6 +81,7 @@ matplotlib==3.10.9
 matplotlib-inline==0.2.2
 mistune==3.2.1
 multidict==6.7.1
+nba_api==1.11.4
 nbclient==0.10.4
 nbconvert==7.17.1
 nbformat==5.10.4
@@ -149,7 +150,7 @@ slicer==0.0.8
 soupsieve==2.8.4
 SQLAlchemy==2.0.50
 stack-data==0.6.3
-starlette==1.2.0
+starlette==1.2.1
 terminado==0.18.1
 threadpoolctl==3.6.0
 tinycss2==1.5.1
