@@ -93,7 +93,7 @@ notebook==7.5.6
 notebook_shim==0.2.4
 numba==0.65.1
 numpy==2.4.6
-optuna==4.8.0
+optuna==4.9.0
 orjson==3.11.9
 packaging==26.2
 pandas==3.0.3
@@ -125,7 +125,7 @@ python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
 python-engineio==4.13.2
 python-json-logger==4.1.0
-python-multipart==0.0.29
+python-multipart==0.0.30
 python-socketio==5.16.2
 pytz==2026.2
 pywebview==6.2.1
