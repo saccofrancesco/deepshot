@@ -157,7 +157,7 @@ threadpoolctl==3.6.0
 tinycss2==1.5.1
 tornado==6.5.6
 tqdm==4.67.3
-traitlets==5.15.0
+traitlets==5.15.1
 typing-inspection==0.4.2
 typing_extensions==4.15.0
 tzdata==2026.2
