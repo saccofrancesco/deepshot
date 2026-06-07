@@ -14,7 +14,7 @@ asttokens==3.0.1
 async-lru==2.3.0
 attrs==26.1.0
 babel==2.18.0
-beautifulsoup4==4.14.3
+beautifulsoup4==4.15.0
 bidict==0.23.1
 bleach==6.4.0
 bottle==0.13.4
