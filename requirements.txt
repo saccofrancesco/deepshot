@@ -146,7 +146,7 @@ setuptools==82.0.1
 shap==0.52.0
 simple-websocket==1.1.0
 six==1.17.0
-sklearn-compat==0.1.5
+sklearn-compat==0.1.6
 slicer==0.0.8
 soupsieve==2.8.4
 SQLAlchemy==2.0.50
