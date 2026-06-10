@@ -44,7 +44,7 @@ httpx==0.28.1
 idna==3.18
 ifaddr==0.2.0
 imbalanced-learn==0.14.2
-ipykernel==7.2.0
+ipykernel==7.3.0
 ipython==9.14.1
 ipython_pygments_lexers==1.1.1
 ipywidgets==8.1.8
@@ -88,6 +88,7 @@ nbconvert==7.17.1
 nbformat==5.10.4
 nbstripout==0.9.1
 nest-asyncio==1.6.0
+nest-asyncio2==1.7.2
 nicegui==3.13.0
 nicegui-highcharts==3.2.1
 notebook==7.5.7
