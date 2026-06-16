@@ -5,7 +5,7 @@ aiosignal==1.4.0
 alembic==1.18.4
 annotated-doc==0.0.4
 annotated-types==0.7.0
-anyio==4.13.0
+anyio==4.14.0
 appnope==0.1.4
 argon2-cffi==25.1.0
 argon2-cffi-bindings==25.1.0
@@ -128,7 +128,7 @@ python-dotenv==1.2.2
 python-engineio==4.13.2
 python-json-logger==4.1.0
 python-multipart==0.0.32
-python-socketio==5.16.2
+python-socketio==5.16.3
 pytz==2026.2
 pywebview==6.2.1
 PyYAML==6.0.3
