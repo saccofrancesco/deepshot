@@ -117,12 +117,12 @@ pycparser==3.0
 pydantic==2.13.4
 pydantic_core==2.46.4
 Pygments==2.20.0
-pyobjc-core==12.2
-pyobjc-framework-Cocoa==12.2
-pyobjc-framework-Quartz==12.2
-pyobjc-framework-Security==12.2
-pyobjc-framework-UniformTypeIdentifiers==12.2
-pyobjc-framework-WebKit==12.2
+pyobjc-core==12.2.1
+pyobjc-framework-Cocoa==12.2.1
+pyobjc-framework-Quartz==12.2.1
+pyobjc-framework-Security==12.2.1
+pyobjc-framework-UniformTypeIdentifiers==12.2.1
+pyobjc-framework-WebKit==12.2.1
 pyparsing==3.3.2
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.2
@@ -141,7 +141,7 @@ rfc3986-validator==0.1.1
 rfc3987-syntax==1.1.0
 rpds-py==2026.5.1
 scikit-learn==1.9.0
-scipy==1.17.1
+scipy==1.18.0
 seaborn==0.13.2
 Send2Trash==2.1.0
 setuptools==82.0.1
