@@ -32,7 +32,7 @@ decorator==5.3.1
 defusedxml==0.7.1
 docutils==0.23
 executing==2.2.1
-fastapi==0.137.2
+fastapi==0.138.0
 fastjsonschema==2.21.2
 fonttools==4.63.0
 fqdn==1.5.1
@@ -53,7 +53,7 @@ itsdangerous==2.2.0
 jedi==0.20.0
 Jinja2==3.1.6
 joblib==1.5.3
-json5==0.14.0
+json5==0.15.0
 jsonpointer==3.1.1
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
