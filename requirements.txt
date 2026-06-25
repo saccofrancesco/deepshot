@@ -2,10 +2,10 @@ aiofiles==25.1.0
 aiohappyeyeballs==2.6.2
 aiohttp==3.14.1
 aiosignal==1.4.0
-alembic==1.18.4
+alembic==1.18.5
 annotated-doc==0.0.4
 annotated-types==0.7.0
-anyio==4.14.0
+anyio==4.14.1
 appnope==0.1.4
 argon2-cffi==25.1.0
 argon2-cffi-bindings==25.1.0
@@ -21,7 +21,7 @@ bottle==0.13.4
 certifi==2026.6.17
 cffi==2.0.0
 charset-normalizer==3.4.7
-click==8.4.1
+click==8.4.2
 cloudpickle==3.1.2
 colorlog==6.10.1
 comm==0.2.3
@@ -32,7 +32,7 @@ decorator==5.3.1
 defusedxml==0.7.1
 docutils==0.23
 executing==2.2.1
-fastapi==0.138.0
+fastapi==0.138.1
 fastjsonschema==2.21.2
 fonttools==4.63.0
 fqdn==1.5.1
