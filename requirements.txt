@@ -91,7 +91,7 @@ nbstripout==0.9.1
 nest-asyncio==1.6.0
 nest-asyncio2==1.7.2
 nicegui==3.14.0
-nicegui-highcharts==3.2.1
+nicegui-highcharts==3.3.0
 notebook==7.6.0
 notebook_shim==0.2.4
 numba==0.66.0
@@ -144,7 +144,7 @@ scikit-learn==1.9.0
 scipy==1.18.0
 seaborn==0.13.2
 Send2Trash==2.1.0
-setuptools==82.0.1
+setuptools==83.0.0
 shap==0.52.0
 simple-websocket==1.1.0
 six==1.17.0
