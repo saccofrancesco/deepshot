@@ -19,8 +19,8 @@ bidict==0.23.1
 bleach==6.4.0
 bottle==0.13.4
 certifi==2026.6.17
-cffi==2.0.0
-charset-normalizer==3.4.8
+cffi==2.1.0
+charset-normalizer==3.4.9
 click==8.4.2
 cloudpickle==3.1.2
 colorlog==6.10.1
@@ -158,7 +158,7 @@ terminado==0.18.1
 threadpoolctl==3.6.0
 tinycss2==1.5.1
 tornado==6.5.7
-tqdm==4.68.3
+tqdm==4.68.4
 traitlets==5.15.1
 typing-inspection==0.4.2
 typing_extensions==4.16.0
