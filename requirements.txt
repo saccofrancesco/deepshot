@@ -4,7 +4,7 @@ aiohttp==3.14.3
 aiosignal==1.4.0
 alembic==1.18.5
 annotated-doc==0.0.4
-annotated-types==0.7.0
+annotated-types==0.8.0
 anyio==4.14.2
 appnope==0.1.4
 argon2-cffi==25.1.0
@@ -90,7 +90,7 @@ nbformat==5.10.4
 nbstripout==0.9.1
 nest-asyncio==1.6.0
 nest-asyncio2==1.7.2
-nicegui==3.14.0
+nicegui==3.15.0
 nicegui-highcharts==3.4.0
 notebook==7.6.1
 notebook_shim==0.2.4
