@@ -33,7 +33,7 @@ defusedxml==0.7.1
 docutils==0.23
 executing==2.2.1
 fastapi==0.140.0
-fastjsonschema==2.21.2
+fastjsonschema==2.22.0
 fonttools==4.63.0
 fqdn==1.5.1
 frozenlist==1.8.0
