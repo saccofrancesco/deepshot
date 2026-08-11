@@ -92,7 +92,7 @@ nest-asyncio==1.6.0
 nest-asyncio2==1.7.2
 nicegui==3.15.0
 nicegui-highcharts==3.4.0
-notebook==7.6.1
+notebook==7.6.2
 notebook_shim==0.2.4
 numba==0.66.0
 numpy==2.4.6
