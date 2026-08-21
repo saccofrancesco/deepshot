@@ -6,7 +6,7 @@ alembic==1.19.1
 annotated-doc==0.0.5
 annotated-types==0.8.0
 anyio==4.14.2
-appnope==0.1.4
+appnope==1.0.0
 argon2-cffi==25.1.0
 argon2-cffi-bindings==26.1.0
 arrow==1.4.0
@@ -82,7 +82,7 @@ matplotlib==3.11.1
 matplotlib-inline==0.2.2
 mistune==3.3.4
 multidict==6.7.1
-narwhals==2.24.0
+narwhals==2.25.0
 nba_api==1.11.4
 nbclient==0.11.0
 nbconvert==7.17.1
@@ -133,7 +133,7 @@ python-socketio==5.16.4
 pytz==2026.3.post1
 pywebview==6.2.1
 PyYAML==6.0.3
-pyzmq==27.1.0
+pyzmq==27.2.0
 referencing==0.37.0
 requests==2.34.2
 rfc3339-validator==0.1.4
