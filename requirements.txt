@@ -5,7 +5,7 @@ aiosignal==1.4.0
 alembic==1.19.1
 annotated-doc==0.0.5
 annotated-types==0.8.0
-anyio==4.14.2
+anyio==4.15.0
 appnope==1.0.0
 argon2-cffi==25.1.0
 argon2-cffi-bindings==26.1.0
