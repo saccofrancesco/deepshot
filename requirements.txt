@@ -66,7 +66,7 @@ jupyter_client==8.10.0
 jupyter_core==5.9.1
 jupyter_server==2.21.1
 jupyter_server_terminals==0.5.4
-jupyterlab==4.6.3
+jupyterlab==4.6.4
 jupyterlab_pygments==0.3.0
 jupyterlab_server==2.28.1
 jupyterlab_widgets==3.0.17
@@ -81,7 +81,7 @@ MarkupSafe==3.0.3
 matplotlib==3.11.2
 matplotlib-inline==0.2.2
 mistune==3.3.4
-multidict==6.9.0
+multidict==6.9.1
 narwhals==2.26.0
 nba_api==1.11.4
 nbclient==0.11.0
@@ -91,8 +91,8 @@ nbstripout==0.9.1
 nest-asyncio==1.6.0
 nest-asyncio2==1.7.2
 nicegui==3.17.1
-nicegui-highcharts==3.4.0
-notebook==7.6.2
+nicegui-highcharts==3.5.0
+notebook==7.6.3
 notebook_shim==0.2.4
 numba==0.67.0
 numpy==2.5.3
@@ -105,7 +105,7 @@ parso==0.8.7
 pexpect==4.9.0
 pillow==12.3.0
 pip-review==1.3.0
-platformdirs==4.11.11
+platformdirs==4.11.12
 prometheus_client==0.26.0
 prompt_toolkit==3.0.53
 propcache==0.5.4
@@ -123,7 +123,7 @@ pyobjc-framework-Quartz==12.2.2
 pyobjc-framework-Security==12.2.2
 pyobjc-framework-UniformTypeIdentifiers==12.2.2
 pyobjc-framework-WebKit==12.2.2
-pyparsing==3.3.2
+pyparsing==3.3.3
 python-dateutil==2.9.0.post0
 python-dotenv==1.2.3
 python-engineio==4.14.0
@@ -167,7 +167,7 @@ uri-template==1.3.0
 urllib3==2.8.0
 uvicorn==0.53.0
 uvloop==0.22.1
-watchfiles==1.2.0
+watchfiles==1.3.0
 wcwidth==0.8.4
 webcolors==25.10.0
 webencodings==0.6.1
