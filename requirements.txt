@@ -105,7 +105,7 @@ parso==0.8.7
 pexpect==4.9.0
 pillow==12.3.0
 pip-review==1.3.0
-platformdirs==4.11.12
+platformdirs==4.12.0
 prometheus_client==0.26.0
 prompt_toolkit==3.0.53
 propcache==0.5.4
@@ -151,7 +151,7 @@ six==1.17.0
 sklearn-compat==0.1.6
 slicer==0.0.8
 soupsieve==2.10
-SQLAlchemy==2.0.54
+SQLAlchemy==2.1.1
 stack-data==0.6.3
 starlette==1.7.0
 terminado==0.18.1
@@ -165,7 +165,7 @@ typing_extensions==4.16.0
 tzdata==2026.4
 uri-template==1.3.0
 urllib3==2.8.0
-uvicorn==0.53.0
+uvicorn==0.54.0
 uvloop==0.22.1
 watchfiles==1.3.0
 wcwidth==0.9.1
