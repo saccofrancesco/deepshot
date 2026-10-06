@@ -21,7 +21,7 @@ bottle==0.13.4
 certifi==2026.10.23
 cffi==2.1.1
 charset-normalizer==3.5.2
-click==8.5.0
+click==8.5.1
 cloudpickle==3.1.2
 colorlog==6.12.0
 comm==0.2.3
@@ -32,7 +32,7 @@ decorator==5.3.1
 defusedxml==0.7.1
 docutils==0.23
 executing==2.3.0
-fastapi==0.162.0
+fastapi==0.162.1
 fastjsonschema==2.22.3
 fonttools==4.68.0
 fqdn==1.6.0
@@ -56,7 +56,7 @@ jedi==0.20.1
 Jinja2==3.1.6
 joblib==1.6.0
 json5==0.17.3
-jsonpointer==3.8
+jsonpointer==3.10
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
 jupyter==1.1.1
