@@ -32,7 +32,7 @@ decorator==5.3.1
 defusedxml==0.7.1
 docutils==0.23
 executing==2.2.1
-fastapi==0.142.4
+fastapi==0.143.0
 fastjsonschema==2.22.2
 fonttools==4.66.1
 fqdn==1.6.0
@@ -114,7 +114,7 @@ proxy_tools==0.1.0
 psutil==7.2.2
 ptyprocess==0.7.0
 pure_eval==0.2.4
-pycparser==3.0
+pycparser==3.1
 pydantic==2.13.4
 pydantic_core==2.46.4
 Pygments==2.21.0
@@ -146,7 +146,7 @@ scipy==1.18.1
 seaborn==0.13.2
 Send2Trash==2.1.0
 setuptools==84.0.0
-shap==0.52.0
+shap==0.53.0
 simple-websocket==1.1.0
 six==1.17.0
 sklearn-compat==0.1.6
