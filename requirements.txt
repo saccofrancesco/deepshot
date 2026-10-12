@@ -11,7 +11,7 @@ argon2-cffi==25.1.0
 argon2-cffi-bindings==26.1.0
 arrow==1.4.0
 asttokens==3.0.2
-async-lru==2.3.0
+async-lru==2.4.0
 attrs==26.1.0
 babel==2.18.0
 beautifulsoup4==4.15.0
@@ -50,7 +50,7 @@ ipython_pygments_lexers==1.1.1
 ipywidgets==8.1.9
 isoduration==20.11.0
 itsdangerous==2.2.0
-jedi==0.20.0
+jedi==0.20.1
 Jinja2==3.1.6
 joblib==1.6.0
 json5==0.17.3
@@ -85,7 +85,7 @@ multidict==6.9.1
 narwhals==2.27.1
 nba_api==1.11.4
 nbclient==0.11.0
-nbconvert==7.17.1
+nbconvert==7.17.2
 nbformat==5.11.1
 nbstripout==0.9.1
 nest-asyncio==1.6.0
@@ -151,7 +151,7 @@ simple-websocket==1.1.0
 six==1.17.0
 sklearn-compat==0.1.6
 slicer==0.0.8
-soupsieve==3.0.2
+soupsieve==3.0.3
 SQLAlchemy==2.1.4
 stack-data==0.6.3
 starlette==1.7.0
