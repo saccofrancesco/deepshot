@@ -32,7 +32,7 @@ decorator==5.3.1
 defusedxml==0.7.1
 docutils==0.23
 executing==2.3.0
-fastapi==0.146.0
+fastapi==0.148.0
 fastjsonschema==2.22.2
 fonttools==4.67.0
 fqdn==1.6.0
@@ -54,7 +54,7 @@ jedi==0.20.1
 Jinja2==3.1.6
 joblib==1.6.0
 json5==0.17.3
-jsonpointer==3.3
+jsonpointer==3.4
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
 jupyter==1.1.1
@@ -80,7 +80,7 @@ markdown2==2.5.5
 MarkupSafe==3.0.4
 matplotlib==3.11.2
 matplotlib-inline==0.2.2
-mistune==3.3.4
+mistune==3.4.0
 multidict==7.1.0
 narwhals==2.27.1
 nba_api==1.11.4
