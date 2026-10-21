@@ -257,8 +257,7 @@ def get_best_color_pair(team1: str, team2: str) -> tuple[str, str]:
 lower_better_stats: set = {"tov", "pf", "drtg", "tov_pct", "tov_to_poss"}
 
 # Get the next day NBA game
-year: datetime.datetime = datetime.datetime.now().strftime("%Y")
-today: datetime.datetime = f"{year}-10-20"
+today: datetime.datetime = datetime.datetime.now().strftime("%Y-%m-%d")
 
 
 # Function to retrieve and get the scheduled games for today
