@@ -54,7 +54,7 @@ jedi==0.20.1
 Jinja2==3.1.6
 joblib==1.6.0
 json5==0.17.3
-jsonpointer==3.4
+jsonpointer==3.5
 jsonschema==4.26.0
 jsonschema-specifications==2025.9.1
 jupyter==1.1.1
@@ -81,7 +81,7 @@ MarkupSafe==3.0.4
 matplotlib==3.11.2
 matplotlib-inline==0.2.2
 mistune==3.4.0
-multidict==7.2.0
+multidict==7.2.1
 narwhals==2.27.1
 nba_api==1.12.0
 nbclient==0.11.0
