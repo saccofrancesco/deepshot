@@ -66,7 +66,7 @@ jupyter_client==8.10.0
 jupyter_core==5.9.1
 jupyter_server==2.21.1
 jupyter_server_terminals==0.5.4
-jupyterlab==4.6.4
+jupyterlab==4.6.5
 jupyterlab_pygments==0.3.0
 jupyterlab_server==2.28.1
 jupyterlab_widgets==3.0.17
@@ -96,7 +96,7 @@ notebook==7.6.3
 notebook_shim==0.2.4
 numba==0.68.1
 numpy==2.5.4
-opentelemetry-api==1.45.1
+opentelemetry-api==1.45.2
 optuna==5.0.0
 orjson==3.13.0
 packaging==26.3
@@ -115,8 +115,8 @@ psutil==7.2.2
 ptyprocess==0.7.0
 pure_eval==0.2.4
 pycparser==3.12
-pydantic==2.14.1
-pydantic_core==2.50.1
+pydantic==2.14.2
+pydantic_core==2.50.2
 Pygments==2.21.0
 pyobjc-core==12.2.2
 pyobjc-framework-Cocoa==12.2.2
@@ -131,7 +131,7 @@ python-engineio==4.15.1
 python-json-logger==4.2.0
 python-multipart==0.0.32
 python-socketio==5.17.0
-pytz==2026.5
+pytz==2026.6
 pywebview==6.2.1
 PyYAML==6.0.3
 pyzmq==27.2.0
