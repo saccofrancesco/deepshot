@@ -45,7 +45,7 @@ idna==3.20
 ifaddr==0.2.0
 imbalanced-learn==0.14.2
 ipykernel==7.4.0
-ipython==9.17.1
+ipython==9.18.0
 ipython_pygments_lexers==1.1.1
 ipywidgets==8.1.9
 isoduration==20.11.0
@@ -92,7 +92,7 @@ nest-asyncio==1.6.0
 nest-asyncio2==1.7.4
 nicegui==3.18.0
 nicegui-highcharts==3.5.0
-notebook==7.6.3
+notebook==7.6.4
 notebook_shim==0.2.4
 numba==0.68.1
 numpy==2.5.4
