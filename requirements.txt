@@ -130,7 +130,7 @@ python-dotenv==1.2.4
 python-engineio==4.15.1
 python-json-logger==4.2.0
 python-multipart==0.0.33
-python-socketio==5.18.0
+python-socketio==5.18.1
 pytz==2026.6
 pywebview==6.2.1
 PyYAML==6.0.3
@@ -151,7 +151,7 @@ simple-websocket==1.1.0
 six==1.17.0
 sklearn-compat==0.1.6
 slicer==0.0.8
-soupsieve==3.0.4
+soupsieve==4.0
 SQLAlchemy==2.1.6
 stack-data==0.6.3
 starlette==1.10.0
