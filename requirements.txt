@@ -32,7 +32,7 @@ decorator==5.3.1
 defusedxml==0.7.1
 docutils==0.23
 executing==2.3.0
-fastapi==0.162.1
+fastapi==0.162.2
 fastjsonschema==2.22.3
 fonttools==4.68.0
 fqdn==1.6.0
