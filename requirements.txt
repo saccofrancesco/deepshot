@@ -153,14 +153,14 @@ simple-websocket==1.1.0
 six==1.17.0
 sklearn-compat==0.1.6
 slicer==0.0.8
-soupsieve==4.0.1
+soupsieve==4.1
 SQLAlchemy==2.1.8
 stack-data==0.6.3
 starlette==1.10.0
 terminado==0.18.1
 threadpoolctl==3.8.0
 tinycss2==1.5.1
-tornado==6.6
+tornado==6.6.1
 tqdm==4.70.1
 traitlets==5.16.1
 truststore==0.10.5
