@@ -146,7 +146,7 @@ rpds-py==2026.9.1
 scikit-learn==1.9.1
 scipy==1.18.1
 seaborn==0.13.2
-Send2Trash==2.1.0
+Send2Trash==2.2.0
 setuptools==84.2.1
 shap==0.54.1
 simple-websocket==1.1.0
