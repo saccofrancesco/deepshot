@@ -39,10 +39,10 @@ fqdn==1.6.0
 frozenlist==1.8.0
 h11==0.16.0
 httpcore==1.0.9
-httpcore2==2.16.0
+httpcore2==2.16.2
 httptools==0.9.0
 httpx==0.28.1
-httpx2==2.16.0
+httpx2==2.16.2
 idna==3.20
 ifaddr==0.2.0
 imbalanced-learn==0.14.2
@@ -97,9 +97,9 @@ nicegui-highcharts==3.5.0
 notebook==7.6.5
 notebook_shim==0.2.4
 numba==0.68.1
-numpy==2.5.4
+numpy==2.5.5
 opentelemetry-api==1.45.2
-optuna==5.0.0
+optuna==5.1.0
 orjson==3.13.0
 packaging==26.3
 pandas==3.1.1
