@@ -18,6 +18,10 @@
 </p>
 
 <p align="center">
+  <a href="https://trendshift.io/repositories/17517?utm_source=trendshift-badge&amp;utm_medium=badge&amp;utm_campaign=badge-trendshift-17517" target="_blank" rel="noopener noreferrer"><img src="https://trendshift.io/api/badge/trendshift/repositories/17517/daily?language=Jupyter%20Notebook" alt="saccofrancesco%2Fdeepshot | Trendshift" width="250" height="55"/></a>
+</p>
+
+<p align="center">
   <a href="#tldr">TL;DR</a> •
   <a href="#key-features">Key Features</a> •
   <a href="#quickstart">Quickstart</a> •
