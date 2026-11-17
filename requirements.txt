@@ -131,7 +131,7 @@ python-dateutil==4.0.0
 python-dotenv==1.2.4
 python-engineio==4.15.1
 python-json-logger==4.2.0
-python-multipart==0.0.33
+python-multipart==0.0.34
 python-socketio==5.18.1
 pytz==2026.6
 pywebview==6.2.1
@@ -154,7 +154,7 @@ six==1.17.0
 sklearn-compat==0.1.6
 slicer==0.0.8
 soupsieve==4.1.1
-SQLAlchemy==2.1.8
+SQLAlchemy==2.1.9
 stack-data==0.6.3
 starlette==1.10.0
 terminado==0.18.1
