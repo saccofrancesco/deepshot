@@ -92,7 +92,7 @@ nbformat==5.11.1
 nbstripout==0.9.2
 nest-asyncio==1.6.0
 nest-asyncio2==1.7.4
-nicegui==4.0.0
+nicegui==4.1.0
 nicegui-highcharts==3.5.0
 notebook==7.6.5
 notebook_shim==0.2.4
@@ -101,7 +101,7 @@ numpy==2.5.5
 opentelemetry-api==1.45.2
 optuna==5.1.0
 orjson==3.13.0
-packaging==26.3
+packaging==26.4
 pandas==3.1.1
 pandocfilters==1.5.1
 parso==0.8.7
