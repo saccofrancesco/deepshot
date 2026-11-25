@@ -13,7 +13,7 @@ arrow==1.4.0
 asttokens==3.0.2
 async-lru==2.4.0
 attrs==26.1.0
-babel==2.18.0
+babel==2.19.0
 beautifulsoup4==4.15.0
 bidict==0.24.1
 bleach==6.4.0
@@ -120,12 +120,12 @@ pycparser==3.12
 pydantic==2.14.4
 pydantic_core==2.50.5
 Pygments==2.21.0
-pyobjc-core==13.0
-pyobjc-framework-Cocoa==13.0
-pyobjc-framework-Quartz==13.0
-pyobjc-framework-Security==13.0
-pyobjc-framework-UniformTypeIdentifiers==13.0
-pyobjc-framework-WebKit==13.0
+pyobjc-core==13.1
+pyobjc-framework-Cocoa==13.1
+pyobjc-framework-Quartz==13.1
+pyobjc-framework-Security==13.1
+pyobjc-framework-UniformTypeIdentifiers==13.1
+pyobjc-framework-WebKit==13.1
 pyparsing==3.3.3
 python-dateutil==4.0.0
 python-dotenv==1.2.4
