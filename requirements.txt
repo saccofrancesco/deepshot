@@ -34,7 +34,7 @@ docutils==0.23
 executing==2.3.0
 fastapi==0.165.0
 fastjsonschema==2.22.3
-fonttools==4.68.0
+fonttools==4.69.1
 fqdn==1.6.0
 frozenlist==1.8.0
 h11==0.16.0
